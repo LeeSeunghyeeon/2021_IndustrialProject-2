@@ -17,15 +17,6 @@ import com.google.android.material.tabs.TabLayout
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
-/*
-
-    private val ContentFragment by lazy { ContentFragment() }
-    private val MissionFragment by lazy { MissionFragment() }
-    private val HealthFragment by lazy { HealthFragment() }
-    private val DiaryFragment by lazy { DiaryFragment() }
-
-*/
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,65 +40,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun init(){
-        //var vp_ac_main_frag_pager = findViewById<ViewPager>(R.id.vp_ac_main_frag_pager)
-        //var tl_ac_main_bottom_menu =findViewById<TabLayout>(R.id.tl_ac_main_bottom_menu)
-
-        /*supportFragmentManager.beginTransaction().replace(R.id.container, HealthFragment).commit();
-        binding.bnvMain.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.content -> {
-                    //changeFragment(ContentFragment)
-                    supportFragmentManager.beginTransaction().replace(R.id.container, ContentFragment).commit();
-                }
-                R.id.mission -> {
-                    changeFragment(MissionFragment)
-                }
-                R.id.health -> {
-                    changeFragment(HealthFragment)
-                }
-                R.id.diary -> {
-                    changeFragment(DiaryFragment)
-
-                    //return@OnNavigationItemSelectedListener true
-                }
-                else -> false
-            }
-            true
-        }*/
-    }
-/*
-
-    private val mOnNavigationiItemSelectedListener = NavigationBarView.OnItemSelectedListener{ item ->
-        when(item.itemId){
-            R.id.content -> {
-                changeFragment(ContentFragment)
-                return@OnItemSelectedListener true
-            }
-            R.id.mission -> {
-                changeFragment(MissionFragment)
-                return@OnItemSelectedListener true
-            }
-            R.id.health -> {
-                changeFragment(HealthFragment)
-                return@OnItemSelectedListener true
-            }
-            R.id.diary -> {
-                changeFragment(DiaryFragment)
-                return@OnItemSelectedListener true
-
-                //return@OnNavigationItemSelectedListener true
-            }
-            else -> false
-        }
-    }
-
-    private fun changeFragment(fragment: Fragment){
-        val fragmemtTransaction = supportFragmentManager.beginTransaction()
-        fragmemtTransaction.replace(R.id.container, HealthFragment)
-        fragmemtTransaction.commit()
-    }
-*/
 
 }
 
