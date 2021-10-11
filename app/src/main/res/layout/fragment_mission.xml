@@ -17,8 +17,8 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:layout_margin="5dp"
+                android:padding="10dp"
                 android:text="오늘의 미션"
                 android:textSize="24sp"
                 android:textStyle="bold" />

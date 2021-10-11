@@ -1,15 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DiaryFragment">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="다이어리 만들어주세요" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#825FC1"
+                android:padding="10dp"
+                android:text="다이어리"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+            <TextView
+                android:id="@+id/ExpectedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:padding="10sp"
+                android:text="출산 예정일 : 2022년 3월 12일"
+                android:textAlignment="center"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/d_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="monospace"
+                android:padding="10sp"
+                android:layout_marginBottom="15sp"
+                android:text="아이와 만나기까지 D-151"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#555555"/>
+
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10sp"
+                android:minDate="10/01/2021"
+                android:maxDate="10/01/2022"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#555555"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:paddingTop="15sp"
+                android:text="2021년 10월 01일"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:text="오늘은 00이의 첫 태동이 있었다."/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>
