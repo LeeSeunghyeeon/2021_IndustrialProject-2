@@ -137,12 +137,11 @@
                     android:layout_span="2"
                     android:layout_margin="10dp"
                     android:background="#94ADEC"
-                    android:text="섭취 칼로리 \n 10000 / 12000" />
+                    android:text="섭취 칼로리 \n 1000 / 1200" />
             </TableRow>
 
         </TableLayout>
     </FrameLayout>
-
 
 
 </ScrollView>

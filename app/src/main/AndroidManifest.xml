@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Welt">
         <activity
-            android:name=".SingUpActivity2"
+            android:name=".MainActivity"
             android:exported="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".SingUpActivity2"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

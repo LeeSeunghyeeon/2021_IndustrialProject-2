@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TableRow
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -35,16 +37,19 @@
                     android:id="@+id/editTextNumber"
                     android:layout_width="48dp"
                     android:layout_height="wrap_content"
+                    android:layout_column="1"
                     android:layout_margin="10dp"
                     android:ems="10"
                     android:inputType="number"
                     android:text="00"
                     android:textSize="24sp"
                     tools:ignore="TouchTargetSizeCheck" />
+
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_column="2"
                     android:layout_margin="10dp"
                     android:text="일 남았습니다."
                     android:textSize="24sp" />
@@ -54,7 +59,7 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp">
+            android:layout_marginTop="130dp">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -71,14 +76,14 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="364dp"
                     android:layout_height="240dp"
                     android:layout_margin="10dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    android:src="@drawable/img" />
             </TableRow>
 
         </TableLayout>
@@ -86,32 +91,35 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="450dp"
-            android:stretchColumns="0,1,2,3">
+            android:layout_marginTop="440dp"
+            android:stretchColumns="*">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
                     android:layout_margin="10dp"
+                    android:layout_span="2"
                     android:text="태교에 도움이 되는 콘텐츠"
                     android:textSize="24sp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/button5"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
                     android:text="마음챙김 영상" />
 
                 <Button
@@ -119,12 +127,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
                     android:text="고위험 임신군 \n위험도 측정" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="127dp"
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/button7"
@@ -142,8 +153,6 @@
             </TableRow>
         </TableLayout>
     </RelativeLayout>
-
-
 
 
 </ScrollView>
