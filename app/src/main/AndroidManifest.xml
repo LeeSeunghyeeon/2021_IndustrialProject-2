@@ -12,21 +12,7 @@
         <activity
             android:name=".SingUpActivity2"
             android:exported="true" />
-        <activity
-            android:name=".DiaryActivity"
-            android:exported="true" />
-        <activity
-            android:name=".HealthActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MissionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ContentActivity"
-            android:exported="true" />
-        <activity
-            android:name=".SignUpActivity"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
