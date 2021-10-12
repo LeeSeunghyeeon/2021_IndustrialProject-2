@@ -12,9 +12,10 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_diary.xml" value="0.264" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_diaty.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_health.xml" value="0.264" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_mission.xml" value="0.264" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_mission.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/layout/fragment_sing_up.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/Welt/app/src/main/res/menu/navi_menu.xml" value="0.25729166666666664" />
+<<<<<<< HEAD
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/activity_main.xml" value="0.2595108695652174" />
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/activity_sing_up2.xml" value="0.36614583333333334" />
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/bottom_navigation_tab.xml" value="0.36614583333333334" />
@@ -22,6 +23,12 @@
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/fragment_diary.xml" value="0.3061797752808989" />
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/fragment_health.xml" value="0.36614583333333334" />
         <entry key="..\:/project/2021_IndustrialProject-2/app/src/main/res/layout/fragment_mission.xml" value="0.36614583333333334" />
+=======
+        <entry key="..\:/Users/skadm/2021_IndustrialProject-2/app/src/main/res/layout/activity_sing_up2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/skadm/2021_IndustrialProject-2/app/src/main/res/layout/fragment_content.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/skadm/AndroidStudioProjects/2021_IndustrialProject-2/app/src/main/res/layout/activity_sing_up2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/skadm/AndroidStudioProjects/2021_IndustrialProject-2/app/src/main/res/layout/fragment_content.xml" value="0.25364583333333335" />
+>>>>>>> 2bcdaa147b735fc89e12c1469a20ee1dfd7d1e4f
       </map>
     </option>
   </component>
