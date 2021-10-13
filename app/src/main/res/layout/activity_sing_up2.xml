@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CDE3FDFE"
+    android:background="#FFFFFF"
     tools:context=".SingUpActivity2">
 
 
@@ -32,10 +32,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_span="3"
-                    android:background="#99CCFF"
+                    android:background="#825FC1"
                     android:gravity="center"
                     android:text="회원가입"
-                    android:textColor="#546E7A"
+                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     android:textStyle="bold" />
             </TableRow>

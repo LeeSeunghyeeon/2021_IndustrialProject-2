@@ -16,55 +16,67 @@
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
+        android:layout_weight="1"
         android:backgroundTint="#BDBDBD"
         android:text="운동"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#BDBDBD"
         android:text="식사 기록"
+        android:textStyle="bold"
         android:textColor="#000000" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#BDBDBD"
         android:text="수면"
+        android:textStyle="bold"
         android:textColor="#000000" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#BDBDBD"
         android:text="체중"
+        android:textStyle="bold"
         android:textColor="#000000" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#BDBDBD"
         android:text="태동"
+        android:textStyle="bold"
         android:textColor="#000000" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:backgroundTint="#BDBDBD"
         android:text="복약 (엽산, 철분제, 아스피린, 프로게스테론)"
+        android:textStyle="bold"
         android:textColor="#000000" />
 
 </LinearLayout>

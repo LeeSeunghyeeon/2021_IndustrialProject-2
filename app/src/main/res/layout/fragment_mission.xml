@@ -28,8 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
-                android:backgroundTint="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="10주차 컨텐츠 학습하기" />
 
@@ -38,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="식사 기록하기" />
 
@@ -47,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="다이어리 작성하기" />
 
@@ -56,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="체중 기록하기" />
 
@@ -65,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="운동 30분하기" />
 
@@ -74,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="#94ADEC"
+                android:backgroundTint="#BDBDBD"
                 android:minHeight="48dp"
                 android:text="명상 1분하기" />
         </LinearLayout>
@@ -111,8 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:background="#94ADEC"
-                    android:backgroundTint="#94ADEC"
+                    android:backgroundTint="#BDBDBD"
                     android:text="수면\n4시간/8시간" />
 
                 <Button
@@ -120,8 +118,7 @@
                     android:layout_width="139dp"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:background="#94ADEC"
-                    android:backgroundTint="#94ADEC"
+                    android:backgroundTint="#BDBDBD"
                     android:text="걸음 수\n 3000/5000" />
 
             </TableRow>
@@ -136,7 +133,7 @@
                     android:layout_height="100dp"
                     android:layout_span="2"
                     android:layout_margin="10dp"
-                    android:background="#94ADEC"
+                    android:backgroundTint="#BDBDBD"
                     android:text="섭취 칼로리 \n 1000 / 1200" />
             </TableRow>
 
