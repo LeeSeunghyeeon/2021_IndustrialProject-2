@@ -5,15 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import com.example.welt.databinding.FragmentMissionBinding
 
 
 class MissionFragment : Fragment() {
+    private lateinit var binding:FragmentMissionBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mission, container, false) }
+        binding = FragmentMissionBinding.inflate(inflater, container, false)
+        return binding.root }
 
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        showDialog()
+    }
+
+    private fun showDialog(){
+        binding.button1.setOnClickListener{
+            val sleepDialog = Mission_SleepDialog()
+            activity?.supportFragmentManager?.let { fragmentManager ->
+                sleepDialog.show(fragmentManager, "Mission_SleepDialog")
+            }
+        }
+
+    }
 
 }

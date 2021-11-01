@@ -103,22 +103,22 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#BDBDBD"
+                    android:backgroundTint="#ECCCDD"
                     android:text="수면\n4시간/8시간" />
 
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="139dp"
+                    android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#BDBDBD"
+                    android:backgroundTint="#ECCCDD"
                     android:text="걸음 수\n 3000/5000" />
 
             </TableRow>
@@ -131,10 +131,38 @@
                     android:id="@+id/button3"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:layout_span="2"
                     android:layout_margin="10dp"
-                    android:backgroundTint="#BDBDBD"
+                    android:backgroundTint="#ECCCDD"
                     android:text="섭취 칼로리 \n 1000 / 1200" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#ECCCDD"
+                    android:text="소모 칼로리 \n 1000 / 1200" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#ECCCDD"
+                    android:text="체중 \n 53kg" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#ECCCDD"
+                    android:text="태동 \n" />
             </TableRow>
 
         </TableLayout>
