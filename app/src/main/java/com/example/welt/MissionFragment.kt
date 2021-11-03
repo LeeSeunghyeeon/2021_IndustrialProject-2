@@ -32,7 +32,5 @@ class MissionFragment : Fragment() {
                 sleepDialog.show(fragmentManager, "Mission_SleepDialog")
             }
         }
-
     }
-
 }

@@ -25,12 +25,12 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 import com.github.mikephil.charting.data.ChartData as ChartData1
 
-class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
-    var chart :LineChart?= null
-    private lateinit var btnOK:Button
+        class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
+        var chart :LineChart?= null
+        private lateinit var btnOK:Button
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        override fun onCreateView(
+            inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_mission__sleep_dialog, container, false) as ViewGroup
@@ -131,11 +131,5 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
         chart!!.data = data
         chart!!.invalidate()
     }
-
-
-
-
-
-
 
 }
