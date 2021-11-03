@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="260dp"
+        android:layout_height="226dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/chick" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="91dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="아이디"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="116dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="229dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="아이디/비밀번호 찾기"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="비밀번호"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress4" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="229dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="회원가입"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="211dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="91dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="276dp"
+        android:text="로그인"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="#B4F9D2FF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
