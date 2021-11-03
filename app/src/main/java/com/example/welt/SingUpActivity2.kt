@@ -19,7 +19,7 @@ class SingUpActivity2 : AppCompatActivity() {
 
     private fun init(){
        binding.button7.setOnClickListener({
-           val intent = Intent(this, MainActivity::class.java)
+           val intent = Intent(this, SingInActivity::class.java)
            startActivity(intent)
        })
     }

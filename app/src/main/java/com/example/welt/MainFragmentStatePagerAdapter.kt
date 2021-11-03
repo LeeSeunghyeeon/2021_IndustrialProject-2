@@ -11,7 +11,7 @@ class MainFragmentStatePagerAdapter(fm : FragmentManager, val fragmentCount : In
             1 -> return MissionFragment()
             2 -> return HealthFragment()
             3 -> return DiaryFragment()
-            else -> return HealthFragment()
+            else -> return ContentFragment()
         }
     }
 
