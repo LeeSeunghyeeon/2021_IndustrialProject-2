@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout_week"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content_WeekFeatures">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="임신 7주차 특징"
+                    android:textColor="#673AB7"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2EBFF"
+                android:text="태아의발달"
+                android:textAlignment="center"
+                android:textColor="#825FC1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="얼굴이 만들어지기 시작합니다."
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="자궁벽을 통해 태아의 모습을 볼 수 있습니다. 가슴을 향해 머리를 숙이고 있는 태아에게서 유난히 커 보이는 머리와 눈, 그리고 콧구멍의 모습도 마치 검은 점처럼 발견할 수가 있습니다. 귀가 될 부분은 작은 구멍처럼, 팔과 다리가 될 부분은 솟아난 봉우리처럼 보입니다. 또, 길어진 손과 발은 지느러미처럼 보이고, 손가락은 이제부터 형성되기 시작합니다. 태아의 심장박동을 들을 수 있습니다. 심장은 좌우로 나뉘고, 어른 박동수의 2배, 즉 1분에 150번 정도 뜁니다. 뇌하수체도 형성되고 있습니다.\n"
+                android:textSize="16sp"
+                android:background="@drawable/borderline"/>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2EBFF"
+                android:text="엄마 몸의 변화"
+                android:textAlignment="center"
+                android:textColor="#825FC1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="① 약간의 복부통증이 있을 수 있습니다. \n아랫배에 약간의 통증이나 불편함이 있을 수 있습니다. 대개는 그냥 지나치는 증상이지만, 임신 중의 복부경련은 간혹 좋지 않은 징후일 수 있습니다. 경련과 함께 출혈이 있다면 즉시 의사 선생님과 상의하세요.\n② 입덧이 나타납니다.\n만약 입덧이 심하게 나타난다면 음식을 억지로 먹으려 애쓰지 말고 소량의 물과 음식을 자주 섭취하도록 권장합니다. 자극적인 맛이나 지방식은 줄이고, 말린 식품, 고단백 스낵, 크래커 등을 섭취할 것을 권유합니다. (출처 : 질병관리본부_국가건강정보포털)\n③ 피부가 가렵기도 합니다.\n호르몬의 변화로 피부가 가려울 수 있습니다. 충분한 수분 보충과 보습을 해 줍니다.\n④ 유방이 민감해집니다.\n임신을 하면 마치 월경 전의 증상처럼 유두가 민감해져 따끔거리기도 하고, 유방에 핏줄이 확실하게 보이기도 합니다.\n"
+                android:textSize="16sp"
+                android:background="@drawable/borderline"/>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2EBFF"
+                android:text="꼭 필요한 태교"
+                android:textAlignment="center"
+                android:textColor="#825FC1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="① 음식 태교가 중요합니다. \n태교 중에 가장 중요한 것은 태아가 건강하게 자라도록 해주는 것입니다. 또한 건강한 아이가 지능도 높고 정서도 안정됩니다. 그러므로 건강하고 총명한 아기를 바란다면 엄마가 영양의 균형을 생각하여 잘 먹는 음식태교부터 할 수 있어야 합니다. 입덧으로 먹기가 힘들 때는 간식을 먹는다든지 그 밖에 다른 것으로 영양을 보충하는 방법을 생각해 보세요.\n
+    1. 태아 성장을 돕는 균형잡힌 식사를 합니다.\n
+    2. 뇌 발달을 돕는 단백질, DHA, 비타민 E를 충분히 섭취합니다.\n
+    3. 태아 세포발달에 도움을 주는 비타민 c를 충분히 섭취합니다. 비타민 c가 많은 음식으로는 오렌지주스, 멜론, 딸기 등이 있습니다.\n
+    4. 신선한 식품을 골라 먹습니다.\n
+    5. 하루 세 번 규칙적인 식사를 합니다.\n
+    6. 자극적인 음식, 찬 음식을 먹지 않습니다.\n
+    ② 예비엄마의 건강을 돌봅니다.\n또한 태아의 각 기관과 외모가 형성되는 시기이니 기형과 질병에 대한 예방을 철저히 합니다. 사람이 많이 모이는 곳에는 가지 않습니다.
+    특히 착상이 불안정해 유산될 확률이 가장 높은 시기이므로 성관계 횟수를 줄이고, 하더라도 삽입이 얕은 체위로 해야 안전합니다. 몸이 피곤하다면 심한 운동이나 활동을 피합니다.
+    몸의 환경이 바뀌고 호르몬 변화로 이 시기에는 자주 졸릴 수 있습니다. 특히 직장 여성이라면 이에 대한 대비를 해두는 것이 좋습니다. 점심 시간만이라도 10분 정도 잔다거나 눈을 감고 휴식을 취하는 것이 좋습니다."
+                android:textSize="16sp"
+                android:background="@drawable/borderline"/>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2EBFF"
+                android:text="엄마 아빠가 할 일"
+                android:textAlignment="center"
+                android:textColor="#825FC1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="① 충분한 영양공급을 해주세요.\n아기가 빠르게 성장하고 있습니다. 아기의 신체 주요기능이 형성되는 때이므로 원활한 영양공급이 무엇보다 중요합니다. 조혈을 위한 영양제, 균형 잡힌 영양을 충분히 섭취하도록 식단을 점검해 보세요. 비타민제를 먹으면서 구토가 생긴다면 종합비타민이 강화된 시리얼을 대신 먹는 것도 좋습니다.\n② 유산에 주의하세요.\n대체로 유산은 임신 초기인 7~8주 사이에 일어나기 쉽습니다. 태반이 형성되기 전인 이 시기에 아랫배에 통증이 오고 출혈이 시작되면 유산의 징조일 수 있습니다. 무리하지 않도록 주의합니다.\n"
+                android:textSize="16sp"
+                android:background="@drawable/borderline"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="244dp"
+                android:layout_height="59dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/OKbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="확인" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

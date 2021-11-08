@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/framelayout_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content_HighRiskPregnancyTest">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderline"
+                android:text="고위험 임신 자가테스트"
+                android:textAlignment="center"
+                android:textColor="#673AB7"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="해당하는 항목을 체크해주세요.✔"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView94"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="416dp"
+                android:layout_height="20dp"
+                android:background="@drawable/borderline"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/borderline"
+                    android:text="평점구분"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView121"
+                    android:layout_width="90dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/borderline"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="170dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/borderline"
+                    android:text="세부요인"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:background="@drawable/borderline"
+                    android:text="점수"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borderline" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="416dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderline"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="일반요인"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="90dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/borderline"
+                        android:text="연령"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="90dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="체중"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="90dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="신장"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="90dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="임신희망여부"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_19세이하"
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="19세이하"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="만 35세 이상"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView76"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="초산"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="(체중/신장) > 25"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="150cm이하"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="170dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="원하지 않는 임신"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="10"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="10"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView77"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="10"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="5"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="5"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkBox5"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox4"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox19"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/borderline"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="80dp"
+                        android:layout_height="280dp"
+                        android:layout_gravity="center|center_horizontal"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="기존질환"
+                        android:textAlignment="center"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/textView78"
+                        android:layout_width="80dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="산과적요인" />
+
+                    <TextView
+                        android:id="@+id/textView95"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="현재 \n임신 상태" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView47"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="만성병"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="유전질환"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView49"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="성병"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="90dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="다태임신" />
+
+                    <TextView
+                        android:id="@+id/textView82"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="이상태위" />
+
+                    <TextView
+                        android:id="@+id/textView83"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="자궁이상" />
+
+                    <TextView
+                        android:id="@+id/textView84"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="외음부 첨형 콘딜로마" />
+
+                    <TextView
+                        android:id="@+id/textView85"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="RH(-) 임산부" />
+
+                    <TextView
+                        android:id="@+id/textView96"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="혈압상승" />
+
+                    <TextView
+                        android:id="@+id/textView97"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="과도한 \n체중증가" />
+
+                    <TextView
+                        android:id="@+id/textView98"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="두통" />
+
+                    <TextView
+                        android:id="@+id/textView99"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="시력감퇴" />
+
+                    <TextView
+                        android:id="@+id/textView100"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="오심, 구토" />
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="복통" />
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="질출혈" />
+
+                    <TextView
+                        android:id="@+id/textView103"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="조기양막파수" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="고혈압"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="심장병"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView60"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="신장병"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView59"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="당뇨"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="갑상선질환"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="폐질환"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="천식"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="간질"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="정신질환"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="혈관색전증"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="빈혈"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:text="염색체이상,\n대사장애성 질환 등"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="에이즈,매독,임질 등"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView80"
+                        android:layout_width="170dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="쌍태아 이상을\n임신한 경우" />
+
+                    <TextView
+                        android:id="@+id/textView86"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="둔위,안면위" />
+
+                    <TextView
+                        android:id="@+id/textView91"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="근종, 선천성자궁기형" />
+
+                    <TextView
+                        android:id="@+id/textView92"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="회음부 사마귀" />
+
+                    <TextView
+                        android:id="@+id/textView93"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView104"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="140/90mmHg이상" />
+
+                    <TextView
+                        android:id="@+id/textView105"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="임신 8,9,10개월 기간\n1kg/주 이상" />
+
+                    <TextView
+                        android:id="@+id/textView106"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView107"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView108"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView109"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView110"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/textView111"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="진통 시작 전에\n 양막이 파열되는 경우" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView74"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView73"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView70"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView67"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView65"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView64"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView63"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView87"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView88"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView89"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView90"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView112"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView113"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+
+                    <TextView
+                        android:id="@+id/textView114"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView115"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView116"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView117"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView118"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="10" />
+
+                    <TextView
+                        android:id="@+id/textView119"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline"
+                        android:gravity="center"
+                        android:text="20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borderline"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkBox9"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox10"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox11"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox16"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox17"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox12"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox13"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox14"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox15"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox8"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox7"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox6"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox18"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox21"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox37"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox38"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox39"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox40"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox41"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox42"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox43"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox44"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox45"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox46"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox47"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@drawable/borderline" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox48"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/borderline" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView123"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:text="점수 : "
+                    android:textAlignment="textEnd"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView122"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView124"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView125"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="점수가 80점 이상인 경우 \n산부인과 전문변원에서 산전 진찰 필수입니다!"
+                android:textAlignment="center"
+                android:textColor="#A37AEC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btnOK"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="확인" />
+
+                <Space
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
