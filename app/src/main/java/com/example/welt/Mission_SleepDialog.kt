@@ -34,7 +34,7 @@ import com.github.mikephil.charting.data.ChartData as ChartData1
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_mission__sleep_dialog, container, false) as ViewGroup
-
+////////
         //dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         btnOK = rootView.findViewById(R.id.btn_OK)
         btnOK.setOnClickListener{
