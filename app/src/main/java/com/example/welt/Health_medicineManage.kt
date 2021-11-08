@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class baby_movement : Fragment() {
+class Health_medicineManage : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
