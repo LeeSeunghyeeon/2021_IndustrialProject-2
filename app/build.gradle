@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -8,6 +9,9 @@ android {
 
     viewBinding{
         enabled = true
+    }
+    buildFeatures {
+        viewBinding true
     }
 
     defaultConfig {

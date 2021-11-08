@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import com.example.welt.databinding.FragmentContenetVisitHospitalBinding
+import com.example.welt.databinding.FragmentHealthExerciseBinding
+import com.example.welt.databinding.FragmentHealthSleepBinding
 
+class Health_sleep : DialogFragment() {
 
-
-class Contenet_VisitHospital : DialogFragment(){
-    private lateinit var binding: FragmentContenetVisitHospitalBinding
+    private lateinit var binding: FragmentHealthSleepBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +23,11 @@ class Contenet_VisitHospital : DialogFragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentContenetVisitHospitalBinding.inflate(inflater, container, false)
-        binding.VisitiHospitalOKbtn.setOnClickListener{
+        binding = FragmentHealthSleepBinding.inflate(inflater, container, false)
+        binding.BtnSleepCancel.setOnClickListener{
+            dismiss()
+        }
+        binding.BtnSleepOK.setOnClickListener {
             dismiss()
         }
         return binding.root
