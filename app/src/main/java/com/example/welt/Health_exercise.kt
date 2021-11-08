@@ -5,14 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
-import com.example.welt.databinding.FragmentContenetVisitHospitalBinding
+import com.example.welt.databinding.FragmentHealthExerciseBinding
+import kotlinx.android.synthetic.*
 
-
-
-class Contenet_VisitHospital : DialogFragment(){
-    private lateinit var binding: FragmentContenetVisitHospitalBinding
+class Health_exercise : DialogFragment() {
+    private lateinit var binding: FragmentHealthExerciseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +23,13 @@ class Contenet_VisitHospital : DialogFragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentContenetVisitHospitalBinding.inflate(inflater, container, false)
-        binding.VisitiHospitalOKbtn.setOnClickListener{
+        binding = FragmentHealthExerciseBinding.inflate(inflater, container, false)
+        binding.BtnExerciseCancel.setOnClickListener{
+            dismiss()
+        }
+        binding.BtnExerciseOK.setOnClickListener {
             dismiss()
         }
         return binding.root
     }
-
 }
