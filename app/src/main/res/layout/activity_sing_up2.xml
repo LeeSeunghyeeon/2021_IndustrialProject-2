@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context=".SingUpActivity2">
+
 
 
     <FrameLayout
@@ -20,8 +21,7 @@
             android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical"
-            android:stretchColumns="*"
-            >
+            android:stretchColumns="*">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -41,6 +41,7 @@
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -63,11 +64,11 @@
                     android:layout_span="2"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:minHeight="48dp"
-                    android:text="Name" />
+                    android:minHeight="48dp" />
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -95,6 +96,7 @@
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -111,7 +113,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/Btn_mommy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="1"
@@ -119,7 +121,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/Btn_papa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="1"
@@ -128,6 +130,7 @@
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -149,12 +152,12 @@
                     android:layout_span="2"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     tools:ignore="TouchTargetSizeCheck" />
 
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -183,19 +186,103 @@
             </TableRow>
 
             <TableRow
+                android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView139"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <Button
-                    android:id="@+id/button7"
+                    android:id="@+id/Btn_ID_Duplicate_Check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중복 체크" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView128"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="***"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView124"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전화번호"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName411"
+                    android:layout_width="wrap_content"
+                    android:layout_span="2"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Btn_Sign_Up"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_span="3"
                     android:text="회원가입"
                     android:textStyle="bold" />
+
             </TableRow>
         </TableLayout>
     </FrameLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

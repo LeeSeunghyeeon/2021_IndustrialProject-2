@@ -18,7 +18,7 @@ class SingUpActivity2 : AppCompatActivity() {
     }
 
     private fun init(){
-       binding.button7.setOnClickListener({
+       binding.BtnSignUp.setOnClickListener({
            val intent = Intent(this, SingInActivity::class.java)
            startActivity(intent)
        })

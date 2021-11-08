@@ -45,11 +45,11 @@
             android:layout_gravity="center"/>
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/Btn_Sign_In"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="로그인"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_gravity="center"
@@ -66,7 +66,7 @@
             android:layout_marginTop="10dp">
 
             <Button
-                android:id="@+id/signUp"
+                android:id="@+id/Btn_Sign_Up"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
@@ -76,10 +76,11 @@
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 app:layout_constraintVertical_bias="1.0" />
 
             <Button
-                android:id="@+id/editTextTextPersonName5"
+                android:id="@+id/Btn_Finding_ID"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
@@ -87,9 +88,25 @@
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="textPersonName"
-                android:text="아이디/비밀번호 찾기"
+                android:text="아이디 찾기"
                 android:textSize="12sp"
                 android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/Btn_Finding_PW"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFFFFF"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="비밀번호 찾기"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
                 app:layout_constraintVertical_bias="1.0" />
         </LinearLayout>
     </LinearLayout>

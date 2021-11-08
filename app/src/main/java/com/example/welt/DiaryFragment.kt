@@ -5,20 +5,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CalendarView
+import android.widget.TextView
+import com.example.welt.databinding.FragmentContenetVisitHospitalBinding
+import com.example.welt.databinding.FragmentDiaryBinding
 
 import java.io.FileInputStream
 import java.io.FileOutputStream
+import androidx.annotation.NonNull
+
+import android.R
+import android.widget.CalendarView.OnDateChangeListener
 
 
 class DiaryFragment : Fragment(){
+    private lateinit var binding: FragmentDiaryBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentDiaryBinding.inflate(inflater, container, false)
+        test()
+        return binding.root
+    }
 
+    private fun test(){
+        binding.calendarView.setOnDateChangeListener(OnDateChangeListener { view, year, month, dayOfMonth ->
+            binding.today.text = "$year 년 $month 월 $dayOfMonth 일"
+        })
 
-        return inflater.inflate(R.layout.fragment_diary, container, false) }
+    }
 
 }
 

@@ -18,12 +18,20 @@ class SingInActivity : AppCompatActivity() {
     }
 
     private fun init(){
-        binding.signUp.setOnClickListener {
+        binding.BtnSignUp.setOnClickListener {
             val intent = Intent(this, SingUpActivity2::class.java)
             startActivity(intent)
         }
-        binding.button8.setOnClickListener({
+        binding.BtnSignIn.setOnClickListener({
             val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        })
+        binding.BtnFindingID.setOnClickListener({
+            val intent = Intent(this, Sign_Finding_ID::class.java)
+            startActivity(intent)
+        })
+        binding.BtnFindingPW.setOnClickListener({
+            val intent = Intent(this, Sign_Finding_PW::class.java)
             startActivity(intent)
         })
 
