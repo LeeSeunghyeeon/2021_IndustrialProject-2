@@ -7,13 +7,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
 import com.example.welt.databinding.FragmentContentBinding
 import com.example.welt.databinding.FragmentHealthBinding
-=======
-import com.example.welt.databinding.FragmentHealthBinding
-import com.example.welt.databinding.FragmentMissionBinding
->>>>>>> 9402a92131393ac3166ea96cefe7bb01bf42d682
 
 
 class HealthFragment : Fragment() {
@@ -23,33 +18,6 @@ class HealthFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-<<<<<<< HEAD
-
-        binding = FragmentHealthBinding.inflate(inflater, container, false)
-        showDialog()
-        return binding.root
-
-        // Inflate the layout for this fragment
-       // return inflater.inflate(R.layout.fragment_health, container, false)
-        }
-
-    private fun showDialog(){
-        binding.BtnBabyMovement.setOnClickListener{
-            val baby_movement_Dialog = Health_babyMovement()
-            activity?.supportFragmentManager?.let { fragmentManager ->
-               // baby_movement_Dialog.show(fragmentManager, "Health_babyMovement")
-            }
-        }
-
-        binding.BtnMedicineManage.setOnClickListener{
-            val baby_movement_Dialog = Health_medicineManage()
-            activity?.supportFragmentManager?.let { fragmentManager ->
-                //baby_movement_Dialog.show(fragmentManager, "Health_medicineManage")
-            }
-        }
-
-    }
-=======
         binding = FragmentHealthBinding.inflate(inflater, container, false)
         setButtonClickEvent()
         return binding.root
@@ -105,5 +73,4 @@ class HealthFragment : Fragment() {
         }
     }
 
->>>>>>> 9402a92131393ac3166ea96cefe7bb01bf42d682
 }
