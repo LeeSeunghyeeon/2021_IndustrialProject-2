@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.DialogFragment
-import com.example.welt.databinding.FragmentHealthMedicineManageBinding
 
-class Health_medicineManage : DialogFragment() {
-    private lateinit var binding: FragmentHealthMedicineManageBinding
+class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
+    private lateinit var btnOK: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,14 +21,21 @@ class Health_medicineManage : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHealthMedicineManageBinding.inflate(inflater, container, false)
+        var rootView =
+            inflater.inflate(R.layout.fragment_mission_burnt_cal_dialog, container, false) as ViewGroup
+////////
+        //dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        btnOK = rootView.findViewById(R.id.btn_OK)
+        btnOK.setOnClickListener {
+            dismiss()
+        }
 
-        binding.BtnBabymcancle.setOnClickListener {
-            dismiss()
-        }
-        binding.BtnBabymOK.setOnClickListener {
-            dismiss()
-        }
-        return binding.root
+        return rootView
     }
+
+    override fun onClick(v: View?) {
+        dismiss()
+    }
+
+
 }

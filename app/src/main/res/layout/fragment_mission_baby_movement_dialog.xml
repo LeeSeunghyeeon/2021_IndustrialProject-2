@@ -16,26 +16,28 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:background="#875DD3"
-            android:text="수면"
+            android:text="태동"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/piechart"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="20dp"
-            tools:ignore="MissingClass" />
-
         <TextView
-            android:id="@+id/sleepFeedbackText"
+            android:id="@+id/movementText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="잠이 부족합니다"
+            android:text="10:00 ~ 11:00 태동 9회"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/movementText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="13:10 ~ 14:10 태동 9회"
             android:textStyle="bold" />
 
         <Button

@@ -9,35 +9,38 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.components.XAxis.XAxisPosition
 import com.github.mikephil.charting.components.YAxis
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
+import com.github.mikephil.charting.utils.MPPointF
+import kotlinx.android.synthetic.main.fragment_mission__sleep_dialog.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import com.github.mikephil.charting.data.ChartData as ChartData1
 
-        class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
-        var chart :LineChart?= null
-        private lateinit var btnOK:Button
+class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
+    var chart: PieChart? = null
+    private lateinit var btnOK: Button
 
-        override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var rootView = inflater.inflate(R.layout.fragment_mission__sleep_dialog, container, false) as ViewGroup
+        var rootView =
+            inflater.inflate(R.layout.fragment_mission__sleep_dialog, container, false) as ViewGroup
 ////////
         //dialog?.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         btnOK = rootView.findViewById(R.id.btn_OK)
-        btnOK.setOnClickListener{
+        btnOK.setOnClickListener {
             dismiss()
         }
 
@@ -49,87 +52,64 @@ import com.github.mikephil.charting.data.ChartData as ChartData1
         dismiss()
     }
 
-    private fun initUI(rootView:ViewGroup){
-        chart = rootView.findViewById(R.id.linechart)
+    private fun initUI(rootView: ViewGroup) {
+        chart = rootView.findViewById(R.id.piechart)
+        chart!!.setUsePercentValues(true)
         chart!!.description.isEnabled = false
-        chart!!.setDrawGridBackground(false)
-        chart!!.setBackgroundColor(Color.WHITE)
-        chart!!.setViewPortOffsets(0f, 0f, 0f, 0f)
-        
-        val legend = chart!!.legend
-        legend.isEnabled = false
-        
-        val xAxis = chart!!.xAxis
-        xAxis.position = XAxis.XAxisPosition.BOTTOM_INSIDE
-        xAxis.textSize = 10f
-        xAxis.textColor = Color.WHITE
-        xAxis.setDrawAxisLine(false)
-        xAxis.setDrawGridLines(true)
-        xAxis.textColor = Color.BLACK
-        xAxis.setCenterAxisLabels(true)
-        xAxis.granularity = 1f
-        xAxis.setValueFormatter(object : ValueFormatter() {
-            private val mFormat =
-                SimpleDateFormat("MM-DD", Locale.KOREA)
 
-            override fun getFormattedValue(value: Float): String? {
-                val millis =
-                    TimeUnit.HOURS.toMillis(value.toLong())
-                return mFormat.format(Date(millis))
-            }
-        })
+        chart!!.setTransparentCircleColor(Color.WHITE)
+        chart!!.setTransparentCircleAlpha(110)
 
-        val leftAxis = chart!!.getAxisLeft()
-        leftAxis.setPosition(YAxis.YAxisLabelPosition.INSIDE_CHART)
-        leftAxis.textColor = Color.BLACK
-        leftAxis.setDrawGridLines(true)
-        leftAxis.isGranularityEnabled = true
-        leftAxis.axisMinimum = 30f
-        leftAxis.axisMaximum = 100f
-        leftAxis.yOffset = -9f
-        leftAxis.textColor = Color.BLACK
+        chart!!.holeRadius = 58f
+        chart!!.transparentCircleRadius = 61f
 
-        val rightAxis= chart!!.getAxisRight()
-        rightAxis.isEnabled = false
+        chart!!.setDrawCenterText(true)
+
+        chart!!.isHighlightPerTapEnabled = true
+
+        val legent1 = chart!!.legend
+        legent1.isEnabled = false
+
+        chart!!.setEntryLabelColor(Color.WHITE)
+        chart!!.setEntryLabelTextSize(12f)
 
         setData()
+
     }
 
     private fun setData(){
-        val values =
-            ArrayList<Entry>()
-        values.add(Entry(24f, 53.0f))
-        values.add(Entry(48f, 54.0f))
-        values.add(Entry(72f, 54.5f))
-        values.add(Entry(96f, 55.0f))
-        values.add(Entry(120f, 56.0f))
-
-        // create a dataset and give it a type
-        val set1 = LineDataSet(values, "DataSet 1")
-        set1.axisDependency = YAxis.AxisDependency.LEFT
-        set1.color = Color.rgb(97,93,188)
-        set1.valueTextColor = Color.rgb(97,93,188)
-        set1.lineWidth = 1.5f
-        set1.setDrawCircles(true)
-        set1.setDrawValues(false)
-        set1.fillAlpha = 65
-        set1.fillColor = Color.rgb(97,93,188)
-        context?.let { ContextCompat.getColor(it, R.color.purple_200) }?.let {
-            set1.setCircleColor(
-                it
+        val entries = ArrayList<PieEntry>()
+        entries.add(
+            PieEntry(
+                50.0f, "",
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_baseline_bedtime_24, null)
             )
+
+        )
+        entries.add(
+            PieEntry(
+                50.0f, "",
+                ResourcesCompat.getDrawable(getResources(), R.drawable.ic_baseline_wb_sunny_24, null)
+            )
+
+        )
+
+        val dataSet = PieDataSet(entries, "수면 시간")
+        dataSet.setDrawIcons(true)
+        dataSet.sliceSpace = 3f
+        dataSet.iconsOffset = MPPointF(0F, (-40).toFloat())
+        dataSet.selectionShift = 5f
+        val colors = ArrayList<Int>()
+        for (c in ColorTemplate.JOYFUL_COLORS) {
+            colors.add(c)
         }
-        set1.highLightColor = Color.rgb(244, 117, 117)
-        set1.setDrawCircleHole(false)
-
-        // create a data object with the data sets
-        val data = LineData(set1)
+        dataSet.colors = colors
+        val data = PieData(dataSet)
+        data.setValueTextSize(22.0f)
         data.setValueTextColor(Color.WHITE)
-        data.setValueTextSize(9f)
-
-        // set data
         chart!!.data = data
         chart!!.invalidate()
     }
+
 
 }

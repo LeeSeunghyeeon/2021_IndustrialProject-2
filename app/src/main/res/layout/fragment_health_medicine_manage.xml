@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,65 +16,51 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="139dp"
-            android:layout_marginTop="102dp"
-            android:layout_marginEnd="139dp"
-            android:layout_marginBottom="70dp"
+            android:textAlignment="center"
             android:text="복약 관리"
             android:textColor="#000000"
             android:textSize="34sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="245dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="83dp"
-            android:layout_marginEnd="83dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="약 이름  |  횟수  |  식전/식후"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" >
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="245dp"
+                android:layout_height="57dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="약 이름  |  횟수  |  식전/식후"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="46dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="285dp"
-                android:layout_marginBottom="398dp"
                 android:backgroundTint="#C87BB7E8"
                 android:text="+"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" >
 
             <EditText
                 android:id="@+id/editTextTextPersonName9"
                 android:layout_width="65dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="280dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="철분제" />
@@ -83,9 +69,6 @@
                 android:id="@+id/editTextTextPersonName11"
                 android:layout_width="73dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="280dp"
-                android:layout_marginEnd="7dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text=" 1번  ▼" />
@@ -94,38 +77,22 @@
                 android:id="@+id/editTextTextPersonName14"
                 android:layout_width="95dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="280dp"
-                android:layout_marginEnd="83dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text=" 식전   ▼" />
 
-        </LinearLayout>
-    </LinearLayout>
+        </TableRow>
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"  >
 
             <EditText
                 android:id="@+id/editTextTextPersonName13"
                 android:layout_width="65dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="85dp"
-                android:layout_marginTop="335dp"
-                android:layout_marginBottom="340dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="비타민" />
@@ -134,9 +101,6 @@
                 android:id="@+id/editTextTextPersonName15"
                 android:layout_width="73dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="335dp"
-                android:layout_marginBottom="60dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text=" 2번  ▼" />
@@ -145,16 +109,39 @@
                 android:id="@+id/editTextTextPersonName12"
                 android:layout_width="95dp"
                 android:layout_height="47dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="335dp"
-                android:layout_marginEnd="83dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text=" 식후   ▼" />
+        </TableRow>
 
-        </LinearLayout>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" >
+
+            <Button
+                android:id="@+id/BtnBabymOK"
+                android:layout_width="118dp"
+                android:layout_height="57dp"
+                android:text="저장"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:backgroundTint="#BFDE98EA" />
+
+            <Button
+                android:id="@+id/BtnBabymcancle"
+                android:layout_width="118dp"
+                android:layout_height="57dp"
+                android:text="취소"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                tools:backgroundTint="#BFDE98EA" />
+        </TableRow>
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
