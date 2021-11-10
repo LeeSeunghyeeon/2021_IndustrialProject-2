@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1036661814432",
+    "project_id": "welt-766ac",
+    "storage_bucket": "welt-766ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036661814432:android:5a690b334366e8026a85c5",
+        "android_client_info": {
+          "package_name": "com.example.welt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036661814432-derf915b35c2btk3d4vafot5soo60chk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.welt",
+            "certificate_hash": "02c1d41710f423c28fa0b1d1feea7e5cccdf5b42"
+          }
+        },
+        {
+          "client_id": "1036661814432-qj6081h1qu7nc6c2uib2djihtjb1sdn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9phZlq7nwHCxfr8XEiTx0a8gMMobnK0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036661814432-qj6081h1qu7nc6c2uib2djihtjb1sdn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

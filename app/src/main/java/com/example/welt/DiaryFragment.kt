@@ -32,10 +32,16 @@ class DiaryFragment : Fragment(){
 
     private fun test(){
         binding.calendarView.setOnDateChangeListener(OnDateChangeListener { view, year, month, dayOfMonth ->
-            binding.today.text = "$year 년 $month 월 $dayOfMonth 일"
+            binding.today.text = String.format("%d년 %d월 %d일", year, month+1, dayOfMonth)
+            binding.contextEditText.visibility = View.VISIBLE
+            binding.saveBtn.visibility = View.VISIBLE
+            binding.chaBtn.visibility = View.VISIBLE
+            binding.delBtn.visibility = View.VISIBLE
+
         })
 
     }
+
 
 }
 
