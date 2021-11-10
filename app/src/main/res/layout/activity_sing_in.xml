@@ -68,7 +68,7 @@
             <Button
                 android:id="@+id/Btn_Sign_Up"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -82,7 +82,7 @@
             <Button
                 android:id="@+id/Btn_Finding_ID"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
@@ -97,7 +97,7 @@
             <Button
                 android:id="@+id/Btn_Finding_PW"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
