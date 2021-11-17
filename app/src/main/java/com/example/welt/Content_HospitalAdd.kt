@@ -1,5 +1,6 @@
 package com.example.welt
 
+import android.app.TimePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,13 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
-import com.example.welt.databinding.FragmentContenetVisitHospitalBinding
+import com.example.welt.databinding.FragmentContentHospitalAddBinding
+import com.example.welt.databinding.FragmentContentHospitalBinding
 
+class Content_HospitalAdd : DialogFragment() {
 
-
-class Contenet_VisitHospital : DialogFragment(){
-    private lateinit var binding: FragmentContenetVisitHospitalBinding
-
+    private lateinit var binding: FragmentContentHospitalAddBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -24,11 +24,13 @@ class Contenet_VisitHospital : DialogFragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentContenetVisitHospitalBinding.inflate(inflater, container, false)
-        binding.VisitiHospitalOKbtn.setOnClickListener{
+        // Inflate the layout for this fragment
+
+        binding = FragmentContentHospitalAddBinding.inflate(inflater, container, false)
+        binding.hospitalAddSaveBtn.setOnClickListener{
             dismiss()
         }
-        return binding.root
+        return inflater.inflate(R.layout.fragment_content__hospital_add, container, false)
     }
 
 }

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView
 import android.widget.TextView
-import com.example.welt.databinding.FragmentContenetVisitHospitalBinding
 import com.example.welt.databinding.FragmentDiaryBinding
 
 import java.io.FileInputStream

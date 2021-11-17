@@ -41,10 +41,10 @@ class ContentFragment : Fragment() {
             }}
 
         binding.button6.setOnClickListener{
-            val VisitDialog = Contenet_VisitHospital()
-            activity?.supportFragmentManager?.let { fragmentManager ->
-                VisitDialog.show(fragmentManager, "Content_Visit_Hospital")
-                }
+            val show_hospital = activity?.supportFragmentManager?.beginTransaction()
+            if (show_hospital != null) {
+                show_hospital.replace(R.id.frameLayout_content,Content_Hospital()).addToBackStack(null).commit()
+            }
             }
     }
 

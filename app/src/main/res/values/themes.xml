@@ -16,4 +16,7 @@
 
         <!-- Customize your theme here. -->
     </style>
+    <style name="ActionBarTextColor" parent="android:TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>

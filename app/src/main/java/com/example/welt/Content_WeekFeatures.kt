@@ -22,8 +22,6 @@ class Content_WeekFeatures : Fragment() {
     ): View? {
         binding = FragmentContentWeekFeaturesBinding.inflate(inflater, container, false)
         binding.OKbtn.setOnClickListener{
-            //val show_content = activity?.supportFragmentManager?.beginTransaction()
-            //val frameLayout = activity?.supportFragmentManager?.findFragmentById(R.id.framelayout_week)
             val fragmentManager: FragmentManager? = activity?.supportFragmentManager
             if (fragmentManager != null) {
                 fragmentManager.beginTransaction().remove(Content_WeekFeatures()).commit()

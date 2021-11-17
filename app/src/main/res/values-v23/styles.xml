@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" tools:ignore="DuplicateDefinition">
+    <style name="AppTheme" parent="Theme.AppCompat.Light" tools:ignore="DuplicateDefinition">
         <item name="colorPrimary">#FFFFFF</item>
         <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
         <item name="colorAccent">#FFFFFF</item>
-        <item name="android:windowLightStatusBar">false</item>
-
 
     </style>
 
