@@ -117,7 +117,7 @@
                         android:layout_width="150dp"
                         android:layout_height="237dp"
                         android:layout_margin="10dp"
-                        android:src="@drawable/week7_blueberry" />
+                        android:src="@drawable/week07_blueberry" />
 
                     <LinearLayout
                         android:layout_width="216dp"
