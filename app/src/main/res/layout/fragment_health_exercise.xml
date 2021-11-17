@@ -40,28 +40,6 @@
         android:layout_marginTop="20dp">
 
         <EditText
-            android:id="@+id/hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="numberSigned"
-            android:text="1" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시간" />
-    </TableRow>
-
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp">
-
-        <EditText
             android:id="@+id/min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,6 +70,13 @@
 
         <Button
             android:id="@+id/Btn_exerciseCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취소" />
+
+        <Button
+            android:id="@+id/Btn_exerciseModify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -26,49 +26,49 @@ class HealthFragment : Fragment() {
     private fun setButtonClickEvent(){
         // 운동
         binding.BtnExercise.setOnClickListener{
-            val exerciseDialog = Health_exercise()
+            val dialog = Health_exercise()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_exercise_dialog")
+                dialog.show(fragmentManager, "Health_exercise_dialog")
             }
         }
 
         // 식사
         binding.BtnMeal.setOnClickListener{
-            val exerciseDialog = Health_meal()
+            val dialog = Health_meal()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_meal_dialog")
+                dialog.show(fragmentManager, "Health_meal_dialog")
             }
         }
 
         // 수면
         binding.BtnSleep.setOnClickListener{
-            val exerciseDialog = Health_sleep()
+            val dialog = Health_sleep()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_sleep_dialog")
+                dialog.show(fragmentManager, "Health_sleep_dialog")
             }
         }
 
         // 체중
         binding.BtnWeight.setOnClickListener{
-            val exerciseDialog = Health_weight()
+            val dialog = Health_weight()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_weight_dialog")
+                dialog.show(fragmentManager, "Health_weight_dialog")
             }
         }
 
         // 태동
         binding.BtnBabyMovement.setOnClickListener{
-            val exerciseDialog = Health_babyMovement()
+            val dialog = Health_babyMovement()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_babyMovement_dialog")
+                dialog.show(fragmentManager, "Health_babyMovement_dialog")
             }
         }
 
-        // 복약
+        // 복약 (프래그먼트 - 프래그먼트)
         binding.BtnMedicineManage.setOnClickListener{
-            val exerciseDialog = Health_medicineManage()
+            val dialog = Health_medicineManage()
             activity?.supportFragmentManager?.let { fragmentManager ->
-                exerciseDialog.show(fragmentManager, "Health_medicineManage_dialog")
+                dialog.show(fragmentManager, "Health_medicineManage_dialog")
             }
         }
     }

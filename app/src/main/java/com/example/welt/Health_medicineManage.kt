@@ -22,6 +22,12 @@ class Health_medicineManage : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHealthMedicineManageBinding.inflate(inflater, container, false)
+        
+        binding.addMedicine.setOnClickListener { 
+            // 약 추가하기
+        }
+
+        // 삭제하기
 
         binding.BtnBabymcancle.setOnClickListener {
             dismiss()
