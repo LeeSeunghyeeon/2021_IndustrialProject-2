@@ -23,7 +23,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress4"
+            android:id="@+id/input_Id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -34,7 +34,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress5"
+            android:id="@+id/input_PW"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

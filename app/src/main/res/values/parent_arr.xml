@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="parent_arr">
+        <item>엄마👩</item>
+        <item>아빠👨</item>
+    </string-array>
+</resources>

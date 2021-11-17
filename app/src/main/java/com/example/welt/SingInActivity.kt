@@ -3,37 +3,69 @@ package com.example.welt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.RelativeLayout
+import android.widget.Toast
 import com.example.welt.databinding.ActivitySingInBinding
 import com.example.welt.databinding.ActivitySingUp2Binding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 class SingInActivity : AppCompatActivity() {
     lateinit var binding: ActivitySingInBinding
+    lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySingInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        mAuth = FirebaseAuth.getInstance()
 
         init()
     }
 
     private fun init(){
         binding.BtnSignUp.setOnClickListener {
-            val intent = Intent(this, SingUpActivity2::class.java)
-            startActivity(intent)
+            changeActivity(SingUpActivity2::class.java)
         }
         binding.BtnSignIn.setOnClickListener({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            signIn()
+
         })
         binding.BtnFindingID.setOnClickListener({
-            val intent = Intent(this, Sign_Finding_ID::class.java)
-            startActivity(intent)
+            changeActivity(Sign_Finding_ID::class.java)
         })
         binding.BtnFindingPW.setOnClickListener({
-            val intent = Intent(this, Sign_Finding_PW::class.java)
-            startActivity(intent)
+            changeActivity(Sign_Finding_PW::class.java)
         })
 
+    }
+
+    private fun signIn(){
+        if (binding.inputId.length() > 0 && binding.inputPW.length() > 0) {
+            mAuth.signInWithEmailAndPassword(binding.inputId.text.toString(), binding.inputPW.text.toString())
+                .addOnCompleteListener(this,
+                    OnCompleteListener<AuthResult?> { task ->
+                        if (task.isSuccessful) {
+                            val user: FirebaseUser? = mAuth.getCurrentUser()
+                            Toast.makeText(this, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT)
+                            changeActivity(MainActivity::class.java)
+                        } else {
+                            if (task.exception != null) {
+                                Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT)
+                            }
+                        }
+                    })
+        } else {
+            Toast.makeText(this, "이메일 또는 비밀번호를 입력해 주세요.", Toast.LENGTH_SHORT)
+        }
+    }
+
+    private fun changeActivity(c: Class<*>) {
+        val intent = Intent(this, c)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
     }
 }

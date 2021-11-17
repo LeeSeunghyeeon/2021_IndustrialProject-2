@@ -48,7 +48,7 @@
                 android:gravity="center">
 
                 <TextView
-                    android:id="@+id/minute"
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -58,7 +58,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                    android:id="@+id/input_Name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
@@ -84,15 +84,24 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextDate3"
+                <DatePicker
+                    android:id="@+id/parentDateSpinner"
+                    android:layout_span="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="2"
-                    android:ems="10"
-                    android:inputType="date"
-                    android:minHeight="48dp"
-                    tools:ignore="SpeakableTextPresentCheck" />
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+
+                <!--
+                                <EditText
+                                    android:id="@+id/editTextDate3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_span="2"
+                                    android:ems="10"
+                                    android:inputType="date"
+                                    android:minHeight="48dp"
+                                    tools:ignore="SpeakableTextPresentCheck" /> -->
             </TableRow>
 
             <TableRow
@@ -112,21 +121,30 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/Btn_mommy"
+                <Spinner
+                    android:id="@+id/spinner_parent"
+                    android:layout_span="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_span="1"
-                    android:text="엄마👩"
-                    android:textStyle="bold" />
+                    android:spinnerMode="dropdown" />
 
-                <Button
-                    android:id="@+id/Btn_papa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_span="1"
-                    android:text="아빠👨"
-                    android:textStyle="bold" />
+
+                <!--
+                                <Button
+                                    android:id="@+id/Btn_mommy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_span="1"
+                                    android:text="엄마👩"
+                                    android:textStyle="bold" />
+
+                                <Button
+                                    android:id="@+id/Btn_papa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_span="1"
+                                    android:text="아빠👨"
+                                    android:textStyle="bold" /> -->
             </TableRow>
 
             <TableRow
@@ -146,13 +164,22 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <DatePicker
+                    android:id="@+id/babyDateSpinner"
+                    android:layout_span="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner" />
+
+                <!--
                 <EditText
                     android:id="@+id/editTextTextPersonName4"
                     android:layout_width="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck" /> -->
 
             </TableRow>
 
@@ -174,7 +201,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextDate2"
+                    android:id="@+id/input_BabyName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
@@ -201,7 +228,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName2"
+                    android:id="@+id/input_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
@@ -231,7 +258,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName6"
+                    android:id="@+id/input_pw"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
@@ -258,7 +285,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/editTextTextPersonName411"
+                    android:id="@+id/input_telNum"
                     android:layout_width="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
