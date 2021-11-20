@@ -121,7 +121,6 @@
                     android:hint="오늘 하루 있었던 일이나 산모님의 감정 등을 자유롭게 기록해주세요."
                     android:inputType="textMultiLine"
                     android:textSize="13sp"
-                    android:visibility="invisible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/today"
@@ -139,8 +138,7 @@
                     android:layout_marginRight="8dp"
                     app:layout_constraintStart_toStartOf="@+id/contextEditText"
                     android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:visibility="invisible"/>
+                    android:layout_marginStart="8dp" />
 
 
                 <Button
@@ -156,8 +154,7 @@
                     android:text="저장"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/contextEditText"
-                    android:visibility="invisible"/>
+                    app:layout_constraintTop_toBottomOf="@+id/contextEditText" />
 
                 <Button
                     android:id="@+id/cha_Btn"

@@ -18,6 +18,8 @@ import android.R
 import android.widget.CalendarView.OnDateChangeListener
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_diary.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class DiaryFragment : Fragment(){
@@ -26,18 +28,34 @@ class DiaryFragment : Fragment(){
     lateinit var fname : String
     lateinit var str : String
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDiaryBinding.inflate(inflater, container, false)
+
+        val currentDate = currentDate()
+        binding.today.setText(currentDate.dateToString("yyyy년 MM월 dd일"))
         test()
+
         return binding.root
+    }
+
+    private fun Date.dateToString(format:String, local : Locale = Locale.getDefault()) : String{
+        val formatter = SimpleDateFormat(format, local)
+        return formatter.format(this)
+    }
+
+    private fun currentDate() : Date{
+        return Calendar.getInstance().time
     }
 
     private fun test(){
         binding.calendarView.setOnDateChangeListener(OnDateChangeListener { view, year, month, dayOfMonth ->
             binding.today.text = String.format("%d년 %d월 %d일", year, month + 1, dayOfMonth)
+
             binding.contextEditText.visibility = View.VISIBLE
             binding.saveBtn.visibility = View.VISIBLE
             binding.diaryContent.visibility = View.INVISIBLE
@@ -75,13 +93,13 @@ class DiaryFragment : Fragment(){
         var fis: FileInputStream? = null
 
         try{
-//           fis = openFileInput(fname)
+//            fis = openFileInput(fname)
 //
 //           var fileData = ByteArray(fis.available())
 //
 //           fis.read(fileData)
 //           fis.close()
-//
+
 //           str = String(fileData)
 
             contextEditText.visibility = View.INVISIBLE
