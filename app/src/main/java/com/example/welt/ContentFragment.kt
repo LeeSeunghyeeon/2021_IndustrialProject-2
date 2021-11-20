@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import com.example.welt.databinding.FragmentContentBinding
 import android.content.Intent
 import android.net.Uri
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 
 class ContentFragment : Fragment() {
     private lateinit var binding: FragmentContentBinding
@@ -24,6 +27,16 @@ class ContentFragment : Fragment() {
             startActivity(intent)
         }
         binding.button7.setOnClickListener{
+//            myRef.addValueEventListener(object :ValueEventListener{
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//                    val value = snapshot?.value
+//                    binding.button7.setText("$value")
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {
+//                    println("Failed")
+//                }
+//            })
             var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gimpo.go.kr/health/contents.do?key=2196"))
             startActivity(intent)
         }

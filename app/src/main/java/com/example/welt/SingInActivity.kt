@@ -12,6 +12,11 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+
+val database : FirebaseDatabase = FirebaseDatabase.getInstance()
+val myRef : DatabaseReference = database.reference
 
 class SingInActivity : AppCompatActivity() {
     lateinit var binding: ActivitySingInBinding
@@ -31,6 +36,7 @@ class SingInActivity : AppCompatActivity() {
             changeActivity(SingUpActivity2::class.java)
         }
         binding.BtnSignIn.setOnClickListener({
+            myRef.child("User").child("2").setValue("hi")
             signIn()
 
         })
