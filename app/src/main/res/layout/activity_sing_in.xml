@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textEmailAddress"
-            android:text="아이디"
+            android:hint="아이디"
             android:layout_marginTop="10dp"
             tools:ignore="TouchTargetSizeCheck"
             android:layout_gravity="center"/>
@@ -41,7 +41,7 @@
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:layout_marginTop="10dp"
-            android:text="비밀번호"
+            android:hint="비밀번호"
             android:layout_gravity="center"/>
 
         <Button
