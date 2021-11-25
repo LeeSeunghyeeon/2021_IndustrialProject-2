@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -30,7 +31,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/content_todaydate"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_column="2"
@@ -64,7 +65,7 @@
                             android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/textView31"
+                            android:id="@+id/content_remainingDays"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_column="2"
@@ -113,7 +114,7 @@
                     android:layout_height="264dp">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/content_weekPhoto"
                         android:layout_width="150dp"
                         android:layout_height="237dp"
                         android:layout_margin="10dp"
@@ -129,17 +130,18 @@
                             android:layout_height="34dp" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/content_showWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:text="7주차"
+                            android:textAlignment="center"
                             android:textColor="#673AB7"
                             android:textSize="28sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/textView11"
+                            android:id="@+id/content_weekSize"
                             android:layout_width="230dp"
                             android:layout_height="110dp"
                             android:gravity="center"
@@ -147,7 +149,7 @@
                             android:textSize="24sp" />
 
                         <TextView
-                            android:id="@+id/textView30"
+                            android:id="@+id/content_weekBody"
                             android:layout_width="match_parent"
                             android:layout_height="35dp"
                             android:text="(1.30cm , - )"
@@ -164,7 +166,7 @@
                                 android:layout_height="44dp" />
 
                             <Button
-                                android:id="@+id/button8"
+                                android:id="@+id/content_moreBtn"
                                 android:layout_width="70dp"
                                 android:layout_height="35dp"
                                 android:background="#E1D5F4"
@@ -205,7 +207,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/content_youtubeBtn"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
@@ -214,7 +216,7 @@
                         android:text="마음챙김 태교영상" />
 
                     <Button
-                        android:id="@+id/button6"
+                        android:id="@+id/content_hospitalBtn"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
@@ -227,7 +229,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/content_highBtn"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
@@ -236,7 +238,7 @@
                         android:text="고위험 임신군 \n위험도 측정" />
 
                     <Button
-                        android:id="@+id/button7"
+                        android:id="@+id/content_depressionBtn"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
@@ -246,7 +248,6 @@
             </TableLayout>
 
         </FrameLayout>
-
 
 
     </RelativeLayout>

@@ -3,15 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-   >
+    tools:context=".Health_babyMovement">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+<<<<<<< HEAD
+        <LinearLayout
+=======
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/content_showWeek"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -42,43 +49,122 @@
 
         <EditText
             android:id="@+id/editTextNumber2"
+>>>>>>> 469d4d05daf806b4e7c65835976126b4bee79b24
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="number"
-            android:text="횟수  |  5번                      ▼" />
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="👶 태동 기록"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="시작 시간"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#000000" />
+
+                <TimePicker
+                    android:id="@+id/timePicker_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:timePickerMode="spinner"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="종료 시간"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000" />
+
+                <TimePicker
+                    android:id="@+id/timePicker_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:timePickerMode="spinner"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:text="횟수"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/babyM_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:hint="7"
+                    android:inputType="numberSigned" />
 
 
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp" >
+            </TableRow>
 
-            <Button
-                android:id="@+id/BtnBabymOK"
-                android:layout_width="118dp"
-                android:layout_height="57dp"
-                android:text="저장"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:backgroundTint="#BFDE98EA" />
 
-            <Button
-                android:id="@+id/BtnBabymcancle"
-                android:layout_width="118dp"
-                android:layout_height="57dp"
-                android:text="취소"
-                android:textSize="16sp"
-                android:textStyle="bold"
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
 
-                tools:backgroundTint="#BFDE98EA" />
-        </TableRow>
+                <Button
+                    android:id="@+id/BtnBabymOK"
+                    android:layout_width="118dp"
+                    android:layout_height="57dp"
+                    android:text="저장"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:backgroundTint="#BFDE98EA" />
+
+                <Button
+                    android:id="@+id/BtnBabymcancle"
+                    android:layout_width="118dp"
+                    android:layout_height="57dp"
+                    android:text="취소"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    tools:backgroundTint="#BFDE98EA" />
+            </TableRow>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-
+    </ScrollView>
 </FrameLayout>

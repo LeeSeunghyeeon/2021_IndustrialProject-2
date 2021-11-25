@@ -1,11 +1,22 @@
 package com.example.welt
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
+import android.widget.Toast
 import com.example.welt.databinding.ActivitySignFindingIdBinding
 import com.example.welt.databinding.ActivitySignFindingPwBinding
+import com.example.welt.databinding.ActivitySingUp2Binding
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_sign_finding_id.*
+import java.io.IOException
 
+var mAuth: FirebaseAuth? =null
 class Sign_Finding_PW : AppCompatActivity() {
     lateinit var binding: ActivitySignFindingPwBinding
 
@@ -18,6 +29,22 @@ class Sign_Finding_PW : AppCompatActivity() {
     }
 
     private fun init(){
+        binding.BtnFindingPWNext.setOnClickListener{
+
+            if(user_name.length()>0&&user_phone.length()>0){
+                FirebaseAuth.getInstance().sendPasswordResetEmail(binding.userId.text.toString())
+                    .addOnCompleteListener {	task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(this, "비밀번호 재설정 메일을 보냈습니다.", Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this, "정확한 정보를 입력하세요.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }else{
+                Toast.makeText(this, "모든 항목을 입력하세요.", Toast.LENGTH_SHORT).show()
+            }
+
+        }
         binding.BtnPWCancel.setOnClickListener {
             val intent = Intent(this, SingInActivity::class.java)
             startActivity(intent)
