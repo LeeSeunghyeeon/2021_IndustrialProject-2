@@ -36,7 +36,6 @@ class SingInActivity : AppCompatActivity() {
             changeActivity(SingUpActivity2::class.java)
         }
         binding.BtnSignIn.setOnClickListener({
-            myRef.child("User").child("2").setValue("hi")
             signIn()
 
         })
@@ -56,16 +55,18 @@ class SingInActivity : AppCompatActivity() {
                     OnCompleteListener<AuthResult?> { task ->
                         if (task.isSuccessful) {
                             val user: FirebaseUser? = mAuth.getCurrentUser()
-                            Toast.makeText(this, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT)
+                            Toast.makeText(this, "로그인에 성공하였습니다.", Toast.LENGTH_SHORT).show()
                             changeActivity(MainActivity::class.java)
+                            binding.inputId.text=null
+                            binding.inputPW.text=null
                         } else {
                             if (task.exception != null) {
-                                Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT)
+                                Toast.makeText(this, "로그인 정보를 다시 확인하세요.", Toast.LENGTH_SHORT).show()
                             }
                         }
                     })
         } else {
-            Toast.makeText(this, "이메일 또는 비밀번호를 입력해 주세요.", Toast.LENGTH_SHORT)
+            Toast.makeText(this, "아이디 또는 비밀번호를 입력해 주세요.", Toast.LENGTH_SHORT).show()
         }
     }
 
