@@ -8,10 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import com.example.welt.databinding.FragmentContentWeekFeaturesBinding
 
-
 class Content_WeekFeatures : Fragment() {
     private lateinit var binding: FragmentContentWeekFeaturesBinding
-
+    private var url = "https://www.maeili.com/cms/contents/contentsView.do?idx=6859&categoryCd1=1&categoryCd2=2&categoryCd3=0&reCome=1&gubn=1"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

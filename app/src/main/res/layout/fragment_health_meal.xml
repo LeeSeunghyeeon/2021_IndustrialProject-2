@@ -6,7 +6,64 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+<<<<<<< HEAD
     tools:context=".Health_meal">
+=======
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/content_showWeek"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="식사 기록"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/meal1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="아침 메뉴" />
+
+    <EditText
+        android:id="@+id/input_meal1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="시리얼" />
+
+    <TextView
+        android:id="@+id/meal2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="점심 메뉴" />
+
+    <EditText
+        android:id="@+id/input_meal2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="돈까스" />
+
+    <TextView
+        android:id="@+id/meal3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="저녁 메뉴" />
+
+    <EditText
+        android:id="@+id/input_meal3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="제육볶음" />
+>>>>>>> 469d4d05daf806b4e7c65835976126b4bee79b24
 
     <LinearLayout
         android:layout_width="wrap_content"
