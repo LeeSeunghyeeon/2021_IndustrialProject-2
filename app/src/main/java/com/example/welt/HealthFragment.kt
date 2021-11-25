@@ -1,18 +1,26 @@
 package com.example.welt
 
+import android.R
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.welt.databinding.FragmentContentBinding
+import android.view.WindowManager
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentManager
 import com.example.welt.databinding.FragmentHealthBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 
 
 class HealthFragment : Fragment() {
     private lateinit var binding: FragmentHealthBinding
+    val myRef = database.getReference("User")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +33,19 @@ class HealthFragment : Fragment() {
 
     private fun setButtonClickEvent(){
         // 운동
+
+//        myRef.addValueEventListener(object: ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                val test = snapshot.child("1").child("Health").child("20211127").child("meal")
+//                for (ds in test.children) {
+//                    Log.d("snap", ds.toString())
+//                }
+//            }
+//            override fun onCancelled(error: DatabaseError) {
+//                Log.e("error", "에러")
+//            }
+//        })
+
         binding.BtnExercise.setOnClickListener{
             val dialog = Health_exercise()
             activity?.supportFragmentManager?.let { fragmentManager ->
@@ -35,6 +56,7 @@ class HealthFragment : Fragment() {
         // 식사
         binding.BtnMeal.setOnClickListener{
             val dialog = Health_meal()
+            //dialog.setStyle(DialogFragment.STYLE_NO_TITLE, android.R.style.Theme_NoTitleBar_Fullscreen)
             activity?.supportFragmentManager?.let { fragmentManager ->
                 dialog.show(fragmentManager, "Health_meal_dialog")
             }

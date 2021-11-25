@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
     tools:context=".HealthFragment">
     <!--
         <ImageView
@@ -16,11 +18,11 @@
     <Button
         android:id="@+id/Btn_Exercise"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:layout_weight="1"
-        android:backgroundTint="#BDBDBD"
+        android:backgroundTint="#F7ECD6"
         android:text="운동"
         android:textColor="#000000"
         android:textStyle="bold" />
@@ -28,21 +30,21 @@
     <Button
         android:id="@+id/Btn_Meal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#BDBDBD"
-        android:text="식사 기록"
+        android:backgroundTint="#F7ECD6"
+        android:text="식사"
         android:textStyle="bold"
         android:textColor="#000000" />
 
     <Button
         android:id="@+id/Btn_Sleep"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#BDBDBD"
+        android:backgroundTint="#F7ECD6"
         android:text="수면"
         android:textStyle="bold"
         android:textColor="#000000" />
@@ -50,10 +52,10 @@
     <Button
         android:id="@+id/Btn_Weight"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#BDBDBD"
+        android:backgroundTint="#F7ECD6"
         android:text="체중"
         android:textStyle="bold"
         android:textColor="#000000" />
@@ -61,10 +63,10 @@
     <Button
         android:id="@+id/Btn_Baby_Movement"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="#BDBDBD"
+        android:backgroundTint="#F7ECD6"
         android:text="태동"
         android:textStyle="bold"
         android:textColor="#000000" />
@@ -72,10 +74,11 @@
     <Button
         android:id="@+id/Btn_Medicine_Manage"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="40dp"
         android:layout_weight="1"
-        android:backgroundTint="#BDBDBD"
-        android:text="복약 (엽산, 철분제, 아스피린, 프로게스테론)"
+        android:backgroundTint="#F7ECD6"
+        android:text="복약 (엽산, 철분제 등 개인약)"
+        android:layout_marginBottom="20dp"
         android:textStyle="bold"
         android:textColor="#000000" />
 

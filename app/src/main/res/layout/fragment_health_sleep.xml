@@ -4,81 +4,91 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    >
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="수면 기록"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp">
-
-        <EditText
-            android:id="@+id/hour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="numberSigned"
-            android:text="7" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="시간" />
-    </TableRow>
-
-
-    <TableRow
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp">
-
-        <EditText
-            android:id="@+id/min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="5"
-            android:inputType="numberSigned"
-            android:text="30" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="분" />
-    </TableRow>
+    tools:context=".Health_sleep">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="🛌 수면 기록"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/BtnSleepOK"
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="확인" />
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
 
-        <Button
-            android:id="@+id/BtnSleepCancel"
+            <EditText
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="7"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textColor="#000000" />
+        </TableRow>
+
+
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="취소" />
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
 
+            <EditText
+                android:id="@+id/input_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="30"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BtnSleepOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="확인" />
+
+            <Button
+                android:id="@+id/BtnSleepCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="취소" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

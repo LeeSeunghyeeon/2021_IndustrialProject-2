@@ -6,80 +6,155 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="식사 기록"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/meal1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="아침 메뉴" />
-
-    <EditText
-        android:id="@+id/input_meal1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="시리얼" />
-
-    <TextView
-        android:id="@+id/meal2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="점심 메뉴" />
-
-    <EditText
-        android:id="@+id/input_meal2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="돈까스" />
-
-    <TextView
-        android:id="@+id/meal3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="저녁 메뉴" />
-
-    <EditText
-        android:id="@+id/input_meal3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="제육볶음" />
+    tools:context=".Health_meal">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp">
+        android:layout_margin="20dp"
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:text="🍽 식사 기록"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/BtnMealOK"
+        <TextView
+            android:id="@+id/breakfast"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="확인" />
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:text="아침 메뉴" />
 
-        <Button
-            android:id="@+id/BtnMealCancel"
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="취소" />
+            android:layout_marginTop="1dp">
 
+            <EditText
+                android:id="@+id/input_breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:hint="아침 메뉴를 입력하세요"
+                android:inputType="textPersonName"
+                android:privateImeOptions="defaultInputmode=korean"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/breakfastOK"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="저장" />
+
+            <Button
+                android:id="@+id/breakfastDelete"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="삭제" />
+
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:text="점심 메뉴" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp">
+
+            <EditText
+                android:id="@+id/input_launch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="점심 메뉴를 입력하세요"
+                android:inputType="textPersonName"
+                android:privateImeOptions="defaultInputmode=korean" />
+
+            <Button
+                android:id="@+id/launchOK"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="저장" />
+
+            <Button
+                android:id="@+id/launchDelete"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="삭제" />
+
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:text="저녁 메뉴" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp">
+
+            <EditText
+                android:id="@+id/input_dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="저녁 메뉴를 입력하세요"
+                android:inputType="textPersonName"
+                android:privateImeOptions="defaultInputmode=korean" />
+
+            <Button
+                android:id="@+id/dinnerOK"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="저장" />
+
+            <Button
+                android:id="@+id/dinnerDelete"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="삭제" />
+        </TableRow>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/BtnMealOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="확인" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
