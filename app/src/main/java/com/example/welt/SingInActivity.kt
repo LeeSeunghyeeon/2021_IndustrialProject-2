@@ -36,6 +36,10 @@ class SingInActivity : AppCompatActivity() {
             changeActivity(SingUpActivity2::class.java)
         }
         binding.BtnSignIn.setOnClickListener({
+<<<<<<< HEAD
+=======
+//            myRef.child("test").setValue("hi")
+>>>>>>> 69f9630980142fa128a0ef7a6c29437cb7cd965f
             signIn()
 
         })
