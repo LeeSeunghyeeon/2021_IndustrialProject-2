@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import com.example.welt.databinding.FragmentContentHighRiskPregnancyTestBinding
-import com.example.welt.databinding.FragmentContentWeekFeaturesBinding
 
 
 class Content_HighRiskPregnancyTest : Fragment() {
