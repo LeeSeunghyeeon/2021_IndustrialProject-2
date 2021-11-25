@@ -6,25 +6,6 @@
     android:orientation="vertical"
     tools:context=".Health_sleep">
 
-<<<<<<< HEAD
-    <LinearLayout
-=======
-    <TextView
-        android:id="@+id/content_showWeek"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="수면 기록"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
-    <TableRow
->>>>>>> 469d4d05daf806b4e7c65835976126b4bee79b24
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView10"
@@ -102,7 +83,6 @@
                 android:layout_marginBottom="10dp"
                 android:text="취소" />
 
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
