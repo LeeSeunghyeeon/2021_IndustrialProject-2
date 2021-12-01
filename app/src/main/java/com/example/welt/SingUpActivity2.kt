@@ -3,6 +3,7 @@ package com.example.welt
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.RelativeLayout
@@ -18,11 +19,14 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_sing_up2.*
 import kotlin.reflect.KClass
+import java.util.ArrayList
+
+
+
 
 class SingUpActivity2 : AppCompatActivity() {
     private var mAuth: FirebaseAuth? =null
@@ -34,6 +38,7 @@ class SingUpActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySingUp2Binding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         mAuth = Firebase.auth
@@ -60,7 +65,7 @@ class SingUpActivity2 : AppCompatActivity() {
 //        }
 //    }
     private fun signUp(){
-        if(binding.inputName.length()>0&&binding.inputBabyName.length()>0&&binding.inputTelNum.length()>0&&binding.inputId.length()>0&&binding.inputPw.length()>0){
+        if(binding.inputName.length()>0&&binding.inputBabyName.length()>0&&binding.inputTelNum.length()>0&&binding.inputId.length()>0&&binding.inputPw.length()>0&&binding.inputHeight.length()>0&&binding.inputWeight.length()>0){
             var id = binding.inputId.text.toString()
             var pw = binding.inputPw.text.toString()
             mAuth?.createUserWithEmailAndPassword(id, pw)
@@ -81,6 +86,10 @@ class SingUpActivity2 : AppCompatActivity() {
                         var user_id=binding.inputId.text.toString()
                         var user_pw=binding.inputPw.text.toString()
                         var user_relationship=binding.spinnerParent.selectedItem.toString()
+                        var user_height=binding.inputHeight.text.toString()
+                        var user_weight=binding.inputWeight.text.toString()
+
+                        var num:Int=0
 
                         var user_babyBirth:String
                         var user_birth:String
@@ -110,6 +119,8 @@ class SingUpActivity2 : AppCompatActivity() {
                             user_birth=user_birth_y.toString()+(user_birth_m+1).toString()+user_birth_d.toString()
                         }
 
+
+
                         if (user_uid != null) {
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_babyBirth").setValue(user_babyBirth)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_baby_name").setValue(user_baby_name)
@@ -119,6 +130,9 @@ class SingUpActivity2 : AppCompatActivity() {
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_phone").setValue(user_phone)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_pw").setValue(user_pw)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_relationship").setValue(user_relationship)
+                            myRef.child("User").child(user_uid).child("Health").child("height").setValue(user_height)
+                            myRef.child("User").child(user_uid).child("Health").child("weight").setValue(user_weight)
+
                         }
                         //val user = mAuth.currentUser
                         Toast.makeText(this, "회원가입에 성공하였습니다.", Toast.LENGTH_SHORT).show()
