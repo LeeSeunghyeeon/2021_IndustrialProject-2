@@ -24,22 +24,15 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/walkText"
+            android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="걷기 30분 106kcal"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/walkText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="요가 1시간 139kcal"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btn_OK"

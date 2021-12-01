@@ -29,15 +29,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="10:00 ~ 11:00 태동 9회"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/movementText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:text="13:10 ~ 14:10 태동 9회"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <Button

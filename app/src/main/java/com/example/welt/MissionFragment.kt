@@ -3,10 +3,12 @@ package com.example.welt
 import android.content.Context
 import android.graphics.ColorSpace
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.welt.databinding.FragmentMissionBinding
@@ -21,6 +23,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
 
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_content.*
 
 class MissionFragment : Fragment() {
     private lateinit var binding:FragmentMissionBinding
@@ -37,6 +40,7 @@ class MissionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMissionBinding.inflate(inflater, container, false)
+
         initData()
         return binding.root
     }
@@ -49,15 +53,19 @@ class MissionFragment : Fragment() {
     }
 
     private fun initData(){
-        data.clear()
+
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Mission").child("20211124")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                data.clear()
                 for (messageData in dataSnapshot.children) {
-                    val text = messageData.child("content").getValue().toString()
+                    /*val text = messageData.child("content").getValue().toString()
                     val cc = messageData.child("check").getValue().toString().toBoolean()
+                    data.add(MyMission(text, cc))*/
+                    val text = messageData.key.toString()
+                    val cc = messageData.getValue().toString().toBoolean()
                     data.add(MyMission(text, cc))
                 }
                 adapter.notifyDataSetChanged()
@@ -76,18 +84,6 @@ class MissionFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         adapter = Mission_Adapter(data)
 
-        /*adapter.itemClickListener = object : Mission_Adapter.OnItemClickListener,
-            AdapterView.OnItemClickListener {
-            override fun onItemClick(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                TODO("Not yet implemented")
-            }
-
-        }*/
     }
 
 
