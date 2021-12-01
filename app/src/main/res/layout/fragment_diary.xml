@@ -120,6 +120,15 @@
                     android:visibility="invisible"/>
 
 
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/upload_image"
+                    android:src="@drawable/week32_pumpkin"
+                    app:layout_constraintTop_toTopOf="@id/contextEditText"
+                    app:layout_constraintEnd_toEndOf="@id/contextEditText"/>
+
+
 
                 <EditText
                     android:id="@+id/contextEditText"

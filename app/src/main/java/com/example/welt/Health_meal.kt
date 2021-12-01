@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.welt.databinding.FragmentHealthMealBinding
 import kotlinx.android.synthetic.main.fragment_health_meal.*
+import java.lang.Exception
 
 
 class Health_meal : DialogFragment() {
@@ -28,62 +29,97 @@ class Health_meal : DialogFragment() {
 
         // 아침 메뉴 저장
         binding.breakfastOK.setOnClickListener {
-            var breakfast = input_breakfast.text.toString()
-            if (breakfast.length > 0) {
-                // 저장 -> 데이터베이스에 삽입
-                Toast.makeText(requireContext(), breakfast, Toast.LENGTH_LONG).show()
+            try {
+                var breakfast = input_breakfast.text.toString()
+                if (breakfast.length > 0) {
+                    // 저장 -> 데이터베이스에 삽입
+                    Toast.makeText(requireContext(), breakfast, Toast.LENGTH_LONG).show()
 
-            } else {
-                // 저장 X
+                } else {
+                    // 저장 X
+                    Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
 
+            } catch (E:Exception) {
+                Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
         }
         // 아침 메뉴 삭제
         binding.breakfastDelete.setOnClickListener {
-            var breakfast = input_breakfast.text.toString()
-            if (breakfast.length == 0) {
-                // 삭제 X
-            } else {
-                // 삭제
+            try {
+                var breakfast = input_breakfast.text.toString()
+                if (breakfast.length > 0) {
+                    // 삭제
+                } else {
+                    // 삭제 X
+                }
+            } catch (E:Exception) {
+
             }
+
         }
 
         // 점심 메뉴 저장
         binding.launchOK.setOnClickListener {
-            var launch = input_breakfast.text.toString()
-            if (launch.length == 0) {
-                // 저장 X
-            } else {
-                // 저장
+            try {
+                var launch = input_launch.text.toString()
+                if (launch.length > 0) {
+                    // 저장 -> 데이터베이스에 삽입
+                    Toast.makeText(requireContext(), launch, Toast.LENGTH_LONG).show()
+
+                } else {
+                    // 저장 X
+                    Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
+
+            } catch (E:Exception) {
+                Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
         }
         // 점심 메뉴 삭제
         binding.launchDelete.setOnClickListener {
-            var launch = input_breakfast.text.toString()
-            if (launch.length == 0) {
-                // 삭제 X
-            } else {
-                // 삭제
+
+            try {
+                var launch = input_breakfast.text.toString()
+                if (launch.length > 0) {
+                    // 삭제
+                } else {
+                    // 삭제 X
+                }
+            } catch (E:Exception) {
+
             }
         }
 
         // 저녁 메뉴 저장
         binding.dinnerOK.setOnClickListener {
-            var dinner = input_breakfast.text.toString()
-            if (dinner.length == 0) {
-                // 저장 X
-            } else {
-                // 저장
+            try {
+                var dinner = input_breakfast.text.toString()
+                if (dinner.length > 0) {
+                    // 저장
+                } else {
+                    // 저장 X
+                    Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
+            } catch (E:Exception) {
+                Toast.makeText(getActivity(), "메뉴를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
+
+
         }
 
         // 저녁 메뉴 삭제
         binding.dinnerDelete.setOnClickListener {
-            var dinner = input_breakfast.text.toString()
-            if (dinner.length == 0) {
-                // 삭제 X
-            } else {
-                // 삭제
+
+            try {
+                var dinner = input_breakfast.text.toString()
+                if (dinner.length > 0) {
+                    // 삭제
+                } else {
+                    // 삭제 X
+                }
+            } catch (E:Exception) {
+
             }
         }
 

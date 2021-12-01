@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.example.welt.databinding.FragmentHealthSleepBinding
 import com.example.welt.databinding.FragmentHealthWeightBinding
@@ -32,13 +33,19 @@ class Health_weight : DialogFragment() {
             try {
                 var weightET = binding.weight.getText().toString()
                 var weight:Float = weightET.toFloat()
-                // 날짜에 맞게 데이터 베이스에 저장
+
+                if (weight > 0) {
+                    // 날짜에 맞게 데이터 베이스에 저장
+                } else {
+                    Toast.makeText(getActivity(), "몸무게를 올바르게 입력해주세요.", Toast.LENGTH_SHORT).show()
+                }
+
+                dismiss()
 
             } catch (e:Exception){
-                println("다시 입력")
+                Toast.makeText(getActivity(), "몸무게를 올바르게 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
 
-            dismiss()
         }
 
         binding.BtnWeightCancel.setOnClickListener{

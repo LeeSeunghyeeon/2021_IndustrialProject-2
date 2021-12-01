@@ -284,7 +284,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView124"
+                    android:id="@+id/content_high_show_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="전화번호"
@@ -300,6 +300,60 @@
                     android:layout_span="2"
                     android:ems="10"
                     android:inputType="phone"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView1224"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신장(cm)"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_span="1"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/input_height"
+                    android:layout_width="wrap_content"
+                    android:layout_span="2"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="ex)165.6"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView1124"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="체중(kg)"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_span="1"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/input_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_span="2"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:hint="ex)58.7"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </TableRow>
