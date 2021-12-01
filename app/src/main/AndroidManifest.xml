@@ -17,13 +17,13 @@
 
 
         <activity
-            android:name=".Sign_Finding_PW"
+            android:name=".Sign.Sign_Finding_PW"
             android:exported="true" />
         <activity
-            android:name=".Sign_Finding_ID"
+            android:name=".Sign.Sign_Finding_ID"
             android:exported="true" />
         <activity
-            android:name=".SingInActivity"
+            android:name=".Sign.SingInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SingUpActivity2"
+            android:name=".Sign.SingUpActivity2"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

@@ -1,15 +1,12 @@
-package com.example.welt
+package com.example.welt.Content
 
-import android.app.TimePickerDialog
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.FragmentManager
+import com.example.welt.R
 import com.example.welt.databinding.FragmentContentHospitalAddBinding
-import com.example.welt.databinding.FragmentContentHospitalBinding
 
 class Content_HospitalAdd : DialogFragment() {
 

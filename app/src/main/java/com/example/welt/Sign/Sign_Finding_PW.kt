@@ -1,22 +1,13 @@
-package com.example.welt
+package com.example.welt.Sign
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.ImageDecoder
-import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
-import android.view.View
 import android.widget.Toast
-import com.example.welt.databinding.ActivitySignFindingIdBinding
 import com.example.welt.databinding.ActivitySignFindingPwBinding
-import com.example.welt.databinding.ActivitySingUp2Binding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_sign_finding_id.*
-import java.io.IOException
 
 var mAuth: FirebaseAuth? =null
 class Sign_Finding_PW : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.example.welt
+package com.example.welt.Health
 
 import android.os.Build
 import android.os.Bundle
@@ -7,9 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import com.example.welt.Sign.database
 import com.example.welt.databinding.FragmentHealthBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
 import java.time.LocalDate
 
 // 날짜 하루 지나면(12시 땡치면) 그 날짜로 테이블 만들기

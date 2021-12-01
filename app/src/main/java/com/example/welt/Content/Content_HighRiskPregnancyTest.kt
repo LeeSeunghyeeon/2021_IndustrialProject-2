@@ -1,4 +1,4 @@
-package com.example.welt
+package com.example.welt.Content
 
 import android.os.Build
 import android.os.Bundle

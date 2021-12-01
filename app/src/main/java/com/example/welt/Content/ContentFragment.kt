@@ -1,4 +1,4 @@
-package com.example.welt
+package com.example.welt.Content
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
+import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
@@ -119,7 +120,8 @@ class ContentFragment : Fragment() {
             val show_Content_HighRiskPregnancyTest = activity?.supportFragmentManager?.beginTransaction()
 
             if (show_Content_HighRiskPregnancyTest != null) {
-                show_Content_HighRiskPregnancyTest.replace(R.id.frameLayout_content,
+                show_Content_HighRiskPregnancyTest.replace(
+                    R.id.frameLayout_content,
                     Content_HighRiskPregnancyTest()
                 ).addToBackStack(null).commit()
             }}

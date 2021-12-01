@@ -1,12 +1,12 @@
-package com.example.welt
+package com.example.welt.Mission
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.util.ArrayList

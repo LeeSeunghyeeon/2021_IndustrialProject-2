@@ -3,6 +3,9 @@ package com.example.welt
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import com.example.welt.Content.ContentFragment
+import com.example.welt.Health.HealthFragment
+import com.example.welt.Mission.MissionFragment
 
 class MainFragmentStatePagerAdapter(fm : FragmentManager, val fragmentCount : Int) : FragmentStatePagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {

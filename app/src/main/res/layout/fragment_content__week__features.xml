@@ -4,7 +4,7 @@
     android:id="@+id/framelayout_week"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Content_WeekFeatures">
+    tools:context=".Content.Content_WeekFeatures">
 
     <!-- TODO: Update blank fragment layout -->
 
