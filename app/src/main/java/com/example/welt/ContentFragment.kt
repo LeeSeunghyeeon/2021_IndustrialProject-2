@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package com.example.welt
 
 import android.os.Bundle
@@ -121,15 +119,16 @@ class ContentFragment : Fragment() {
             val show_Content_HighRiskPregnancyTest = activity?.supportFragmentManager?.beginTransaction()
 
             if (show_Content_HighRiskPregnancyTest != null) {
-                show_Content_HighRiskPregnancyTest.replace(R.id.frameLayout_content,Content_HighRiskPregnancyTest()).addToBackStack(null).commit()
+                show_Content_HighRiskPregnancyTest.replace(R.id.frameLayout_content,
+                    Content_HighRiskPregnancyTest()
+                ).addToBackStack(null).commit()
             }}
 
         binding.contentHospitalBtn.setOnClickListener{
             val show_hospital = activity?.supportFragmentManager?.beginTransaction()
             if (show_hospital != null) {
-                show_hospital.replace(R.id.frameLayout_content,Content_Hospital()).addToBackStack(null).commit()
+                show_hospital.replace(R.id.frameLayout_content, Content_Hospital()).addToBackStack(null).commit()
             }
         }
     }
 }
->>>>>>> b3dd604b6a1ec0a37d4c98ee3546d01d623f1e85

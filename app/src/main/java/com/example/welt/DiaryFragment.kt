@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package com.example.welt
 
 import android.Manifest
@@ -51,9 +49,6 @@ import java.io.InputStream
 import android.graphics.drawable.BitmapDrawable
 
 import java.io.ByteArrayOutputStream
-
-
-
 
 
 class DiaryFragment : Fragment() {
@@ -399,8 +394,4 @@ class DiaryFragment : Fragment() {
         }
     }
 
-
-
-
 }
->>>>>>> b3dd604b6a1ec0a37d4c98ee3546d01d623f1e85
