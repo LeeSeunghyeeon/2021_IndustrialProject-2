@@ -19,6 +19,7 @@ class Content_WeekFeatures : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding.contentWfWebview.loadUrl("https://www.maeili.com/cms/contents/contentsView.do?idx=6859&categoryCd1=1&categoryCd2=2&categoryCd3=0&reCome=1&gubn=1")
         binding = FragmentContentWeekFeaturesBinding.inflate(inflater, container, false)
         binding.OKbtn.setOnClickListener{
             val fragmentManager: FragmentManager? = activity?.supportFragmentManager
