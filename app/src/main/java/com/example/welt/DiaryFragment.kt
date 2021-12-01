@@ -43,21 +43,31 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.main.fragment_diary.view.*
 
 import java.io.InputStream
+import android.graphics.drawable.BitmapDrawable
+
+import java.io.ByteArrayOutputStream
+
+
+
 
 
 class DiaryFragment : Fragment() {
+    private lateinit var byteArray: ByteArray
     private lateinit var binding: FragmentDiaryBinding
+    
     lateinit var fname: String
     lateinit var str: String
-    private val OPEN_GALLERY = 1
+    lateinit var simage : String
+//    private val OPEN_GALLERY = 1
 
     private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
     private val myRef: DatabaseReference = database.reference
 
-    var uriPhoto: Uri? = null
-
+    private var uri: Uri? = null
+    private val Gallery = 1
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -67,6 +77,14 @@ class DiaryFragment : Fragment() {
 
         val currentDate = currentDate()
         binding.today.text = currentDate.dateToString("yyyy년 MM월 dd일")
+
+//        binding.uploadImage.setImageURI(uri)
+//
+//        binding.addPhotoBtn.setOnClickListener{
+//            checkPermission()
+//            funImageUpload(uri!!)
+//
+//        }
 
         test()
 
@@ -80,6 +98,31 @@ class DiaryFragment : Fragment() {
 
     private fun currentDate(): Date {
         return Calendar.getInstance().time
+    }
+
+
+//    private fun funImageUpload(uri: Uri){
+//        var fbStorage : FirebaseStorage? = FirebaseStorage.getInstance()
+//
+//        var timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+//        var imgFileName = "IMAGE_" + timeStamp + "_png"
+//        var storageRef = fbStorage?.reference?.child("images")?.child(imgFileName)
+//
+//        storageRef?.putFile(uri!!)?.addOnSuccessListener {
+//            Toast.makeText(activity, "사진이 업로드되었습니다." , Toast.LENGTH_SHORT).show()
+//        }?.addOnFailureListener{
+//            println(it)
+//            Toast.makeText(activity, "사진 업로드에 실패하였습니다." , Toast.LENGTH_SHORT).show()
+//
+//        }
+//    }
+
+    private fun updateFirebase() {
+
+
+
+
+
     }
 
 
@@ -112,12 +155,31 @@ class DiaryFragment : Fragment() {
             binding.saveBtn.setOnClickListener {
 
                 saveDiary(fname)
+               // funImageUpload(uri!!)
+                updateFirebase()
 
                 str = contextEditText.getText().toString()
 
                 myRef.child("User").child(userID.toString()).child("Diary")
-                    .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).setValue(str)
+                    .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).child("Diary_Text").setValue(str)
                 Toast.makeText(context, "저장되었습니다.", Toast.LENGTH_SHORT).show()
+
+//                val stream = ByteArrayOutputStream()
+//                val bitmap = (binding.uploadImage.getDrawable() as BitmapDrawable).bitmap
+//
+//                val scale = (1024 / bitmap.width.toFloat())
+//                val image_w = (bitmap.width * scale).toInt()
+//                val image_h = (bitmap.height * scale).toInt()
+//                val resize = Bitmap.createScaledBitmap(bitmap, image_w, image_h, true)
+//                resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+//                byteArray = stream.toByteArray()
+//
+//                simage = byteArray.toString()
+//
+//                myRef.child("User").child(userID.toString()).child("Diary")
+//                    .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).child("Diary_Image").setValue(str)
+
+
 
                 diaryContent.text = "${str}"
 
@@ -127,6 +189,8 @@ class DiaryFragment : Fragment() {
                 binding.delBtn.visibility = View.VISIBLE
                 binding.diaryContent.visibility = View.VISIBLE
                 binding.addPhotoBtn.visibility = View.INVISIBLE
+
+
 
             }
 
@@ -160,9 +224,10 @@ class DiaryFragment : Fragment() {
                 Toast.makeText(context, "삭제되었습니다.", Toast.LENGTH_SHORT).show()
             }
 
+            binding.addPhotoBtn.setOnClickListener{
+                checkPermission()
+            }
 
-
-            binding.addPhotoBtn.setOnClickListener { checkPermission() }
         })
 
 
@@ -234,7 +299,6 @@ class DiaryFragment : Fragment() {
     @SuppressLint("WrongConstant")
     fun removeDiary(readyDay: String) {
 
-
         var fos: FileOutputStream? = null
 
         try {
@@ -281,10 +345,15 @@ class DiaryFragment : Fragment() {
 
     //갤러리 열기
     private fun openGallery() {
-        val intent: Intent = Intent(Intent.ACTION_GET_CONTENT)
+
+        val intent = Intent()
         intent.type = "image/*"
-        startActivityForResult(intent, OPEN_GALLERY)
+        intent.action = Intent.ACTION_GET_CONTENT
+//        startActivityForResult(intent, OPEN_GALLERY)
+
+        startActivityForResult(Intent.createChooser(intent, "Load Picture"), Gallery)
     }
+
 
 
     //권한 요청 처리
@@ -307,44 +376,28 @@ class DiaryFragment : Fragment() {
     }
 
 //
-//    @Override
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//
-//        if (resultCode == Activity.RESULT_OK) {
-//            if (requestCode == OPEN_GALLERY) {
-//
-//                var currentImageUrl: Uri? = data?.data
-//
-//                try {
-//                    val bitmap =
-//                        MediaStore.Images.Media.getBitmap(context?.contentResolver, currentImageUrl)
-//                    showImage.setImageBitmap(bitmap)
-//                    showImage.setImageURI(uriPhoto)
-//                    ImageUpload(uriPhoto!!)
-//
-//                } catch (e: java.lang.Exception) {
-//                    e.printStackTrace()
-//                }
-//            }
-//        } else {
-//            Log.d("ActivityResult", "something wrong")
-//        }
-//    }
-//
-//
-//    private fun ImageUpload(uriPhoto: Uri){
-//
-//        var storage : FirebaseStorage? = FirebaseStorage.getInstance()
-//
-//        var timeStamp = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
-//        var imgFileName = "IMAGE_" + timeStamp + "_.png"
-//        var storageRef = storage!!.reference?.child("Diary")?.child(imgFileName)
-//
-//        storageRef?.putFile(uriPhoto!!)?.addOnSuccessListener {
-//            Toast.makeText(view?.context, "Image Uploaded", Toast.LENGTH_SHORT).show()
-//        }
-//    }
+    @Override
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == Gallery) {
+
+                var ImageData : Uri? = data?.data
+
+                try {
+                    val bitmap = MediaStore.Images.Media.getBitmap(context?.contentResolver, ImageData)
+                    upload_image.setImageBitmap(bitmap)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
+        } else {
+            Log.d("ActivityResult", "something wrong")
+        }
+    }
+
+
 
 
 }
