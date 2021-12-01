@@ -20,6 +20,7 @@
             android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:text="🍽 식사 기록"
+            android:background="#F7ECD6"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -32,7 +33,8 @@
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
             android:textColor="#000000"
-            android:text="아침 메뉴" />
+            android:text="아침 메뉴"
+            android:background="#F7ECD6"/>
 
         <TableRow
             android:layout_width="wrap_content"
@@ -72,6 +74,7 @@
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
             android:textColor="#000000"
+            android:background="#F7ECD6"
             android:text="점심 메뉴" />
 
         <TableRow
@@ -111,6 +114,7 @@
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
             android:textColor="#000000"
+            android:background="#F7ECD6"
             android:text="저녁 메뉴" />
 
         <TableRow
@@ -143,8 +147,8 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:orientation="horizontal">
@@ -152,9 +156,12 @@
 
             <Button
                 android:id="@+id/BtnMealOK"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="확인" />
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#ECCCDD"
+                android:text="확인"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
 
         </LinearLayout>
     </LinearLayout>
