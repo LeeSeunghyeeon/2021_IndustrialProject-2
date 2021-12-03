@@ -2,6 +2,7 @@ package com.example.welt.Health
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,10 +11,11 @@ import androidx.annotation.RequiresApi
 import com.example.welt.Sign.database
 import com.example.welt.databinding.FragmentHealthBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import java.time.LocalDate
 
-// 날짜 하루 지나면(12시 땡치면) 그 날짜로 테이블 만들기
-// 날짜 하루 지나면 수면, 운동, 식사, 태동 리셋
 // 몸무게랑 복약은 그대로
 
 // 식사 기록 가져오기 예시
@@ -41,10 +43,13 @@ class HealthFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     var date = LocalDate.now()
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentHealthBinding.inflate(inflater, container, false)
         setButtonClickEvent()
         return binding.root

@@ -125,16 +125,16 @@
                         android:text="저장"
                         android:textSize="15sp"
                         android:textStyle="bold"
-                        tools:backgroundTint="#ECCCDD" />
+                        android:backgroundTint="#ECCCDD" />
 
                     <Button
                         android:id="@+id/BtnBabymcancle"
                         android:layout_width="80dp"
                         android:layout_height="50dp"
-                        android:text="취소"
+                        android:text="닫기"
                         android:textSize="15sp"
                         android:textStyle="bold"
-                        tools:backgroundTint="#ECCCDD" />
+                        android:backgroundTint="#ECCCDD" />
                 </TableRow>
 
             </LinearLayout>

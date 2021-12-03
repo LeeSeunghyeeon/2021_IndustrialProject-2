@@ -17,10 +17,10 @@
 
         <TextView
             android:id="@+id/textView10"
-            android:layout_width="360dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🍽 식사 기록"
             android:background="#F7ECD6"
+            android:text="🍽 식사 기록"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="30sp"
@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
-            android:textColor="#000000"
-            android:text="아침 메뉴"
-            android:background="#F7ECD6"/>
+            android:background="#F7ECD6"
+            android:text="▼ 아침 메뉴"
+            android:textColor="#000000" />
 
         <TableRow
             android:layout_width="wrap_content"
@@ -43,26 +43,38 @@
 
             <EditText
                 android:id="@+id/input_breakfast"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="아침 메뉴를 입력하세요"
                 android:inputType="textPersonName"
                 android:privateImeOptions="defaultInputmode=korean"
-                android:textSize="18sp" />
+                android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/breakfastOK"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="저장" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/breakfastDelete"
-                android:layout_width="60dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="삭제" />
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp">
+
+                <Button
+                    android:id="@+id/breakfastOK"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="저장" />
+
+                <Button
+                    android:id="@+id/breakfastDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="삭제" />
+            </LinearLayout>
 
         </TableRow>
 
@@ -73,9 +85,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
-            android:textColor="#000000"
             android:background="#F7ECD6"
-            android:text="점심 메뉴" />
+            android:text="▼ 점심 메뉴"
+            android:textColor="#000000" />
 
         <TableRow
             android:layout_width="wrap_content"
@@ -84,25 +96,38 @@
 
             <EditText
                 android:id="@+id/input_launch"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="점심 메뉴를 입력하세요"
                 android:inputType="textPersonName"
-                android:privateImeOptions="defaultInputmode=korean" />
+                android:privateImeOptions="defaultInputmode=korean"
+                android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/launchOK"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="저장" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/launchDelete"
-                android:layout_width="60dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="삭제" />
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp">
+
+                <Button
+                    android:id="@+id/launchOK"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="저장" />
+
+                <Button
+                    android:id="@+id/launchDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="삭제" />
+            </LinearLayout>
 
         </TableRow>
 
@@ -113,9 +138,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dp"
             android:layout_marginTop="20dp"
-            android:textColor="#000000"
             android:background="#F7ECD6"
-            android:text="저녁 메뉴" />
+            android:text="▼ 저녁 메뉴"
+            android:textColor="#000000" />
 
         <TableRow
             android:layout_width="wrap_content"
@@ -124,25 +149,38 @@
 
             <EditText
                 android:id="@+id/input_dinner"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="저녁 메뉴를 입력하세요"
                 android:inputType="textPersonName"
-                android:privateImeOptions="defaultInputmode=korean" />
+                android:privateImeOptions="defaultInputmode=korean"
+                android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/dinnerOK"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="저장" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/dinnerDelete"
-                android:layout_width="60dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="삭제" />
+                android:layout_gravity="right"
+                android:layout_marginRight="5dp">
+
+                <Button
+                    android:id="@+id/dinnerOK"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="저장" />
+
+                <Button
+                    android:id="@+id/dinnerDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="삭제" />
+            </LinearLayout>
         </TableRow>
 
 
@@ -159,9 +197,9 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:backgroundTint="#ECCCDD"
-                android:text="확인"
-                android:textStyle="bold"
-                android:textSize="15sp"/>
+                android:text="닫기"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>
