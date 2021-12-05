@@ -1,37 +1,21 @@
-package com.example.welt
+package com.example.welt.Mission
 
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
-import com.github.mikephil.charting.charts.LineChart
+import com.example.welt.R
 import com.github.mikephil.charting.charts.PieChart
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.components.XAxis.XAxisPosition
-import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.*
-import com.github.mikephil.charting.formatter.ValueFormatter
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
-import com.github.mikephil.charting.utils.ColorTemplate
-import com.github.mikephil.charting.utils.ColorTemplate.COLORFUL_COLORS
-import com.github.mikephil.charting.utils.ColorTemplate.COLOR_SKIP
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_mission__sleep_dialog.view.*
-import java.text.SimpleDateFormat
 import java.util.*
-import java.util.concurrent.TimeUnit
-import kotlin.properties.Delegates
-import com.github.mikephil.charting.data.ChartData as ChartData1
 
 class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
     var chart: PieChart? = null
@@ -107,14 +91,16 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
                 entries.add(
                     PieEntry(
                         sleepTime, dataSnapshot.getValue().toString(),
-                        ResourcesCompat.getDrawable(getResources(), R.drawable.ic_baseline_bedtime_24, null)
+                        ResourcesCompat.getDrawable(getResources(),
+                            R.drawable.ic_baseline_bedtime_24, null)
                     )
 
                 )
                 entries.add(
                     PieEntry(
                         100-sleepTime, "",
-                        ResourcesCompat.getDrawable(getResources(), R.drawable.ic_baseline_wb_sunny_24, null)
+                        ResourcesCompat.getDrawable(getResources(),
+                            R.drawable.ic_baseline_wb_sunny_24, null)
                     )
 
                 )

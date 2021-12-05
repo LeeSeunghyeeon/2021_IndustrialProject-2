@@ -1,14 +1,13 @@
-package com.example.welt
+package com.example.welt.Mission
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.DialogFragment
-import com.github.mikephil.charting.utils.Utils.init
+import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 

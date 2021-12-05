@@ -1,6 +1,9 @@
-package com.example.welt
+package com.example.welt.Content
 
+<<<<<<< HEAD:app/src/main/java/com/example/welt/Content_HospitalAdd.kt
 import android.os.Build
+=======
+>>>>>>> 8d77889d56b1fb13d243f83cdbcf052b27e5b932:app/src/main/java/com/example/welt/Content/Content_HospitalAdd.kt
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
+<<<<<<< HEAD:app/src/main/java/com/example/welt/Content_HospitalAdd.kt
 import com.example.welt.databinding.FragmentContentHospitalAddBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -15,6 +19,10 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
+=======
+import com.example.welt.R
+import com.example.welt.databinding.FragmentContentHospitalAddBinding
+>>>>>>> 8d77889d56b1fb13d243f83cdbcf052b27e5b932:app/src/main/java/com/example/welt/Content/Content_HospitalAdd.kt
 
 class Content_HospitalAdd : DialogFragment() {
 

@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Health_sleep">
+    tools:context=".Health.Health_sleep">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
 
             <TextView
                 android:id="@+id/textViewSleep"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="🛌 수면 기록"
                 android:background="#F7ECD6"
@@ -102,7 +102,7 @@
                     android:layout_height="50dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#ECCCDD"
-                    android:text="취소"
+                    android:text="닫기"
                     android:textStyle="bold"
                     android:textSize="15sp"/>
 

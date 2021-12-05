@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     android:layout_width="300sp"
     android:layout_height="500sp"
     tools:context=".Content_HospitalAdd">
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Content.Content_HospitalAdd">
+>>>>>>> 8d77889d56b1fb13d243f83cdbcf052b27e5b932
 
 
     <ScrollView

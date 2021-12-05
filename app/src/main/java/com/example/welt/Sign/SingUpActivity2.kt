@@ -1,31 +1,16 @@
-package com.example.welt
+package com.example.welt.Sign
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.RelativeLayout
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.annotation.NonNull
-import com.example.welt.databinding.ActivityMainBinding
-import com.example.welt.databinding.ActivitySingInBinding
+import com.example.welt.R
 import com.example.welt.databinding.ActivitySingUp2Binding
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_sing_up2.*
-import kotlin.reflect.KClass
-import java.util.ArrayList
-
-
 
 
 class SingUpActivity2 : AppCompatActivity() {

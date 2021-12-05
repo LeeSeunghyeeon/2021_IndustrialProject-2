@@ -1,4 +1,4 @@
-package com.example.welt
+package com.example.welt.Content
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

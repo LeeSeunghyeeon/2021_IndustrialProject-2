@@ -1,16 +1,13 @@
-package com.example.welt
+package com.example.welt.Content
 
-import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.FragmentManager
 import com.example.welt.databinding.FragmentContentHospitalBinding
+<<<<<<< HEAD:app/src/main/java/com/example/welt/Content_Hospital.kt
 import com.example.welt.databinding.FragmentContentWeekFeaturesBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -22,6 +19,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
+=======
+>>>>>>> 8d77889d56b1fb13d243f83cdbcf052b27e5b932:app/src/main/java/com/example/welt/Content/Content_Hospital.kt
 
 class Content_Hospital : Fragment() {
     private lateinit var binding: FragmentContentHospitalBinding

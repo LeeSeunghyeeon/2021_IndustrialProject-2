@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".Health_medicineManage">
+    tools:context=".Health.Health_medicineManage">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -57,6 +57,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:hint="엽산"
+                    android:textSize="15sp"
                     android:inputType="textPersonName"
                     android:privateImeOptions="defaultInputmode=korean" />
             </TableRow>
@@ -155,24 +156,44 @@
                 android:text="유산균 | 아침 식사 전 | 1회"
                 android:textSize="15sp" />
 
-            <Button
-                android:id="@+id/DeleteMedicine"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:background="#ECCCDD"
-                android:text="삭제"
-                android:textStyle="bold"
-                android:textSize="15sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+
                 android:layout_marginTop="10dp"
-                android:text="삭제 버튼을 클릭 시 체크한 복약 내용이 삭제됩니다."
+                android:text="※ 삭제 버튼을 클릭 시 체크한 복약 내용이 삭제됩니다."
                 android:textSize="12sp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/DeleteMedicine"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:backgroundTint="#ECCCDD"
+                    android:text="삭제"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/CancleMedicine"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:backgroundTint="#ECCCDD"
+                    android:text="닫기"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </TableRow>
 
         </LinearLayout>
     </LinearLayout>
