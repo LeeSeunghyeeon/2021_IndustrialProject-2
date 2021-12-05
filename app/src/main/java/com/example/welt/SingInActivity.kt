@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase
 import java.util.ArrayList
 
 val database : FirebaseDatabase = FirebaseDatabase.getInstance()
-val myRef : DatabaseReference = database.reference
+var myRef : DatabaseReference = database.reference
 
 class SingInActivity : AppCompatActivity() {
     lateinit var binding: ActivitySingInBinding

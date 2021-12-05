@@ -41,9 +41,8 @@ class ContentFragment : Fragment() {
         val currentDate: LocalDateTime = LocalDateTime.now() //오늘 날짜
         val show_today = currentDate.format(DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 E요일", Locale("ko", "KR")))
         val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
-        var babyName = "아기"
+        var babyName = ""
         binding.contentTodaydate.setText("오늘은 $show_today")
-        println(uid)
         if (uid != null) {
             myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("UserInfo")
             myRef.addValueEventListener(object :ValueEventListener{
@@ -69,8 +68,8 @@ class ContentFragment : Fragment() {
 
                                 binding.contentWeekSize.setText("%s(이)는\n현재 %s\n크기입니다.".format(babyName,fruitName))
                                 binding.contentWeekBody.setText("(%s , %s)".format(babyHeight,babyWeight))
-                                binding.contentWeekPhoto.setImageResource(R.drawable.week11_lime)
-
+                                binding.contentWeekPhoto.setImageResource(R.drawable.week12_plum)
+                                //binding.contentWeekPhoto.setImageBitmap("R.drawable.$photoName")
                                 //val file = storageRef.child("WeekPhoto/$photoName").downloadUrl.addOnSuccessListener {  }
 
                             }

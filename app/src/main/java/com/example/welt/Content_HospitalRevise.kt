@@ -1,5 +1,6 @@
 package com.example.welt
 
+import android.R.attr
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,16 +10,22 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
 import com.example.welt.databinding.FragmentContentHospitalAddBinding
+import com.example.welt.databinding.FragmentContentHospitalReviseBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import android.R.attr.data
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
-class Content_HospitalAdd : DialogFragment() {
+class Content_HospitalRevise : DialogFragment() {
 
-    private lateinit var binding: FragmentContentHospitalAddBinding
+    private lateinit var binding: FragmentContentHospitalReviseBinding
     val user = FirebaseAuth.getInstance().currentUser
     val uid = user?.uid
 
@@ -35,13 +42,21 @@ class Content_HospitalAdd : DialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        binding = FragmentContentHospitalAddBinding.inflate(inflater, container, false)
-        binding.contentHospitalAddOK.setOnClickListener{
-            var selyear = binding.contentHospitalAddDpSpinner.year
-            var selmonth = binding.contentHospitalAddDpSpinner.month+1
-            var selday =binding.contentHospitalAddDpSpinner.dayOfMonth
-            var selhour = binding.contentHospitalAddTpSpinner.hour
-            var selmin = binding.contentHospitalAddTpSpinner.minute
+        binding = FragmentContentHospitalReviseBinding.inflate(inflater, container, false)
+        var before= "2021-12-06 17:30" // 수정전 키 값
+        var before_token = before.split(' ')
+        var before_token_date = before_token[0].split('-')
+        var before_dayOfWeek = calDayOfWeek("%s%s%s".format(before_token_date[0],before_token_date[1],before_token_date[2]))
+        var before_viewText = "%s년 %s월 %s일 %s %s".format(before_token_date[0],before_token_date[1],before_token_date[2],before_dayOfWeek,before_token[1])
+        binding.contentHospitalReviseBeforeDate.setText(before_viewText)
+
+        binding.contentHospitalReviseOK.setOnClickListener{
+
+            var selyear = binding.contentHospitalReviseDpSpinner.year
+            var selmonth = binding.contentHospitalReviseDpSpinner.month+1
+            var selday =binding.contentHospitalReviseDpSpinner.dayOfMonth
+            var selhour = binding.contentHospitalReviseTpSpinner.hour
+            var selmin = binding.contentHospitalReviseTpSpinner.minute
 
             var selmonth_str = "00"
             var selday_str = "00"
@@ -64,16 +79,21 @@ class Content_HospitalAdd : DialogFragment() {
                 selmin_str="0$selmin"
             else
                 selmin_str="$selmin"
-            var dayOfWeek = calDayOfWeek("%s%s%s".format(selyear,selmonth_str,selday_str))
+            var dayOfWeek = calDayOfWeek("$selyear$selmonth_str$selday_str")
             var view_str = "%d년 %s월 %s일 %s %s:%s".format(selyear,selmonth_str,selday_str,dayOfWeek,selhour_str,selmin_str)
-            var save_str= "$selyear-$selmonth_str-$selday_str $selhour_str:$selmin_str"
-            var memo = binding.contentHospitalAddMemo.text
-            binding.contentHospitalView.setText(view_str)
-            Toast.makeText(context, "%s / %s \n 내원 일정이 저장되었습니다.".format(view_str,memo), Toast.LENGTH_LONG).show()
+            var save_str= "$selyear$selmonth_str$selday_str $selhour_str:$selmin_str"
+            var memo = binding.contentHospitalReviseMemo.text
+            binding.contentHospitalReviseView.setText(view_str)
             if (uid != null) {
                 myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("HospitalSchedule").child("$save_str")
                 myRef.setValue("$memo")
             }
+            if (uid != null) {
+            myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("HospitalSchedule").child("$before")
+            myRef.setValue(null)
+                Toast.makeText(context, "%s / %s \n 내원 일정이 저장되었습니다.".format(view_str,memo), Toast.LENGTH_SHORT).show()
+                dismiss()
+        }
         }
         return binding.root
     }
