@@ -67,6 +67,7 @@ class MissionFragment : Fragment() {
         })
 
         initRecyclerView()
+
     }
 
     private fun initRecyclerView() {
