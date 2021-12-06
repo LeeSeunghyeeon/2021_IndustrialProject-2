@@ -37,7 +37,7 @@ class Content_HighRiskPregnancyTest : Fragment() {
         binding = FragmentContentHighRiskPregnancyTestBinding.inflate(inflater, container, false)
         setInfo()
         calScore()
-        binding.btnOK.setOnClickListener{
+        binding.btnOK.setOnClickListener {
             val fragmentManager: FragmentManager? = activity?.supportFragmentManager
             if (fragmentManager != null) {
                 fragmentManager.beginTransaction().remove(Content_WeekFeatures()).commit()
@@ -46,8 +46,9 @@ class Content_HighRiskPregnancyTest : Fragment() {
         }
         return binding.root
     }
+
     @RequiresApi(Build.VERSION_CODES.O)
-    fun calScore(){
+    fun calScore() {
         var score5 = arrayOf(binding.contentHighCb065, binding.contentHighCb055Height)
         var score10 = arrayOf(
             binding.contentHighCb0110Unger19,
@@ -86,21 +87,23 @@ class Content_HighRiskPregnancyTest : Fragment() {
         binding.contentHighCheckScoreBtn.setOnClickListener {
             var score = 0
             for (i in 0..score5.size - 1)
-                if(score5[i].isChecked)
+                if (score5[i].isChecked)
                     score = score + 5
 
             for (i in 0..score10.size - 1)
-                if(score10[i].isChecked)
+                if (score10[i].isChecked)
                     score = score + 10
 
             for (i in 0..score20.size - 1)
-                if(score20[i].isChecked)
+                if (score20[i].isChecked)
                     score = score + 20
             binding.contentHighShowScore.setText(score.toString())
             val currentDate: LocalDateTime = LocalDateTime.now() //오늘 날짜
-            val today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+            val today =
+                currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
 
-            myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("HighTest")
+            myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
+                .child("HighTest")
             myRef.child(today).child("score").setValue(score)
             Toast.makeText(context, "점수(%d)가 저장되었습니다.".format(score), Toast.LENGTH_SHORT).show()
         }
@@ -109,16 +112,18 @@ class Content_HighRiskPregnancyTest : Fragment() {
     fun setInfo() {
         myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
         if (uid != null) {
-            myRef.child("UserInfo").addValueEventListener(object :ValueEventListener {
-                @RequiresApi(Build.VERSION_CODES.O)
+            myRef.child("UserInfo").addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val user_name = snapshot.child("user_name").getValue() as String
-                    val user_birth = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(snapshot.child("user_birth").getValue().toString())
+                    val user_birth = SimpleDateFormat(
+                        "yyyyMMdd",
+                        Locale("ko", "KR")
+                    ).parse(snapshot.child("user_birth").getValue().toString())
                     val user_age = calculateAge(user_birth)
-                    binding.contentHighUsernameage.setText("%s(만 %d세,".format(user_name,user_age))
-                    if(user_age<=19)
+                    binding.contentHighUsernameage.setText("%s(만 %d세,".format(user_name, user_age))
+                    if (user_age <= 19)
                         binding.contentHighCb0110Unger19.isChecked = true
-                    if(user_age>=35)
+                    if (user_age >= 35)
                         binding.contentHighCb0210Up35.isChecked = true
                 }
 
@@ -126,35 +131,57 @@ class Content_HighRiskPregnancyTest : Fragment() {
                     println("Failed")
                 }
             })
+            if (uid != null) {
+                myRef.child("Weight").limitToLast(1)
+                    .addValueEventListener(object : ValueEventListener {
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            var split1 = snapshot.value.toString().split("=")
+                            var user_weight = split1[1].split("}")[0]
+                            myRef.child("UserInfo").child("height")
+                                .addValueEventListener(object : ValueEventListener {
+                                    override fun onDataChange(snapshot: DataSnapshot) {
+                                        var user_height = snapshot.getValue().toString()
+                                        val user_BMI =
+                                            10000 * user_weight.toDouble() / (user_height.toDouble() * user_height.toDouble())
+                                        if (user_height.toDouble() <= 150.0)
+                                            binding.contentHighCb055Height.isChecked = true
+                                        if (user_BMI > 25)
+                                            binding.contentHighCb0410BMI.isChecked = true
+                                        binding.contentHighUserinfo2.setText(
+                                            "%scm, %skg), BMI : %.2f".format(
+                                                user_height,
+                                                user_weight,
+                                                user_BMI
+                                            )
+                                        )
+                                    }
 
-            myRef.child("Health").addValueEventListener(object : ValueEventListener{
-                @RequiresApi(Build.VERSION_CODES.O)
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val user_weight = snapshot.child("20211127").child("weight").getValue() as String
-                    val user_height = snapshot.child("20211127").child("height").getValue() as String
-                    val user_BMI =  10000 * user_weight.toDouble()/(user_height.toDouble()*user_height.toDouble())
-                    if(user_height.toDouble()<=150.0)
-                        binding.contentHighCb055Height.isChecked = true
-                    if(user_BMI>25)
-                        binding.contentHighCb0410BMI.isChecked = true
-                    binding.contentHighUserinfo2.setText("%scm, %skg), BMI : %.2f".format(user_height,user_weight,user_BMI))}
-                override fun onCancelled(error: DatabaseError) {
-                    println("Failed")
-                }
-            })
+                                    override fun onCancelled(error: DatabaseError) {
+                                        println("Failed")
+                                    }
+                                })
+                        }
+
+                        override fun onCancelled(error: DatabaseError) {
+                            println("Failed")
+                        }
+                    })
+
+            }
         }
     }
-    fun calculateAge(date: Date?): Int {
-        val birthCalendar = Calendar.getInstance()
-        birthCalendar.time = date ?: Date()
-        val current = Calendar.getInstance()
-        val currentYear = current[Calendar.YEAR]
-        val currentMonth = current[Calendar.MONTH]
-        val currentDay = current[Calendar.DAY_OF_MONTH]
-        var age = currentYear - birthCalendar[Calendar.YEAR]
-        if (birthCalendar[Calendar.MONTH] * 100 +
-            birthCalendar[Calendar.DAY_OF_MONTH] > currentMonth * 100 + currentDay
-        ) age--
-        return age
-    }
+}
+
+fun calculateAge(date: Date?): Int {
+    val birthCalendar = Calendar.getInstance()
+    birthCalendar.time = date ?: Date()
+    val current = Calendar.getInstance()
+    val currentYear = current[Calendar.YEAR]
+    val currentMonth = current[Calendar.MONTH]
+    val currentDay = current[Calendar.DAY_OF_MONTH]
+    var age = currentYear - birthCalendar[Calendar.YEAR]
+    if (birthCalendar[Calendar.MONTH] * 100 +
+        birthCalendar[Calendar.DAY_OF_MONTH] > currentMonth * 100 + currentDay
+    ) age--
+    return age
 }
