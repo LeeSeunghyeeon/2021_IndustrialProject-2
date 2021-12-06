@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:hint="50.5"
                     android:inputType="numberDecimal" />
 
@@ -62,6 +63,7 @@
                     android:id="@+id/BtnWeightOK"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:textColor="@color/black"
                     android:backgroundTint="#ECCCDD"
                     android:text="저장"
                     android:textStyle="bold"
@@ -70,6 +72,7 @@
                 <Button
                     android:id="@+id/BtnWeightCancel"
                     android:layout_width="80dp"
+                    android:textColor="@color/black"
                     android:layout_height="50dp"
                     android:backgroundTint="#ECCCDD"
                     android:text="닫기"

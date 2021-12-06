@@ -46,6 +46,7 @@
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="@color/black"
                 android:hint="아침 메뉴를 입력하세요"
                 android:inputType="textPersonName"
                 android:privateImeOptions="defaultInputmode=korean"
@@ -67,12 +68,14 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
                     android:text="저장" />
 
                 <Button
                     android:id="@+id/breakfastDelete"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="삭제" />
             </LinearLayout>
 
@@ -101,6 +104,7 @@
                 android:ems="10"
                 android:hint="점심 메뉴를 입력하세요"
                 android:inputType="textPersonName"
+                android:textColor="@color/black"
                 android:privateImeOptions="defaultInputmode=korean"
                 android:textSize="15sp" />
 
@@ -120,12 +124,14 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
                     android:text="저장" />
 
                 <Button
                     android:id="@+id/launchDelete"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="삭제" />
             </LinearLayout>
 
@@ -153,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="저녁 메뉴를 입력하세요"
+                android:textColor="@color/black"
                 android:inputType="textPersonName"
                 android:privateImeOptions="defaultInputmode=korean"
                 android:textSize="15sp" />
@@ -173,11 +180,13 @@
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
+                    android:textColor="@color/black"
                     android:text="저장" />
 
                 <Button
                     android:id="@+id/dinnerDelete"
                     android:layout_width="60dp"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:text="삭제" />
             </LinearLayout>
@@ -197,6 +206,7 @@
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:backgroundTint="#ECCCDD"
+                android:textColor="@color/black"
                 android:text="닫기"
                 android:textSize="15sp"
                 android:textStyle="bold" />

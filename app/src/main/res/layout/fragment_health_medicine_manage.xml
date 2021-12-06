@@ -140,21 +140,10 @@
                 android:textAlignment="center"
                 android:textColor="#000000" />
 
-            <CheckBox
-                android:id="@+id/medicine_check1"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:text="철분제 | 저녁 식사 후 | 1회"
-                android:textSize="15sp" />
-
-            <CheckBox
-                android:id="@+id/medicine_check2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="유산균 | 아침 식사 전 | 1회"
-                android:textSize="15sp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"

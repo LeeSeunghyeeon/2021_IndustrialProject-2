@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 package com.example.welt.Health
 
 import android.os.Build
@@ -15,7 +13,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.welt.Mission.Mission_Adapter
+import com.example.welt.Health.Health_Adapter
 import com.example.welt.Mission.MyMission
 import com.example.welt.R
 import com.example.welt.Sign.database
@@ -32,7 +30,7 @@ class Health_exercise : DialogFragment() {
     var myRef = database.getReference("User")
     private var data:ArrayList<MyMission> = ArrayList()
     lateinit var recyclerView: RecyclerView
-    lateinit var adapter: Mission_Adapter
+    lateinit var adapter: Health_Adapter
 
 
     // 현재 user 가져오기
@@ -57,7 +55,7 @@ class Health_exercise : DialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHealthExerciseBinding.inflate(inflater, container, false)
-
+        initData()
         // 스피너
         val spinner: Spinner = binding.spinnerExercise
 
@@ -89,7 +87,7 @@ class Health_exercise : DialogFragment() {
 
         // 저장 버튼
         binding.BtnExerciseOK.setOnClickListener {
-
+            myRef = database.getReference("User")
             try {
                 // 입력한 운동 종목 가져오기
                 var exercise = spinner.selectedItem.toString()
@@ -106,7 +104,6 @@ class Health_exercise : DialogFragment() {
 
                     myRef.child(userID.toString()).child("Health").child(date.toString()).child("exercise").child(exercise).setValue(minute)
 
-                    dismiss()
 
 
                 } else {
@@ -147,11 +144,11 @@ class Health_exercise : DialogFragment() {
         recyclerView.setHasFixedSize(true)
 
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        adapter = Mission_Adapter(data)
+        adapter = Health_Adapter(data)
     }
 
     private fun initData() {
-
+        data.clear()
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         myRef = myRef.child(uid.toString()).child("Health").child(date.toString()).child("exercise")
@@ -176,8 +173,7 @@ class Health_exercise : DialogFragment() {
     }
 
     fun showItemList() {
-        adapter = Mission_Adapter(data)
+        adapter = Health_Adapter(data)
         recyclerView.setAdapter(adapter)
     }
 }
->>>>>>> 8ce88394ae1185ce279eaaf700f2f9b98c59f8db

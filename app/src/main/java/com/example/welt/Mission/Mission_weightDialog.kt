@@ -51,7 +51,7 @@ class Mission_weightDialog : DialogFragment(), View.OnClickListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 var last = 50f
                 for (messageData in dataSnapshot.children) {
-                    xAxisValues.add(messageData.key.toString().substring(4))
+                    xAxisValues.add(messageData.key.toString().substring(5))
                     values.add(Entry(count*24f, messageData.getValue().toString().toFloat()))
                     count = count+1f
                     last = messageData.getValue().toString().toFloat()
@@ -78,8 +78,8 @@ class Mission_weightDialog : DialogFragment(), View.OnClickListener {
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         var bmi = 0.0
-        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child("20211127")
-        databaseRef.addValueEventListener(object : ValueEventListener {
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health")
+        databaseRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 bmi = dataSnapshot.child("weight").getValue().toString().toDouble().div(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0).pow(2))
                 //bmi = sqrt(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0))

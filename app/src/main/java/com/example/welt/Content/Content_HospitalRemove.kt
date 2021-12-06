@@ -1,19 +1,16 @@
-package com.example.welt
+package com.example.welt.Content
 
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
+import com.example.welt.Sign.myRef
 import com.example.welt.databinding.FragmentContentHospitalRemoveBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

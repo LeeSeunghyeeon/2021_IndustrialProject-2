@@ -1,4 +1,4 @@
-package com.example.welt.Mission
+package com.example.welt.Health
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
+import com.example.welt.Mission.MyMission
 import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*

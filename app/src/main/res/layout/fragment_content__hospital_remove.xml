@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="wrap_content"
-    tools:context=".Content_HospitalRemove">
+    tools:context=".Content.Content_HospitalRemove">
 
 
     <ScrollView

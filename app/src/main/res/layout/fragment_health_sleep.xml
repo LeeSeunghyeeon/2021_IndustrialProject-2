@@ -48,6 +48,7 @@
 
                 <TimePicker
                     android:id="@+id/tp_Sleepstart"
+                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="150dp"
                     android:timePickerMode="spinner" />
@@ -74,6 +75,7 @@
                 <TimePicker
                     android:id="@+id/tp_SleepEnd"
                     android:layout_width="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_height="150dp"
                     android:timePickerMode="spinner" />
 
@@ -91,6 +93,7 @@
                     android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
                     android:backgroundTint="#ECCCDD"
                     android:text="저장"
                     android:textStyle="bold"
@@ -100,6 +103,7 @@
                     android:id="@+id/BtnSleepCancel"
                     android:layout_width="80dp"
                     android:layout_height="50dp"
+                    android:textColor="@color/black"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#ECCCDD"
                     android:text="닫기"
