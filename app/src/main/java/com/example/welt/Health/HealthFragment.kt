@@ -35,6 +35,7 @@ class HealthFragment : Fragment() {
     private lateinit var binding: FragmentHealthBinding
     val myRef = database.getReference("User")
 
+
     // 현재 user 가져오기
     val user = FirebaseAuth.getInstance().currentUser
     val userID = user?.uid
@@ -42,6 +43,9 @@ class HealthFragment : Fragment() {
     // 현재 날짜 받아오기
     @RequiresApi(Build.VERSION_CODES.O)
     var date = LocalDate.now()
+
+
+
 
 
 
