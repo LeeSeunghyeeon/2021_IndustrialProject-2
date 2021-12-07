@@ -1,20 +1,26 @@
 package com.example.welt.Mission
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
 import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.time.LocalDate
 
 class Mission_babyMovementDialog : DialogFragment(), View.OnClickListener {
     private lateinit var btnOK: Button
     private lateinit var content : TextView
     private lateinit var databaseRef: DatabaseReference
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    var date = LocalDate.now()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,11 +51,13 @@ class Mission_babyMovementDialog : DialogFragment(), View.OnClickListener {
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         var text : String = ""
-        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child("20211127")
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString())
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                for (messageData in dataSnapshot.child("baby_movment").children) {
-                    text = text + messageData.child("start").getValue().toString() + " ~ " + messageData.child("end").getValue().toString() + "  태동 " + messageData.child("count").getValue().toString() + "번 \n\n"
+                for (messageData in dataSnapshot.child("baby_movement").children) {
+                    //content.setText(messageData.key.toString())
+                    val end = messageData.key.toString().split(",")
+                    text = text + end[0] + " ~ " + end[1] + "  태동 " + messageData.getValue().toString() + "번 \n\n"
                 }
                 content.setText(text)
             }

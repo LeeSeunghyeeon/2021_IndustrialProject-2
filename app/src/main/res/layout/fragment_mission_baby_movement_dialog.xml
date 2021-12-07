@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="10:00 ~ 11:00 태동 9회"
+            android:text="태동을 추가해주세요"
             android:textSize="18dp"
             android:textStyle="bold" />
 

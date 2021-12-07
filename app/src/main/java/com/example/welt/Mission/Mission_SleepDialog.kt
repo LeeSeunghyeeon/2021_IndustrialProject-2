@@ -83,7 +83,7 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("sleep")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot != null) {
+                if (!dataSnapshot.getValue().toString().equals("null")) {
                     if (dataSnapshot.getValue().toString().toInt() > 8) {
                         textMessage.setText("잠이 충분합니다. \n 오늘도 좋은 하루 보내세요.")
                     } else if (dataSnapshot.getValue().toString().toInt() < 8) {
@@ -132,7 +132,44 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
                     chart!!.data = data
                     chart!!.invalidate()
 
+                }else{
+                    val entries = ArrayList<PieEntry>()
+                    entries.add(
+                        PieEntry(
+                            0.0f, dataSnapshot.getValue().toString(),
+                            ResourcesCompat.getDrawable(
+                                getResources(),
+                                R.drawable.ic_baseline_bedtime_24, null
+                            )
+                        )
+
+                    )
+                    entries.add(
+                        PieEntry(
+                            100 - 0.0f, "",
+                            ResourcesCompat.getDrawable(
+                                getResources(),
+                                R.drawable.ic_baseline_wb_sunny_24, null
+                            )
+                        )
+
+                    )
+                    val dataSet = PieDataSet(entries, "수면 시간")
+                    dataSet.setDrawIcons(true)
+                    dataSet.sliceSpace = 3f
+                    dataSet.iconsOffset = MPPointF(0F, (-40).toFloat())
+                    dataSet.selectionShift = 5f
+                    val colors = ArrayList<Int>()
+                    colors.add(Color.rgb(175, 196, 231))
+                    colors.add(Color.rgb(238, 175, 175))
+                    dataSet.colors = colors
+                    val data = PieData(dataSet)
+                    data.setValueTextSize(22.0f)
+                    data.setValueTextColor(Color.WHITE)
+                    chart!!.data = data
+                    chart!!.invalidate()
                 }
+
             }
 
 

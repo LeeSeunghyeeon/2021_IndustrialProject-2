@@ -1,12 +1,14 @@
 package com.example.welt.Mission
 
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import com.example.welt.R
@@ -19,6 +21,7 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.time.LocalDate
 import java.util.*
 import kotlin.math.pow
 
@@ -27,6 +30,8 @@ class Mission_weightDialog : DialogFragment(), View.OnClickListener {
     private lateinit var btnOK:Button
     private lateinit var content : TextView
     private lateinit var databaseRef: DatabaseReference
+    private lateinit var databaseRef2: DatabaseReference
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -78,19 +83,30 @@ class Mission_weightDialog : DialogFragment(), View.OnClickListener {
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         var bmi = 0.0
-        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health")
+
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
         databaseRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                bmi = dataSnapshot.child("weight").getValue().toString().toDouble().div(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0).pow(2))
-                //bmi = sqrt(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0))
-                if(bmi < 18.5) content.setText("BMI : "+bmi.toString() + "\n저체중입니다.")
-                else if((bmi >= 18.5) and (bmi < 23)) content.setText("BMI : "+bmi.toString() + "\n정상 체중입니다.")
-                else if((bmi >= 23) and (bmi < 25)) content.setText("BMI : "+bmi.toString() + "\n과체중입니다.")
-                else if(bmi >= 25) content.setText("BMI : "+bmi.toString() + "\n비만입니다.")
+                databaseRef2 = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("UserInfo")
+                databaseRef2.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot2: DataSnapshot) {
+
+                        if (!dataSnapshot.getValue().toString().equals("null")) {
+                            bmi = dataSnapshot.value.toString().substring(12,16).toDouble().div(dataSnapshot2.child("height").getValue().toString().toDouble().div(100.0).pow(2))
+                            //bmi = sqrt(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0))
+                            if(bmi < 18.5) content.setText("BMI : "+bmi.toString() + "\n저체중입니다.")
+                            else if((bmi >= 18.5) and (bmi < 23)) content.setText("BMI : "+bmi.toString() + "\n정상 체중입니다.")
+                            else if((bmi >= 23) and (bmi < 25)) content.setText("BMI : "+bmi.toString() + "\n과체중입니다.")
+                            else if(bmi >= 25) content.setText("BMI : "+bmi.toString() + "\n비만입니다.")
+                        }
+                    }
+                    override fun onCancelled(databaseError: DatabaseError) {}
+                })
 
             }
             override fun onCancelled(databaseError: DatabaseError) {}
         })
+
     }
 
     override fun onClick(v: View?) {
