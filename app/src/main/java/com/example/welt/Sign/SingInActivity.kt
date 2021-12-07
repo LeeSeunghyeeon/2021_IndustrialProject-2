@@ -2,6 +2,7 @@ package com.example.welt.Sign
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.welt.MainActivity
@@ -14,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 val database : FirebaseDatabase = FirebaseDatabase.getInstance()
-val myRef : DatabaseReference = database.reference
+var myRef : DatabaseReference = database.reference
 
 class SingInActivity : AppCompatActivity() {
     lateinit var binding: ActivitySingInBinding

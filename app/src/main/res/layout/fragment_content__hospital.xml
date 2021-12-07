@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Content.Content_Hospital">
 
-    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,273 +15,122 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#875DD3"
-            android:text="이전 검진일"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView132"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center"
-                android:text="▶"
-                android:textAlignment="center"
-                android:textColor="#9C27B0"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView137"
-                android:layout_width="354dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center_vertical"
-                android:text="2021년 07월 02일 금요일 14:00"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox20"
-                android:background="@drawable/borderline"
+                android:id="@+id/textView33"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:textAlignment="center" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView129"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center"
-                android:text="▶"
-                android:textAlignment="center"
-                android:textColor="#9C27B0"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/textView133"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:gravity="center_vertical"
-                android:text="2021년 08월 22일 일요일 11:00"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox22"
-                android:background="@drawable/borderline"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView130"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center"
-                android:text="▶"
+                android:background="#875DD3"
+                android:text="검진일 목록"
                 android:textAlignment="center"
-                android:textColor="#9C27B0"
-                android:textSize="16sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
             <TextView
-                android:id="@+id/textView134"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:gravity="center_vertical"
-                android:text="2021년 09월 25일 토요일 11:30"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox23"
-                android:background="@drawable/borderline"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_be"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView131"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center"
-                android:text="▶"
+                android:text="이전 검진일"
                 android:textAlignment="center"
-                android:textColor="#9C27B0"
-                android:textSize="16sp" />
+                android:textColor="#875DD3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView135"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:gravity="center_vertical"
-                android:text="2021년 10월 15일 금요일 12:30"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox24"
-                android:background="@drawable/borderline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-        <TextView
-            android:id="@+id/textView126"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#673AB7"
-            android:text="다음 검진일"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:id="@+id/hospital_nextLinear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView138"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/borderline"
-                android:gravity="center"
-                android:text="▶"
-                android:textAlignment="center"
-                android:textColor="#9C27B0"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/hospital_schedule04"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/borderline"
-                android:gravity="center_vertical"
-                android:text="2021년 11월 13일 토요일 10:00"
-                android:textSize="16sp" />
-
-            <CheckBox
-                android:id="@+id/checkBox25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/borderline"
-                android:layout_weight="1" />
-
-        </LinearLayout>
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
-
-        <TextView
-            android:id="@+id/textView34"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="삭제 / 수정할 항목을 선택 후 삭제/수정 버튼을 눌러주세요."
-            android:textAlignment="center" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/hospital_addBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="추가"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                tools:ignore="TouchTargetSizeCheck" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <Space
-                android:layout_width="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/text_ne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다음 검진일"
+                android:textAlignment="center"
+                android:textColor="#875DD3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/hospital_addBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="40sp"
+                    android:background="#E3D5FF"
+                    android:foregroundTint="#C18181"
+                    android:text="추가"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/hospital_reviseBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="40sp"
+                    android:background="#E3D5FF"
+                    android:foregroundTint="#C18181"
+                    android:text="수정"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <Button
+                    android:id="@+id/hospital_removeBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="40sp"
+                    android:background="#E3D5FF"
+                    android:foregroundTint="#C18181"
+                    android:text="삭제"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </TableRow>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
             <Button
                 android:id="@+id/Hospital_OKbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="130dp"
+                android:layout_height="40sp"
                 android:layout_gravity="center"
                 android:background="#E0CFFF"
                 android:gravity="center"
                 android:text="확인"
                 android:textAlignment="center"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
 
-            <Space
-                android:layout_width="60dp"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="삭제 / 수정"
-                android:textSize="16sp"
-                android:textStyle="bold" />
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

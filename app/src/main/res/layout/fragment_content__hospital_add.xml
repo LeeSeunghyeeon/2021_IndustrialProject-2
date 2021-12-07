@@ -1,77 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Content.Content_HospitalAdd">
+    android:layout_width="300sp"
+    android:layout_height="500sp"
+    tools:context=".Content_HospitalAdd">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#673AB7"
-            android:text="내원일 추가"
-            android:textAlignment="viewStart"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="2021년 11월 17일 15:00"
+                android:background="#673AB7"
+                android:text="내원일 추가"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/content_hospital_remove_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="날짜와 시각을 선택하세요"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <DatePicker
+                android:id="@+id/content_hospital_add_dpSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:endYear="2022"
+                android:startYear="2021"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+
+            <TimePicker
+                android:id="@+id/content_hospital_add_tpSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:layout_gravity="center_horizontal"
+                android:timePickerMode="spinner" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:text="메모"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/content_hospital_add_memo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:ems="20"
+                    android:hint="ex) 엑스레이촬영"
+                    android:inputType="textShortMessage"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/content_hospital_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/content_hospital_addOK"
+                    android:layout_width="100dp"
+                    android:layout_height="40sp"
+                    android:background="#E0CFFF"
+                    android:text="추가"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
         </LinearLayout>
-
-        <DatePicker
-            android:id="@+id/dpSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:calendarViewShown="false"
-            android:datePickerMode="spinner" />
-
-
-        <TimePicker
-            android:id="@+id/time_picker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:timePickerMode="spinner">
-
-        </TimePicker>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="100dp"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/hospital_addSaveBtn"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:background="#E0CFFF"
-                android:text="추가" />
-        </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

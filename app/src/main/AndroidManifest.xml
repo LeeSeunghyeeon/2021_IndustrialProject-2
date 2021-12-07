@@ -10,13 +10,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="Dr.swan"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/Theme.Welt"
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config">
+=======
+        android:theme="@style/AppTheme">
+>>>>>>> 0c9cd5f2f89adef177ab5c8ea3f8a076ae40ec5a
 
 
         <activity

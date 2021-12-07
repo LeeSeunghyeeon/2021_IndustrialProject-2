@@ -54,6 +54,7 @@
                     <TimePicker
                         android:id="@+id/timePicker_start"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="150dp"
                         android:timePickerMode="spinner" />
 
@@ -80,6 +81,7 @@
                         android:id="@+id/timePicker_end"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
+                        android:textColor="@color/black"
                         android:timePickerMode="spinner" />
 
                 </TableRow>
@@ -106,6 +108,7 @@
                         android:layout_height="wrap_content"
                         android:ems="5"
                         android:hint="7"
+                        android:textColor="@color/black"
                         android:inputType="numberSigned" />
 
 
@@ -124,6 +127,7 @@
                         android:layout_height="50dp"
                         android:text="저장"
                         android:textSize="15sp"
+                        android:textColor="@color/black"
                         android:textStyle="bold"
                         android:backgroundTint="#ECCCDD" />
 
@@ -132,6 +136,7 @@
                         android:layout_width="80dp"
                         android:layout_height="50dp"
                         android:text="닫기"
+                        android:textColor="@color/black"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:backgroundTint="#ECCCDD" />

@@ -42,8 +42,7 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
     }
 
     private fun init() {
-        val data : Map<String, Double> = mapOf("yoga" to 2.5, "pilates" to 2.5, "stretch" to 2.5, "swimming" to 7.0, "bicycle" to 8.0)
-        val name : Map<String, String> = mapOf("yoga" to "요가", "pilates" to "필라테스", "stretch" to "스트레칭", "swimming" to "수영", "bicycle" to "자전거")
+        val data : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
         var text : String = ""
         var totalCal = 0.0
         val user = FirebaseAuth.getInstance().currentUser
@@ -56,7 +55,7 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
                 for (messageData in dataSnapshot.child("exercise").children) {
                     val cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
                     totalCal = totalCal + cal
-                    text = text+ name[messageData.key] +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
+                    text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
                 }
                 text = text + "\n총 소모칼로리  " + totalCal.toString() + "kcal"
                 content.setText(text)

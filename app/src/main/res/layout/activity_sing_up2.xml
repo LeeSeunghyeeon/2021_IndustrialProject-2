@@ -64,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:inputType="textPersonName"
                     android:minHeight="48dp" />
             </TableRow>
@@ -92,6 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:calendarViewShown="false"
+                    android:textColor="@color/black"
                     android:datePickerMode="spinner" />
 
                 <!--
@@ -129,6 +131,7 @@
                     android:layout_span="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:spinnerMode="dropdown" />
 
 
@@ -170,6 +173,7 @@
 
                 <DatePicker
                     android:id="@+id/babyDateSpinner"
+                    android:textColor="@color/black"
                     android:layout_span="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -211,6 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:inputType="textPersonName"
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -239,6 +244,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:layout_span="2"
+                    android:textColor="@color/black"
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck" />
 
@@ -271,6 +277,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_span="2"
+                    android:textColor="@color/black"
                     android:ems="10"
                     android:inputType="textPassword"
                     android:hint="6자 이상"
@@ -298,6 +305,7 @@
                     android:id="@+id/input_telNum"
                     android:layout_width="wrap_content"
                     android:layout_span="2"
+                    android:textColor="@color/black"
                     android:ems="10"
                     android:inputType="phone"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -325,6 +333,7 @@
                     android:layout_width="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:inputType="numberDecimal"
                     android:hint="ex)165.6"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -352,6 +361,7 @@
                     android:layout_width="wrap_content"
                     android:layout_span="2"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:inputType="numberDecimal"
                     android:hint="ex)58.7"
                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -369,6 +379,7 @@
                     android:layout_height="50dp"
                     android:layout_span="3"
                     android:text="회원가입"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
             </TableRow>

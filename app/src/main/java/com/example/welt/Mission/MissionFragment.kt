@@ -1,13 +1,23 @@
 package com.example.welt.Mission
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.welt.R
 import com.example.welt.databinding.FragmentMissionBinding
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.MPPointF
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -16,15 +26,18 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
 
 import com.google.firebase.database.ValueEventListener
+import java.time.LocalDate
+import kotlin.math.pow
 
 class MissionFragment : Fragment() {
     private lateinit var binding:FragmentMissionBinding
     private var data:ArrayList<MyMission> = ArrayList()
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Mission_Adapter
-    lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var databaseRef:DatabaseReference
-    private lateinit var uid : FirebaseAuth
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    var date = LocalDate.now()
 
 
     override fun onCreateView(
@@ -45,10 +58,56 @@ class MissionFragment : Fragment() {
     }
 
     private fun initData(){
-
+        //수면 버튼 텍스트 변경
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Mission").child("20211124")
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("sleep")
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                binding.sleepDialogBtn.setText("수면\n"+dataSnapshot.getValue().toString() + "시간/8시간")
+            }
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        //검음수 버튼 텍스트 변경
+
+
+        //섭취 칼로리 버튼 텍스트 변경
+
+        //소모 칼로리 버튼 텍스트 변경
+        val met : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
+        var text : String = ""
+        var totalCal = 0.0
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child("20211127")
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val weight = dataSnapshot.child("weight").getValue().toString().toDouble()
+
+                for (messageData in dataSnapshot.child("exercise").children) {
+                    val cal = (met[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
+                    totalCal = totalCal + cal
+                    text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
+                }
+                binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + "kcal")
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+
+        //체중 칼로리 버튼 텍스트 변경
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
+        databaseRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                binding.weightDialogBtn.setText(dataSnapshot.getValue().toString())
+
+            }
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+
+
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Mission").child(date.toString())
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 data.clear()
@@ -67,6 +126,7 @@ class MissionFragment : Fragment() {
         })
 
         initRecyclerView()
+
     }
 
     private fun initRecyclerView() {

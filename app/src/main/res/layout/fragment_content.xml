@@ -35,8 +35,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_column="2"
+                            android:textColor="@color/black"
                             android:layout_margin="10dp"
-                            android:text="오늘은 2021년 11월 08일 (MON)"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -60,6 +60,7 @@
                             android:layout_column="2"
                             android:layout_margin="10dp"
                             android:gravity="center"
+                            android:textColor="@color/black"
                             android:text="출산예정일까지"
                             android:textAlignment="center"
                             android:textSize="20sp" />
@@ -71,7 +72,6 @@
                             android:layout_column="2"
                             android:layout_margin="10dp"
                             android:gravity="center"
-                            android:text="151"
                             android:textAlignment="center"
                             android:textColor="#7E4FD3"
                             android:textSize="34sp"
@@ -84,6 +84,7 @@
                             android:layout_column="2"
                             android:layout_margin="10dp"
                             android:text="일 남았습니다."
+                            android:textColor="@color/black"
                             android:textAlignment="center"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -105,6 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:text="주차별 건강정보"
                         android:textSize="24sp" />
                 </TableRow>
@@ -118,7 +120,7 @@
                         android:layout_width="150dp"
                         android:layout_height="237dp"
                         android:layout_margin="10dp"
-                        android:src="@drawable/week07_blueberry" />
+                        android:src="@drawable/tempimg" />
 
                     <LinearLayout
                         android:layout_width="216dp"
@@ -134,7 +136,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="7주차"
                             android:textAlignment="center"
                             android:textColor="#673AB7"
                             android:textSize="28sp"
@@ -144,15 +145,15 @@
                             android:id="@+id/content_weekSize"
                             android:layout_width="230dp"
                             android:layout_height="110dp"
+                            android:textColor="@color/black"
                             android:gravity="center"
-                            android:text="00이는 \n현재 블루베리 \n크기입니다."
                             android:textSize="24sp" />
 
                         <TextView
                             android:id="@+id/content_weekBody"
                             android:layout_width="match_parent"
                             android:layout_height="35dp"
-                            android:text="(1.30cm , - )"
+                            android:textColor="@color/black"
                             android:textAlignment="center"
                             android:textSize="20sp" />
 
@@ -171,6 +172,7 @@
                                 android:layout_height="35dp"
                                 android:background="#E1D5F4"
                                 android:gravity="center"
+                                android:textColor="@color/black"
                                 android:text="더보기"
                                 tools:ignore="TouchTargetSizeCheck" />
                         </LinearLayout>
@@ -197,6 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:layout_span="2"
+                        android:textColor="@color/black"
                         android:text="도움이 되는 콘텐츠"
                         android:textSize="24sp" />
                 </TableRow>
@@ -211,6 +214,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:foregroundGravity="center"
                         android:gravity="center"
                         android:text="마음챙김 태교영상" />
@@ -220,6 +224,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:text="내원일\nD-8" />
                 </TableRow>
 
@@ -234,6 +239,7 @@
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:foregroundGravity="center"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="고위험 임신군 \n위험도 측정" />
 
@@ -242,6 +248,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
+                        android:textColor="@color/black"
                         android:text="지금 우울하신가요?" />
 
                 </TableRow>

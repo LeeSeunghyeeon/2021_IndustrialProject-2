@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                     android:gravity="center"
                     android:text="아이디 찾기"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -61,6 +62,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/black"
                     android:inputType="textPersonName"
                     android:minHeight="48dp" />
             </TableRow>
@@ -87,6 +90,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:textColor="@color/black"
                     android:inputType="date"
                     android:minHeight="48dp"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -103,6 +107,7 @@
                     android:layout_height="50dp"
                     android:layout_span="1"
                     android:text="찾기"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <Button
@@ -111,6 +116,7 @@
                     android:layout_height="50dp"
                     android:layout_span="2"
                     android:text="취소"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
             </TableRow>
@@ -125,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:layout_span="3"
+                    android:textColor="@color/black"
                     android:text="잘못된 입력입니다. 다시 입력하세요."
                     android:visibility="invisible"
                     android:textAlignment="center"

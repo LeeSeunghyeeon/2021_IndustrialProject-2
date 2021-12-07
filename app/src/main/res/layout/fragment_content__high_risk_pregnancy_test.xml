@@ -41,29 +41,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="000(만 30세, "
+                    android:textColor="@color/black"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/content_high_userinfo2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="160cm, 60kg), BMI : 23.43"
                     android:textAlignment="center"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
+                android:textColor="@color/black"
                 android:layout_height="10sp" />
 
             <TextView
                 android:id="@+id/textView41"
                 android:layout_width="match_parent"
                 android:layout_height="40sp"
+                android:textColor="@color/black"
                 android:text="해당하는 항목을 체크해주세요.✔"
                 android:textAlignment="center"
                 android:textSize="22sp" />
@@ -80,6 +84,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/borderline"
                     android:gravity="center"
+                    android:textColor="@color/black"
                     android:text="평점구분"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -88,6 +93,7 @@
                     android:id="@+id/textView121"
                     android:layout_width="90dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/black"
                     android:background="@drawable/borderline"
                     android:textAlignment="center"
                     android:textSize="16sp" />
@@ -96,6 +102,7 @@
                     android:id="@+id/textView23"
                     android:layout_width="210dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/black"
                     android:background="@drawable/borderline"
                     android:gravity="center"
                     android:text="세부요인"
@@ -109,6 +116,7 @@
                     android:background="@drawable/borderline"
                     android:gravity="center"
                     android:text="점수"
+                    android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
@@ -140,6 +148,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="일반요인"
+                        android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="16sp" />
                 </LinearLayout>
@@ -158,6 +167,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="연령"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -167,6 +177,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="체중"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -176,6 +187,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="신장"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -185,6 +197,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="임신희망\n여부"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -202,6 +215,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="19세이하"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -211,6 +225,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="만 35세 이상"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -220,6 +235,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="초산"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -229,6 +245,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="BIM(체질량지수) > 25"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -238,6 +255,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="150cm이하"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -247,6 +265,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="원하지 않는 임신"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
                 </LinearLayout>
 
@@ -263,6 +282,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="10"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -272,6 +292,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="10"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -281,6 +302,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -290,6 +312,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="10"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -299,6 +322,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="5"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -308,6 +332,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="5"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
                 </LinearLayout>
 
@@ -321,6 +346,7 @@
                         android:id="@+id/content_high_cb01_10_unger19"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         tools:ignore="TouchTargetSizeCheck"
                         android:enabled="false"/>
@@ -329,6 +355,7 @@
                         android:id="@+id/content_high_cb02_10_up35"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:checked="false"
                         android:clickable="false"
@@ -338,12 +365,14 @@
                         android:id="@+id/content_high_cb03_20"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline" />
 
                     <CheckBox
                         android:id="@+id/content_high_cb04_10_BMI"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:enabled="false"/>
 
@@ -383,6 +412,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="기존질환"
+                        android:textColor="@color/black"
                         android:textAlignment="center"
                         android:textSize="16sp" />
 
@@ -392,6 +422,7 @@
                         android:layout_height="200dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="산과적요인" />
 
                     <TextView
@@ -400,6 +431,7 @@
                         android:layout_height="400dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="현재 \n임신 상태" />
 
                 </LinearLayout>
@@ -417,6 +449,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="만성병"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -425,6 +458,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="유전질환"
                         android:textAlignment="center" />
 
@@ -434,6 +468,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="성병"
                         android:textAlignment="center" />
 
@@ -441,6 +476,7 @@
                         android:id="@+id/textView79"
                         android:layout_width="90dp"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="다태임신" />
@@ -449,6 +485,7 @@
                         android:id="@+id/textView82"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="이상태위" />
@@ -457,6 +494,7 @@
                         android:id="@+id/textView83"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="자궁이상" />
@@ -467,6 +505,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="외음부 첨형 콘딜로마" />
 
                     <TextView
@@ -475,6 +514,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="RH(-) 임산부" />
 
                     <TextView
@@ -483,6 +523,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="혈압상승" />
 
                     <TextView
@@ -491,6 +532,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="과도한 \n체중증가" />
 
                     <TextView
@@ -499,6 +541,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="두통" />
 
                     <TextView
@@ -507,6 +550,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="시력감퇴" />
 
                     <TextView
@@ -515,6 +559,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="오심, 구토" />
 
                     <TextView
@@ -523,6 +568,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="복통" />
 
                     <TextView
@@ -531,6 +577,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="질출혈" />
 
                     <TextView
@@ -539,6 +586,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="조기양막파수" />
 
                 </LinearLayout>
@@ -556,6 +604,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="고혈압"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -565,6 +614,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="심장병"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -574,6 +624,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="신장병"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -583,6 +634,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="당뇨"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -592,6 +644,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="갑상선질환"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -601,6 +654,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="폐질환"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -610,6 +664,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="천식"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -619,6 +674,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="간질"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -628,6 +684,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="정신질환"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -637,6 +694,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="혈관색전증"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -646,6 +704,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="빈혈"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -655,6 +714,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="염색체이상,\n대사장애성 질환 등"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -664,6 +724,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="에이즈,매독,임질 등"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -672,6 +733,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="쌍태아 이상을 임신한 경우" />
 
                     <TextView
@@ -679,6 +741,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:text="둔위,안면위" />
 
@@ -686,6 +749,7 @@
                         android:id="@+id/textView91"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="근종, 선천성자궁기형" />
@@ -694,6 +758,7 @@
                         android:id="@+id/textView92"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="회음부 사마귀" />
@@ -702,6 +767,7 @@
                         android:id="@+id/textView93"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center" />
 
@@ -709,6 +775,7 @@
                         android:id="@+id/textView104"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="140/90mmHg이상" />
@@ -719,6 +786,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="임신 8,9,10개월 기간\n1kg/주 이상" />
 
                     <TextView
@@ -726,6 +794,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center" />
 
                     <TextView
@@ -733,6 +802,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center" />
 
                     <TextView
@@ -740,12 +810,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center" />
 
                     <TextView
                         android:id="@+id/textView109"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center" />
 
@@ -754,6 +826,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center" />
 
                     <TextView
@@ -762,6 +835,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="진통 시작 전에\n 양막이 파열되는 경우" />
 
                 </LinearLayout>
@@ -779,6 +853,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -788,6 +863,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -797,6 +873,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -806,6 +883,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -815,6 +893,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -824,6 +903,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -833,6 +913,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -842,6 +923,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -851,6 +933,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -860,6 +943,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -869,6 +953,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -878,6 +963,7 @@
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -887,6 +973,7 @@
                         android:gravity="center"
                         android:background="@drawable/borderline"
                         android:text="20"
+                        android:textColor="@color/black"
                         android:textAlignment="center" />
 
                     <TextView
@@ -895,6 +982,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="20" />
 
                     <TextView
@@ -902,6 +990,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:text="20" />
 
@@ -909,6 +998,7 @@
                         android:id="@+id/textView88"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline"
                         android:gravity="center"
                         android:text="20" />
@@ -919,6 +1009,7 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:text="20" />
 
                     <TextView
@@ -926,6 +1017,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="20" />
 
@@ -934,6 +1026,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -942,6 +1035,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="20" />
 
@@ -950,6 +1044,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -958,6 +1053,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -966,6 +1062,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -974,6 +1071,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -982,6 +1080,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="10" />
 
@@ -990,6 +1089,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:background="@drawable/borderline"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:text="20" />
                 </LinearLayout>
@@ -1004,6 +1104,7 @@
                         android:id="@+id/content_high_cb07_20"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:background="@drawable/borderline" />
 
@@ -1012,18 +1113,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center"
+                        android:textColor="@color/black"
                         android:background="@drawable/borderline" />
 
                     <CheckBox
                         android:id="@+id/content_high_cb09_20"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
+                        android:textColor="@color/black"
                         android:gravity="center"
                         android:background="@drawable/borderline" />
 
                     <CheckBox
                         android:id="@+id/content_high_cb10_20"
                         android:layout_width="match_parent"
+                        android:textColor="@color/black"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:background="@drawable/borderline" />
@@ -1031,6 +1135,7 @@
                     <CheckBox
                         android:id="@+id/content_high_cb11_20"
                         android:layout_width="match_parent"
+                        android:textColor="@color/black"
                         android:layout_height="40dp"
                         android:gravity="center"
                         android:background="@drawable/borderline" />
@@ -1204,6 +1309,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textColor="@color/black"
                     android:text="점수확인" />
 
                 <Space
@@ -1222,6 +1328,7 @@
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
                     android:text="점수 : "
+                    android:textColor="@color/black"
                     android:textAlignment="textEnd"
                     android:textSize="16sp" />
 
@@ -1235,6 +1342,7 @@
                 <TextView
                     android:id="@+id/content_high_show_score"
                     android:layout_width="match_parent"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
@@ -1263,6 +1371,7 @@
                     android:id="@+id/btnOK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="확인" />
 
                 <Space
