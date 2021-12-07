@@ -1,54 +1,34 @@
 package com.example.welt
 
 import android.Manifest
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.annotation.SuppressLint
-import android.widget.CalendarView
-import android.widget.TextView
-import com.example.welt.databinding.FragmentDiaryBinding
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import androidx.annotation.NonNull
-
-import android.R
 import android.app.Activity
-import android.content.ContentResolver
 import android.content.Context.MODE_NO_LOCALIZED_COLLATORS
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Bundle
 import android.provider.MediaStore
-import android.provider.Settings
-import android.text.Editable
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.CalendarView.OnDateChangeListener
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import com.example.welt.databinding.FragmentDiaryBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_diary.*
-import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
-import android.graphics.BitmapFactory
 
-import android.graphics.Bitmap
-import com.google.android.gms.auth.api.signin.internal.Storage
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
-import kotlinx.android.synthetic.main.fragment_diary.view.*
 
-import java.io.InputStream
-import android.graphics.drawable.BitmapDrawable
 
-import java.io.ByteArrayOutputStream
 
 
 class DiaryFragment : Fragment() {
@@ -58,22 +38,28 @@ class DiaryFragment : Fragment() {
     lateinit var fname: String
     lateinit var str: String
     lateinit var simage : String
+    private val TAG = "FirebaseService"
 //    private val OPEN_GALLERY = 1
 
     private val database: FirebaseDatabase = FirebaseDatabase.getInstance()
-    private val myRef: DatabaseReference = database.reference
+    private var myRef: DatabaseReference = database.reference
+
+    val user = FirebaseAuth.getInstance().currentUser
+    val userID = user?.uid
 
     private var uri: Uri? = null
     private val Gallery = 1
 
+    val currentDate = currentDate()
+
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         binding = FragmentDiaryBinding.inflate(inflater, container, false)
 
-        val currentDate = currentDate()
+
         binding.today.text = currentDate.dateToString("yyyy년 MM월 dd일")
+
 
 //        binding.uploadImage.setImageURI(uri)
 //
@@ -83,15 +69,72 @@ class DiaryFragment : Fragment() {
 //
 //        }
 
+        myRef = myRef.child(userID.toString()).child("UserInfo")
+
+
+//        myRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                val baby_birth = snapshot.child("user_baby_name").getValue()
+//
+//                val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(currentDate.toString())
+//                val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
+//                val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+//
+//                binding.calDday.setText("$remaining_days")
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                println("error")
+//            }
+//
+//        })
+
+        //Dday_current()
         test()
 
         return binding.root
+    }
+
+    fun Dday_current() {
+
+        if (userID != null) {
+            myRef= FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("UserInfo")
+
+            myRef.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
+
+                    binding.ExpectedDate.setText("$baby_birth")
+
+                    val startDate =
+                        SimpleDateFormat(
+                            "yyyyMMdd",
+                            Locale("ko", "KR")
+                        ).parse(currentDate.toString())
+                    val endDate =
+                        SimpleDateFormat(
+                            "yyyyMMdd",
+                            Locale("ko", "KR")
+                        ).parse(baby_birth.toString())
+                    val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+
+                        binding.calDday.setText("아이와 만나기까지 D - %s".format(remaining_days))
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    println("Failed")
+                }
+            })
+        }
     }
 
     private fun Date.dateToString(format: String, local: Locale = Locale.getDefault()): String {
         val formatter = SimpleDateFormat(format, local)
         return formatter.format(this)
     }
+
 
     private fun currentDate(): Date {
         return Calendar.getInstance().time
@@ -125,9 +168,6 @@ class DiaryFragment : Fragment() {
 
     //날짜 클릭 및 저장 버튼
     private fun test() {
-        val user = FirebaseAuth.getInstance().currentUser
-        val userID = user?.uid
-
         binding.calendarView.setOnDateChangeListener(OnDateChangeListener { view, year, month, dayOfMonth ->
             binding.today.text = String.format("%d년 %d월 %d일", year, month + 1, dayOfMonth)
 
@@ -232,9 +272,6 @@ class DiaryFragment : Fragment() {
 
 
     private fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
-
-        val user = FirebaseAuth.getInstance().currentUser
-        val userID = user?.uid
 
         fname = "" + userID + " " + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt"
         //저장할 파일 이름 : ex) fN2FASdnfDA3 2021-11-22.txt
@@ -393,5 +430,75 @@ class DiaryFragment : Fragment() {
             Log.d("ActivityResult", "something wrong")
         }
     }
+
+
+//    fun onNewToken(token: String?) {
+//        Log.d(TAG, "new Token: $token")
+//
+//        // 토큰 값을 따로 저장해둔다.
+//        val pref = this.getSharedPreferences("token", Context.MODE_PRIVATE)
+//        val editor = pref.edit()
+//        editor.putString("token", token).apply()
+//        editor.commit()
+//
+//        Log.i("로그: ", "성공적으로 토큰을 저장함")
+//    }
+//
+//    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
+//        Log.d(TAG, "From: " + remoteMessage!!.from)
+//
+//        // Notification 메시지를 수신할 경우는
+//        // remoteMessage.notification?.body!! 여기에 내용이 저장되어있다.
+//        // Log.d(TAG, "Notification Message Body: " + remoteMessage.notification?.body!!)
+//
+//        if(remoteMessage.data.isNotEmpty()){
+//            Log.i("바디: ", remoteMessage.data["body"].toString())
+//            Log.i("타이틀: ", remoteMessage.data["title"].toString())
+//            sendNotification(remoteMessage)
+//        }
+//
+//        else {
+//            Log.i("수신에러: ", "data가 비어있습니다. 메시지를 수신하지 못했습니다.")
+//            Log.i("data값: ", remoteMessage.data.toString())
+//        }
+//    }
+//
+//    private fun sendNotification(remoteMessage: RemoteMessage) {
+//        // RequestCode, Id를 고유값으로 지정하여 알림이 개별 표시되도록 함
+//        val uniId: Int = (System.currentTimeMillis() / 7).toInt()
+//
+//        // 일회용 PendingIntent
+//        // PendingIntent : Intent 의 실행 권한을 외부의 어플리케이션에게 위임한다.
+//        val intent = Intent(this.context, MainActivity::class.java)
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Activity Stack 을 경로만 남긴다. A-B-C-D-B => A-B
+//        val pendingIntent = PendingIntent.getActivity(this.context, uniId, intent, PendingIntent.FLAG_ONE_SHOT)
+//
+//        // 알림 채널 이름
+//        val channelId = getString(R.string.firebase_notification_channel_id)
+//
+//        // 알림 소리
+//        val soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+//
+//        // 알림에 대한 UI 정보와 작업을 지정한다.
+//        val notificationBuilder = NotificationCompat.Builder(this, channelId)
+//            .setSmallIcon(R.mipmap.ic_launcher) // 아이콘 설정
+//            .setContentTitle(remoteMessage.data["body"].toString()) // 제목
+//            .setContentText(remoteMessage.data["title"].toString()) // 메시지 내용
+//            .setAutoCancel(true)
+//            .setSound(soundUri) // 알림 소리
+//            .setContentIntent(pendingIntent) // 알림 실행 시 Intent
+//
+//        val notificationManager =
+//            getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+//
+//        // 오레오 버전 이후에는 채널이 필요하다.
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            val channel = NotificationChannel(channelId, "Notice", NotificationManager.IMPORTANCE_DEFAULT)
+//            notificationManager.createNotificationChannel(channel)
+//        }
+//
+//        // 알림 생성
+//        notificationManager.notify(uniId, notificationBuilder.build())
+//    }
 
 }
