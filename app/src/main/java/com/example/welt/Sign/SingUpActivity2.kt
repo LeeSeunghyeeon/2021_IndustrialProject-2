@@ -129,9 +129,9 @@ class SingUpActivity2 : AppCompatActivity() {
                         }
                         if(user_babyBirth_m<10&&user_babyBirth_d<10){
                             user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m).toString()+zero.toString()+user_babyBirth_d.toString()
-                        }else if(user_babyBirth_m>10&&user_babyBirth_d<10){
+                        }else if(user_babyBirth_d<10){
                             user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m).toString()+zero.toString()+user_babyBirth_d.toString()
-                        }else if(user_babyBirth_d>10&&user_babyBirth_m<10){
+                        }else if(user_babyBirth_m<10){
                             user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m)+user_babyBirth_d.toString()
                         }else{
                             user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m).toString()+user_babyBirth_d.toString()
@@ -139,9 +139,9 @@ class SingUpActivity2 : AppCompatActivity() {
 
                         if(user_birth_m<10&&user_birth_d<10){
                             user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m).toString()+zero.toString()+user_birth_d.toString()
-                        }else if(user_birth_m>10&&user_birth_d<10){
+                        }else if(user_birth_d<10){
                             user_birth=user_birth_y.toString()+(user_birth_m).toString()+zero.toString()+user_birth_d.toString()
-                        }else if(user_birth_d>10&&user_birth_m<10){
+                        }else if(user_birth_m<10){
                             user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m).toString()+user_birth_d.toString()
                         }else{
                             user_birth=user_birth_y.toString()+(user_birth_m).toString()+user_birth_d.toString()
@@ -163,8 +163,9 @@ class SingUpActivity2 : AppCompatActivity() {
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_phone").setValue(user_phone)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_pw").setValue(user_pw)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_relationship").setValue(user_relationship)
-                            myRef.child("User").child(user_uid).child("Health").child(getTime).child("height").setValue(user_height)
-                            myRef.child("User").child(user_uid).child("Health").child(getTime).child("weight").setValue(user_weight)
+                            myRef.child("User").child(user_uid).child("UserInfo").child("height").setValue(user_height)
+                            myRef.child("User").child(user_uid).child("Health").child(date.toString()).child("weight").setValue(user_weight)
+                            myRef.child("User").child(user_uid).child("Weight").child(date.toString()).setValue(user_weight)
 
                         }
                         addMission(user_babyBirth)

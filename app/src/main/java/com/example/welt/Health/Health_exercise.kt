@@ -104,8 +104,6 @@ class Health_exercise : DialogFragment() {
 
                     myRef.child(userID.toString()).child("Health").child(date.toString()).child("exercise").child(exercise).setValue(minute)
 
-                    dismiss()
-
 
                 } else {
                     Toast.makeText(getActivity(), "운동 종목과 운동 시간을 제대로 입력해주세요.", Toast.LENGTH_SHORT).show()

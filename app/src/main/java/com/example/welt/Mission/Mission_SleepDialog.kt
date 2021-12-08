@@ -83,22 +83,22 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("sleep")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (!dataSnapshot.getValue().toString().equals("null")) {
-                    if (dataSnapshot.getValue().toString().toInt() > 8) {
+                if (!dataSnapshot.child("hour").getValue().toString().equals("null")) {
+                    if (dataSnapshot.child("hour").getValue().toString().toInt() >= 8) {
                         textMessage.setText("잠이 충분합니다. \n 오늘도 좋은 하루 보내세요.")
-                    } else if (dataSnapshot.getValue().toString().toInt() < 8) {
-                        val feedback = 8 - dataSnapshot.getValue().toString().toInt()
+                    } else if (dataSnapshot.child("hour").getValue().toString().toInt() < 8) {
+                        val feedback = 8 - dataSnapshot.child("hour").getValue().toString().toInt()
                         textMessage.setText("권장 수면 시간보다 " + feedback.toString() + "시간이 부족합니다.")
                     }
                     val sleepTime_str =
-                        (dataSnapshot.getValue().toString().toFloat() / 8.0F) * 100.0
+                        (dataSnapshot.child("hour").getValue().toString().toFloat() / 8.0F) * 100.0
                     val sleepTime = sleepTime_str.toFloat()
 
 
                     val entries = ArrayList<PieEntry>()
                     entries.add(
                         PieEntry(
-                            sleepTime, dataSnapshot.getValue().toString(),
+                            sleepTime, dataSnapshot.child("hour").getValue().toString(),
                             ResourcesCompat.getDrawable(
                                 getResources(),
                                 R.drawable.ic_baseline_bedtime_24, null
