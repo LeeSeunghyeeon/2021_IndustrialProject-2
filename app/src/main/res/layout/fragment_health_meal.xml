@@ -41,13 +41,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/input_breakfast"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:textColor="@color/black"
-                android:hint="아침 메뉴를 입력하세요"
+                android:completionHint="아침 메뉴를 입력하세요"
+                android:completionThreshold="1"
                 android:inputType="textPersonName"
                 android:privateImeOptions="defaultInputmode=korean"
                 android:textSize="15sp" />
@@ -97,16 +98,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/input_launch"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="점심 메뉴를 입력하세요"
+                android:completionHint="점심 메뉴를 입력하세요"
+                android:completionThreshold="1"
                 android:inputType="textPersonName"
                 android:textColor="@color/black"
                 android:privateImeOptions="defaultInputmode=korean"
                 android:textSize="15sp" />
+
 
             <View
                 android:layout_width="0dp"
@@ -153,12 +156,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="1dp">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/input_dinner"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="저녁 메뉴를 입력하세요"
+                android:completionHint="저녁 메뉴를 입력하세요"
+                android:completionThreshold="1"
                 android:textColor="@color/black"
                 android:inputType="textPersonName"
                 android:privateImeOptions="defaultInputmode=korean"

@@ -11,6 +11,8 @@ import com.example.welt.databinding.ActivitySingUp2Binding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class SingUpActivity2 : AppCompatActivity() {
@@ -19,7 +21,7 @@ class SingUpActivity2 : AppCompatActivity() {
 
 //    val database : FirebaseDatabase = FirebaseDatabase.getInstance()
 //    val myRef : DatabaseReference = database.reference
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySingUp2Binding.inflate(layoutInflater)
@@ -42,7 +44,7 @@ class SingUpActivity2 : AppCompatActivity() {
 
     }
 
-//    private fun input_User_Info(){
+    //    private fun input_User_Info(){
 //        var user = mAuth?.currentUser
 //        var user_uid=user?.uid
 //        if (user_uid != null) {
@@ -106,6 +108,11 @@ class SingUpActivity2 : AppCompatActivity() {
 
 
 
+                        val now: Long = System.currentTimeMillis()
+                        val mDate = Date(now)
+                        val simpleDate = SimpleDateFormat("yyyyMMdd")
+                        val getTime: String = simpleDate.format(mDate)
+
                         if (user_uid != null) {
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_babyBirth").setValue(user_babyBirth)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_baby_name").setValue(user_baby_name)
@@ -115,8 +122,8 @@ class SingUpActivity2 : AppCompatActivity() {
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_phone").setValue(user_phone)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_pw").setValue(user_pw)
                             myRef.child("User").child(user_uid).child("UserInfo").child("user_relationship").setValue(user_relationship)
-                            myRef.child("User").child(user_uid).child("Health").child("height").setValue(user_height)
-                            myRef.child("User").child(user_uid).child("Health").child("weight").setValue(user_weight)
+                            myRef.child("User").child(user_uid).child("Health").child(getTime).child("height").setValue(user_height)
+                            myRef.child("User").child(user_uid).child("Health").child(getTime).child("weight").setValue(user_weight)
 
                         }
                         //val user = mAuth.currentUser

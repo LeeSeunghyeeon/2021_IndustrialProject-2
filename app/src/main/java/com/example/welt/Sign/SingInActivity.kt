@@ -1,10 +1,10 @@
 package com.example.welt.Sign
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.welt.MainActivity
 import com.example.welt.databinding.ActivitySingInBinding
 import com.google.android.gms.tasks.OnCompleteListener
@@ -67,6 +67,8 @@ class SingInActivity : AppCompatActivity() {
             Toast.makeText(this, "아이디 또는 비밀번호를 입력해 주세요.", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     private fun changeActivity(c: Class<*>) {
         val intent = Intent(this, c)

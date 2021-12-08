@@ -88,7 +88,7 @@ class MissionFragment : Fragment() {
                     totalCal = totalCal + cal
                     text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
                 }
-                binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + "kcal")
+                binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + " kcal")
             }
 
             override fun onCancelled(databaseError: DatabaseError) {}
@@ -99,7 +99,7 @@ class MissionFragment : Fragment() {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
         databaseRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                binding.weightDialogBtn.setText(dataSnapshot.getValue().toString())
+                binding.weightDialogBtn.setText("체중\n"+dataSnapshot.value.toString().substring(12,16)+"kg")
 
             }
             override fun onCancelled(databaseError: DatabaseError) {}

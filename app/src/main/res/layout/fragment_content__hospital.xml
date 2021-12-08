@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#805BC1"
     tools:context=".Content.Content_Hospital">
 
     <ScrollView
@@ -17,16 +18,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#875DD3"
-                android:text="검진일 목록"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
@@ -35,9 +26,10 @@
                 android:id="@+id/text_be"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#8360C1"
                 android:text="이전 검진일"
                 android:textAlignment="center"
-                android:textColor="#875DD3"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -54,9 +46,10 @@
                 android:id="@+id/text_ne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#673AB7"
                 android:text="다음 검진일"
                 android:textAlignment="center"
-                android:textColor="#875DD3"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -77,24 +70,24 @@
                     android:id="@+id/hospital_addBtn"
                     android:layout_width="0dip"
                     android:layout_height="40sp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
                     android:background="#E3D5FF"
                     android:foregroundTint="#C18181"
                     android:text="추가"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <Button
-                    android:id="@+id/hospital_reviseBtn"
-                    android:layout_width="0dip"
+                    android:id="@+id/Hospital_OKbtn"
+                    android:layout_width="130dp"
                     android:layout_height="40sp"
-                    android:background="#E3D5FF"
-                    android:foregroundTint="#C18181"
-                    android:text="수정"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:background="#E0CFFF"
+                    android:gravity="center"
+                    android:text="닫기"
+                    android:textAlignment="center"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -103,11 +96,11 @@
                     android:id="@+id/hospital_removeBtn"
                     android:layout_width="0dip"
                     android:layout_height="40sp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
                     android:background="#E3D5FF"
                     android:foregroundTint="#C18181"
                     android:text="삭제"
-                    android:layout_weight="1"
-                    android:layout_margin="10dp"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -116,19 +109,6 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="30dp" />
-
-            <Button
-                android:id="@+id/Hospital_OKbtn"
-                android:layout_width="130dp"
-                android:layout_height="40sp"
-                android:layout_gravity="center"
-                android:background="#E0CFFF"
-                android:gravity="center"
-                android:text="확인"
-                android:textAlignment="center"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
     </ScrollView>

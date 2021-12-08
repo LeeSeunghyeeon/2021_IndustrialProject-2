@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- the theme applied to the application or activity -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryDark">@color/purple_500</item>
-        <item name="colorAccent">#FFFFFF</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
-    </style>
-
-
-    <!-- ActionBar styles -->
-    <style name="MyActionBar"
-        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@color/purple_200</item>
-        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-    </style>
-
-    <style name="MyActionBarTitleText"
-        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">#FFFFFF</item>
-    </style>
+<resources>
+        <!-- the theme applied to the application or activity -->
+        <style name="AppTheme" parent="Theme.AppCompat.Light">
+            <item name="colorPrimary">#FFFFFF</item>
+            <item name="colorPrimaryDark">@color/white</item>
+            <item name="colorAccent">#FFFFFF</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
 
 </resources>

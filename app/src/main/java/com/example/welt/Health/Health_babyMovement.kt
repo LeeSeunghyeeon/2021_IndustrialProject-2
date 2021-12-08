@@ -60,9 +60,7 @@ class Health_babyMovement : DialogFragment() {
                 var count = Integer.parseInt(binding.babyMCount.getText().toString())
 
                 // 파이어베이스에 시작시간, 종료시간, 횟수 삽입
-                myRef.child(userID.toString()).child("Health").child(date.toString()).child("baby_movement").child(start + " 시작").child("start").setValue(start)
-                myRef.child(userID.toString()).child("Health").child(date.toString()).child("baby_movement").child(start + " 시작").child("end").setValue(end)
-                myRef.child(userID.toString()).child("Health").child(date.toString()).child("baby_movement").child(start + " 시작").child("count").setValue(count)
+                myRef.child(userID.toString()).child("Health").child(date.toString()).child("baby_movement").child(start +","+end).setValue(count)
                 
                 // 작업 모두 끝나면 다이얼로그 창 닫기
                 dismiss()

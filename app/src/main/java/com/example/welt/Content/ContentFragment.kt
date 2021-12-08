@@ -10,6 +10,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
+import com.example.welt.Mission.MyMission
 import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -23,13 +24,11 @@ class ContentFragment : Fragment() {
     private lateinit var myRef: DatabaseReference
 
     var week = 0
-    //var storage = FirebaseStorage.getInstance()
-    //var storageRef = storage.reference
-
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentContentBinding.inflate(inflater, container, false)
         initData()
+        calDdayHospital()
         setButtonClickEvent()
         return binding.root
     }
@@ -132,4 +131,46 @@ class ContentFragment : Fragment() {
             }
         }
     }
-}
+
+    fun calDdayHospital()
+    {
+        if (uid != null) {
+            com.example.welt.Sign.myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("HospitalSchedule")
+            com.example.welt.Sign.myRef
+                .addValueEventListener(object : ValueEventListener {
+                    @RequiresApi(Build.VERSION_CODES.O)
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        var min = 1000
+                        for (messageData in snapshot.children){
+
+                            var split = messageData.key.toString().split(" ")
+                            var split2= split[0].split("-")
+                            var hospitaldate = "%s%s%s".format(split2[0],split2[1],split2[2])
+                            println(hospitaldate)
+                            val currentDate: LocalDateTime = LocalDateTime.now() //오늘 날짜
+                            val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+
+                            val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
+                            val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(hospitaldate.toString())
+                            val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+                            if (remaining_days.toInt()>=0 && min > remaining_days.toInt())
+                                min = remaining_days.toInt()
+                            println(remaining_days)
+                        }
+                        if(min == 1000)
+                            binding.contentHospitalBtn.setText("다음 내원 일정\n없음 ")
+                        else if(min==0)
+                            binding.contentHospitalBtn.setText("내원일 \nD-day")
+                        else
+                            binding.contentHospitalBtn.setText("내원일\nD-%d".format(min))
+                        }
+
+                    override fun onCancelled(error: DatabaseError) {
+
+                    }
+
+                })
+
+                }
+        }
+    }
