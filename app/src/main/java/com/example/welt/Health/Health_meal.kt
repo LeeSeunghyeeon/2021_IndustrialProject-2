@@ -1,14 +1,19 @@
 package com.example.welt.Health
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.MultiAutoCompleteTextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
+import com.example.welt.R
 import com.example.welt.Sign.database
 import com.example.welt.databinding.FragmentHealthMealBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -35,6 +40,7 @@ class Health_meal : DialogFragment() {
     val userID = user?.uid // 현재 로그인한 사용자의 파이어베이스 uid
 
     lateinit var food_name:String
+    lateinit var adapter: ArrayAdapter<String>
 
 
     // 현재 날짜 받아오기
@@ -46,11 +52,18 @@ class Health_meal : DialogFragment() {
         arguments?.let {
         }
     }
+    @SuppressLint("ResourceType", "UseRequireInsteadOfGet")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHealthMealBinding.inflate(inflater, container, false)
+        val item = resources.getStringArray(R.array.food)
+
+        adapter = ArrayAdapter(getActivity()!!, android.R.layout.simple_dropdown_item_1line, item)
+        binding.inputBreakfast.setAdapter(adapter)
+        binding.inputLaunch.setAdapter(adapter)
+        binding.inputDinner.setAdapter(adapter)
 
 
         try {
@@ -89,7 +102,8 @@ class Health_meal : DialogFragment() {
         binding.breakfastOK.setOnClickListener {
             var food_name = input_breakfast.text.toString()
             val url : String =
-                "http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&desc_kor=" + food_name + "&type=xml"
+                //"http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&desc_kor=" + food_name + "&type=xml"
+                "http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&pageNo="+2222+"&type=xml"
 
             val thread = Thread(NetworkThread(url))
             thread.start()
@@ -108,6 +122,7 @@ class Health_meal : DialogFragment() {
         binding.breakfastDelete.setOnClickListener {
             deleteDB("breakfast")
             binding.inputBreakfast.setText("")
+
         }
 
         // 점심 메뉴 저장

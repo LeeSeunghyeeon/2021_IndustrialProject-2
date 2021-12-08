@@ -1,0 +1,1932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food">
+        <item>   꿩불고기   </item>
+        <item>   닭갈비   </item>
+        <item>   닭갈비   </item>
+        <item>   닭꼬치   </item>
+        <item>   더덕구이   </item>
+        <item>   도미구이   </item>
+        <item>   돼지갈비   </item>
+        <item>   병어구이   </item>
+        <item>   불고기   </item>
+        <item>   붕장어소금구이   </item>
+        <item>   소양념갈비구이   </item>
+        <item>   양념왕갈비   </item>
+        <item>   양념장어구이   </item>
+        <item>   임연수구이   </item>
+        <item>   짚불구이곰장어   </item>
+        <item>   햄버그스테이크   </item>
+        <item>   황태구이   </item>
+        <item>   훈제오리   </item>
+        <item>   게국지   </item>
+        <item>   곰치국   </item>
+        <item>   굴국밥   </item>
+        <item>   김치국   </item>
+        <item>   떡만둣국   </item>
+        <item>   만둣국   </item>
+        <item>   맑은감자국   </item>
+        <item>   매생이국   </item>
+        <item>   무된장국   </item>
+        <item>   미소된장국   </item>
+        <item>   바지락조개국   </item>
+        <item>   뼈다귀해장국   </item>
+        <item>   선지해장국   </item>
+        <item>   소고기무국   </item>
+        <item>   소고기미역국   </item>
+        <item>   순대국   </item>
+        <item>   시래기된장국   </item>
+        <item>   올갱이국   </item>
+        <item>   우거지해장국   </item>
+        <item>   우렁된장국   </item>
+        <item>   탕국   </item>
+        <item>   홍합미역국   </item>
+        <item>   황태해장국   </item>
+        <item>   고추잡채   </item>
+        <item>   난자완스   </item>
+        <item>   도토리묵말이   </item>
+        <item>   라조기   </item>
+        <item>   물회   </item>
+        <item>   생선물회   </item>
+        <item>   소고기샤브샤브   </item>
+        <item>   오징어순대   </item>
+        <item>   초당순두부   </item>
+        <item>   해파리냉채   </item>
+        <item>   고들빼기   </item>
+        <item>   열무얼갈이김치   </item>
+        <item>   미나리나물   </item>
+        <item>   취나물   </item>
+        <item>   콩나물   </item>
+        <item>   경단(깨)   </item>
+        <item>   경단(콩)   </item>
+        <item>   기피편   </item>
+        <item>   녹두시루떡   </item>
+        <item>   메밀전병   </item>
+        <item>   무지개떡   </item>
+        <item>   송편(깨)   </item>
+        <item>   송편(콩)   </item>
+        <item>   수수부꾸미   </item>
+        <item>   수수팥떡   </item>
+        <item>   시루떡   </item>
+        <item>   쑥떡   </item>
+        <item>   절편   </item>
+        <item>   찹쌀떡   </item>
+        <item>   간자장   </item>
+        <item>   굴짬뽕   </item>
+        <item>   기스면   </item>
+        <item>   김치라면   </item>
+        <item>   김치우동   </item>
+        <item>   냉김치말이국수   </item>
+        <item>   닭칼국수   </item>
+        <item>   둘깨칼국수   </item>
+        <item>   막국수   </item>
+        <item>   삼선우동   </item>
+        <item>   삼선자장면   </item>
+        <item>   삼선짬뽕   </item>
+        <item>   쌀국수   </item>
+        <item>   열무김치국수   </item>
+        <item>   열무냉면   </item>
+        <item>   오일소스스파게티   </item>
+        <item>   올갱이국수   </item>
+        <item>   우동(일식)   </item>
+        <item>   우동(중식)   </item>
+        <item>   울면   </item>
+        <item>   자장면   </item>
+        <item>   짬뽕라면   </item>
+        <item>   치즈라면   </item>
+        <item>   크림소스스파게티   </item>
+        <item>   토마토소스스파게티   </item>
+        <item>   해물칼국수   </item>
+        <item>   해물크림소스스파게티   </item>
+        <item>   해물토마토소스스파게티   </item>
+        <item>   골뱅이무침   </item>
+        <item>   노각무침   </item>
+        <item>   단무지무침   </item>
+        <item>   달래나물무침   </item>
+        <item>   더덕무침   </item>
+        <item>   도토리묵   </item>
+        <item>   밴댕이무침   </item>
+        <item>   서대회무침   </item>
+        <item>   쑥갓나물무침   </item>
+        <item>   우거지나물무침   </item>
+        <item>   쥐치채   </item>
+        <item>   청포묵무침   </item>
+        <item>   탕평채   </item>
+        <item>   홍어무침   </item>
+        <item>   고추장불고기 삼각김밥   </item>
+        <item>   곤드레나물밥   </item>
+        <item>   국밥   </item>
+        <item>   농어초밥   </item>
+        <item>   돼지국밥   </item>
+        <item>   류산슬덮밥   </item>
+        <item>   멍게비빔밥   </item>
+        <item>   멸치주먹밥   </item>
+        <item>   묵밥   </item>
+        <item>   문어초밥   </item>
+        <item>   비빔밥   </item>
+        <item>   삼선볶음밥   </item>
+        <item>   새우초밥   </item>
+        <item>   새우튀김롤   </item>
+        <item>   샐러드김밥   </item>
+        <item>   생선초밥(광어)   </item>
+        <item>   생선초밥(모듬)   </item>
+        <item>   소고기국밥   </item>
+        <item>   소고기김밥   </item>
+        <item>   송이덮밥   </item>
+        <item>   숯불갈비 삼각김밥   </item>
+        <item>   약초비빔밥   </item>
+        <item>   연어롤   </item>
+        <item>   연어초밥   </item>
+        <item>   오곡밥   </item>
+        <item>   자장밥   </item>
+        <item>   잡탕밥   </item>
+        <item>   장어덮밥   </item>
+        <item>   장어초밥   </item>
+        <item>   참치덮밥   </item>
+        <item>   참치마요네즈 삼각김밥   </item>
+        <item>   충무김밥   </item>
+        <item>   캘리포니아롤   </item>
+        <item>   한치초밥   </item>
+        <item>   해물덮밥   </item>
+        <item>   해물볶음밥   </item>
+        <item>   회덮밥   </item>
+        <item>   깻잎나물볶음   </item>
+        <item>   돼지고기볶음   </item>
+        <item>   돼지껍데기볶음   </item>
+        <item>   두부김치   </item>
+        <item>   머위나물볶음   </item>
+        <item>   멸치풋고추볶음   </item>
+        <item>   소세지볶음   </item>
+        <item>   순대볶음   </item>
+        <item>   양송이버섯볶음   </item>
+        <item>   오삼불고기   </item>
+        <item>   주꾸미볶음   </item>
+        <item>   표고버섯볶음   </item>
+        <item>   해물볶음   </item>
+        <item>   곰보빵   </item>
+        <item>   만주   </item>
+        <item>   버터크림빵   </item>
+        <item>   불고기피자   </item>
+        <item>   참치샌드위치   </item>
+        <item>   찹쌀도우넛   </item>
+        <item>   채소고로케   </item>
+        <item>   초콜릿케이크   </item>
+        <item>   치즈케이크   </item>
+        <item>   치즈피자   </item>
+        <item>   페이스트리빵   </item>
+        <item>   페퍼로니피자   </item>
+        <item>   포테이토피자   </item>
+        <item>   수정과   </item>
+        <item>   식혜   </item>
+        <item>   간장마늘쫑장아찌   </item>
+        <item>   고추장마늘쫑장아찌   </item>
+        <item>   매실장아찌   </item>
+        <item>   무장아찌   </item>
+        <item>   계적   </item>
+        <item>   낙지꼬지   </item>
+        <item>   돔베기적   </item>
+        <item>   소고기산적   </item>
+        <item>   소라산적   </item>
+        <item>   오징어산적   </item>
+        <item>   홍어적   </item>
+        <item>   홍합산적   </item>
+        <item>   가자미전   </item>
+        <item>   고추전   </item>
+        <item>   굴전   </item>
+        <item>   깻잎전   </item>
+        <item>   녹두빈대떡   </item>
+        <item>   동그랑땡(육원전)   </item>
+        <item>   동태전   </item>
+        <item>   두부전   </item>
+        <item>   미나리전   </item>
+        <item>   배추전   </item>
+        <item>   버섯전   </item>
+        <item>   야채전   </item>
+        <item>   파전   </item>
+        <item>   햄부침   </item>
+        <item>   호박부침개   </item>
+        <item>   호박전   </item>
+        <item>   화양적   </item>
+        <item>   가자미조림   </item>
+        <item>   고추조림   </item>
+        <item>   동태조림   </item>
+        <item>   돼지고기메추리알장조림   </item>
+        <item>   북어조림   </item>
+        <item>   소고기메추리알장조림   </item>
+        <item>   조기조림   </item>
+        <item>   게살죽   </item>
+        <item>   깨죽   </item>
+        <item>   백합죽   </item>
+        <item>   소고기버섯죽   </item>
+        <item>   어죽   </item>
+        <item>   잣죽   </item>
+        <item>   참치죽   </item>
+        <item>   고등어찌개   </item>
+        <item>   김치찌개   </item>
+        <item>   꽁치찌개   </item>
+        <item>   두부전골   </item>
+        <item>   버섯찌개   </item>
+        <item>   부대찌개   </item>
+        <item>   새우젓두부찌개   </item>
+        <item>   소곱창전골   </item>
+        <item>   햄김치찌개   </item>
+        <item>   호박찌개   </item>
+        <item>   대구찜   </item>
+        <item>   도미찜   </item>
+        <item>   동태찜   </item>
+        <item>   돼지등갈비찜   </item>
+        <item>   돼지머리고기   </item>
+        <item>   매운갈비찜   </item>
+        <item>   문어숙회   </item>
+        <item>   민어찜   </item>
+        <item>   병어찜   </item>
+        <item>   북어찜   </item>
+        <item>   붕어찜   </item>
+        <item>   소갈비찜   </item>
+        <item>   순대    </item>
+        <item>   아구찜   </item>
+        <item>   아구찜   </item>
+        <item>   안동찜닭   </item>
+        <item>   전어찜   </item>
+        <item>   조기찜   </item>
+        <item>   참꼬막   </item>
+        <item>   한방오리백숙   </item>
+        <item>   해물찜   </item>
+        <item>   홍어찜   </item>
+        <item>   갈낙탕   </item>
+        <item>   곰탕   </item>
+        <item>   광어매운탕   </item>
+        <item>   낙지탕   </item>
+        <item>   대구매운탕   </item>
+        <item>   대구지리탕   </item>
+        <item>   메기매운탕   </item>
+        <item>   복지리탕   </item>
+        <item>   소탕   </item>
+        <item>   아구탕   </item>
+        <item>   어탕   </item>
+        <item>   연포탕   </item>
+        <item>   우럭매운탕   </item>
+        <item>   육탕   </item>
+        <item>   전복탕   </item>
+        <item>   조기매운탕   </item>
+        <item>   짱뚱어탕   </item>
+        <item>   추어탕   </item>
+        <item>   해물탕   </item>
+        <item>   고구마맛탕   </item>
+        <item>   고구마튀김   </item>
+        <item>   고추튀김   </item>
+        <item>   닭튀김   </item>
+        <item>   등심돈가스   </item>
+        <item>   모래집튀김   </item>
+        <item>   미꾸라지튀김   </item>
+        <item>   생선까스   </item>
+        <item>   안심돈가스   </item>
+        <item>   양념치킨   </item>
+        <item>   쥐포튀김   </item>
+        <item>   치즈돈가스   </item>
+        <item>   치킨까스   </item>
+        <item>   대구포   </item>
+        <item>   북어포   </item>
+        <item>   매작과   </item>
+        <item>   산자   </item>
+        <item>   송화다식   </item>
+        <item>   약과   </item>
+        <item>   유과   </item>
+        <item>   글램핑 바비큐(오리지널 L)   </item>
+        <item>   글램핑 바비큐(나폴리M)   </item>
+        <item>   글램핑 바비큐(나폴리L)   </item>
+        <item>   글램핑 바비큐(씬 M)   </item>
+        <item>   글램핑 바비큐(씬 L)   </item>
+        <item>   글램핑 바비큐(슈퍼시드 함유 도우M)   </item>
+        <item>   글램핑 바비큐(슈퍼시드 함유 도우L)   </item>
+        <item>   글램핑 바비큐 더블치즈엣지(오리지널 M)   </item>
+        <item>   글램핑 바비큐 더블치즈엣지(오리지널 L)   </item>
+        <item>   더블크러스트 이베리코(더블 크러스트 L)   </item>
+        <item>   더블크러스트 이베리코(더블 크러스트 M)   </item>
+        <item>   리얼불고기(오리지널 L)   </item>
+        <item>   리얼불고기(오리지널 M)   </item>
+        <item>   리얼불고기(나폴리L)   </item>
+        <item>   리얼불고기(나폴리M)   </item>
+        <item>   리얼불고기(씬 L)   </item>
+        <item>   리얼불고기(씬 M)   </item>
+        <item>   리얼불고기(슈퍼시드 함유 도우L)   </item>
+        <item>   리얼불고기(슈퍼시드 함유 도우M)   </item>
+        <item>   리얼불고기 더블치즈엣지(오리지널 L)   </item>
+        <item>   리얼불고기 더블치즈엣지(오리지널 M)   </item>
+        <item>   문어밤 슈림프(오리지널 L)   </item>
+        <item>   문어밤 슈림프(오리지널 M)   </item>
+        <item>   문어밤 슈림프(나폴리L)   </item>
+        <item>   문어밤 슈림프(나폴리M)   </item>
+        <item>   문어밤 슈림프(씬 L)   </item>
+        <item>   문어밤 슈림프(씬 M)   </item>
+        <item>   문어밤 슈림프(슈퍼시드 함유 도우L)   </item>
+        <item>   문어밤 슈림프(슈퍼시드 함유 도우M)   </item>
+        <item>   문어밤 슈림프 더블치즈엣지(오리지널 L)   </item>
+        <item>   문어밤 슈림프 더블치즈엣지(오리지널 M)   </item>
+        <item>   베스트 콰트로(오리지널 L)   </item>
+        <item>   베스트 콰트로(오리지널 M)   </item>
+        <item>   베스트 콰트로(나폴리L)   </item>
+        <item>   베스트 콰트로(나폴리M)   </item>
+        <item>   베스트 콰트로(씬 L)   </item>
+        <item>   베스트 콰트로(씬 M)   </item>
+        <item>   베스트 콰트로(슈퍼시드 함유 도우L)   </item>
+        <item>   베스트 콰트로(슈퍼시드 함유 도우M)   </item>
+        <item>   베스트 콰트로 더블치즈엣지(오리지널 L)   </item>
+        <item>   베스트 콰트로 더블치즈엣지(오리지널 M)   </item>
+        <item>   베이컨체더치즈(오리지널 L)   </item>
+        <item>   베이컨체더치즈(오리지널 M)   </item>
+        <item>   베이컨체더치즈(나폴리L)   </item>
+        <item>   베이컨체더치즈(나폴리M)   </item>
+        <item>   베이컨체더치즈(씬 L)   </item>
+        <item>   베이컨체더치즈(씬 M)   </item>
+        <item>   베이컨체더치즈(슈퍼시드 함유 도우L)   </item>
+        <item>   베이컨체더치즈(슈퍼시드 함유 도우M)   </item>
+        <item>   베이컨체더치즈 더블치즈엣지(오리지널 L)   </item>
+        <item>   베이컨체더치즈 더블치즈엣지(오리지널 M)   </item>
+        <item>   불고기(오리지널 L)   </item>
+        <item>   불고기(오리지널 M)   </item>
+        <item>   불고기(나폴리L)   </item>
+        <item>   불고기(나폴리M)   </item>
+        <item>   불고기(씬 L)   </item>
+        <item>   불고기(씬 M)   </item>
+        <item>   불고기(슈퍼시드 함유 도우L)   </item>
+        <item>   불고기(슈퍼시드 함유 도우M)   </item>
+        <item>   불고기 더블치즈엣지(오리지널 L)   </item>
+        <item>   불고기 더블치즈엣지(오리지널 M)   </item>
+        <item>   블랙앵거스 스테이크(오리지널 L)   </item>
+        <item>   블랙앵거스 스테이크(오리지널 M)   </item>
+        <item>   블랙앵거스 스테이크(나폴리L)   </item>
+        <item>   블랙앵거스 스테이크(나폴리M)   </item>
+        <item>   블랙앵거스 스테이크(씬 L)   </item>
+        <item>   블랙앵거스 스테이크(씬 M)   </item>
+        <item>   블랙앵거스 스테이크(슈퍼시드 함유 도우L)   </item>
+        <item>   블랙앵거스 스테이크(슈퍼시드 함유 도우M)   </item>
+        <item>   블랙앵거스 스테이크 더블치즈엣지(오리지널 L)   </item>
+        <item>   블랙앵거스 스테이크 더블치즈엣지(오리지널 M)   </item>
+        <item>   블랙타이거 슈림프(오리지널 L)   </item>
+        <item>   블랙타이거 슈림프(오리지널 M)   </item>
+        <item>   블랙타이거 슈림프(나폴리M)   </item>
+        <item>   블랙타이거 슈림프(나폴리L)   </item>
+        <item>   블랙타이거 슈림프(씬 M)   </item>
+        <item>   블랙타이거 슈림프(씬 L)   </item>
+        <item>   블랙타이거 슈림프(슈퍼시드 함유 도우L)   </item>
+        <item>   블랙타이거 슈림프 더블치즈엣지(오리지널 L)   </item>
+        <item>   블랙타이거슈림프(슈퍼시드 함유 도우M)   </item>
+        <item>   블랙타이거슈림프 더블치즈엣지(오리지널 M)   </item>
+        <item>   슈퍼디럭스(오리지널 L)   </item>
+        <item>   슈퍼디럭스(오리지널 M)   </item>
+        <item>   슈퍼디럭스(나폴리L)   </item>
+        <item>   슈퍼디럭스(나폴리M)   </item>
+        <item>   슈퍼디럭스(씬 L)   </item>
+        <item>   슈퍼디럭스(씬 M)   </item>
+        <item>   슈퍼디럭스(슈퍼시드 함유 도우L)   </item>
+        <item>   슈퍼디럭스(슈퍼시드 함유 도우M)   </item>
+        <item>   슈퍼디럭스 더블치즈엣지(오리지널 L)   </item>
+        <item>   슈퍼디럭스 더블치즈엣지(오리지널 M)   </item>
+        <item>   슈퍼슈프림(오리지널 L)   </item>
+        <item>   슈퍼슈프림(오리지널 M)   </item>
+        <item>   슈퍼슈프림(나폴리L)   </item>
+        <item>   슈퍼슈프림(나폴리M)   </item>
+        <item>   슈퍼슈프림(씬 L)   </item>
+        <item>   슈퍼슈프림(씬 M)   </item>
+        <item>   슈퍼슈프림(슈퍼시드 함유 도우L)   </item>
+        <item>   슈퍼슈프림(슈퍼시드 함유 도우M)   </item>
+        <item>   슈퍼슈프림 더블치즈엣지(오리지널 L)   </item>
+        <item>   슈퍼슈프림 더블치즈엣지(오리지널 M)   </item>
+        <item>   와규 앤 비스테카(오리지널 L)   </item>
+        <item>   와규 앤 비스테카(오리지널 M)   </item>
+        <item>   와규 앤 비스테카(나폴리L)   </item>
+        <item>   와규 앤 비스테카(나폴리M)   </item>
+        <item>   와규 앤 비스테카(씬 L)   </item>
+        <item>   와규 앤 비스테카(씬 M)   </item>
+        <item>   와규 앤 비스테카(슈퍼시드 함유 도우L)   </item>
+        <item>   와규 앤 비스테카(슈퍼시드 함유 도우M)   </item>
+        <item>   와규 앤 비스테카 더블치즈엣지(오리지널 L)   </item>
+        <item>   와규 앤 비스테카 더블치즈엣지(오리지널 M)   </item>
+        <item>   우리 고구마(오리지널 L)   </item>
+        <item>   우리 고구마(오리지널 M)   </item>
+        <item>   우리 고구마(나폴리L)   </item>
+        <item>   우리 고구마(나폴리M)   </item>
+        <item>   우리 고구마(씬 L)   </item>
+        <item>   우리 고구마(씬 M)   </item>
+        <item>   우리 고구마(슈퍼시드 함유 도우L)   </item>
+        <item>   우리 고구마(슈퍼시드 함유 도우M)   </item>
+        <item>   우리 고구마 더블치즈엣지(오리지널 L)   </item>
+        <item>   우리 고구마 더블치즈엣지(오리지널 M)   </item>
+        <item>   직화 스테이크(오리지널 L)   </item>
+        <item>   직화 스테이크(오리지널 M)   </item>
+        <item>   직화 스테이크(나폴리L)   </item>
+        <item>   직화 스테이크(나폴리M)   </item>
+        <item>   직화 스테이크(씬 L)   </item>
+        <item>   직화 스테이크(씬 M)   </item>
+        <item>   직화 스테이크(슈퍼시드 함유 도우L)   </item>
+        <item>   직화 스테이크(슈퍼시드 함유 도우M)   </item>
+        <item>   직화 스테이크 더블치즈엣지(오리지널 M)   </item>
+        <item>   직화 스테이크 더블치즈엣지(오리지널 L)   </item>
+        <item>   치즈(오리지널 L)   </item>
+        <item>   치즈(오리지널 M)   </item>
+        <item>   치즈(나폴리L)   </item>
+        <item>   치즈(나폴리M)   </item>
+        <item>   치즈(씬 L)   </item>
+        <item>   치즈(씬 M)   </item>
+        <item>   치즈(슈퍼시드 함유 도우L)   </item>
+        <item>   치즈(슈퍼시드 함유 도우M)   </item>
+        <item>   치즈 더블치즈엣지(오리지널 L)   </item>
+        <item>   치즈가든(오리지널 L)   </item>
+        <item>   치즈가든(오리지널 M)   </item>
+        <item>   치즈가든(나폴리L)   </item>
+        <item>   치즈가든(나폴리M)   </item>
+        <item>   치즈가든(씬 L)   </item>
+        <item>   치즈가든(씬 M)   </item>
+        <item>   치즈가든(슈퍼시드 함유 도우L)   </item>
+        <item>   치즈가든(슈퍼시드 함유 도우M)   </item>
+        <item>   치즈가든 더블치즈엣지(오리지널 L)   </item>
+        <item>   치즈가든 더블치즈엣지(오리지널 M)   </item>
+        <item>   치즈피자 더블치즈엣지(오리지널 M)   </item>
+        <item>   페퍼로니(오리지널 L)   </item>
+        <item>   페퍼로니(오리지널 M)   </item>
+        <item>   페퍼로니(나폴리L)   </item>
+        <item>   페퍼로니(나폴리M)   </item>
+        <item>   페퍼로니(씬 L)   </item>
+        <item>   페퍼로니(씬 M)   </item>
+        <item>   페퍼로니(슈퍼시드 함유 도우L)   </item>
+        <item>   페퍼로니(슈퍼시드 함유 도우M)   </item>
+        <item>   페퍼로니 더블치즈엣지(오리지널 L)   </item>
+        <item>   페퍼로니 더블치즈엣지(오리지널 M)   </item>
+        <item>   포테이토(오리지널 L)   </item>
+        <item>   포테이토(오리지널 M)   </item>
+        <item>   포테이토(나폴리L)   </item>
+        <item>   포테이토(나폴리M)   </item>
+        <item>   포테이토(씬 L)   </item>
+        <item>   포테이토(씬 M)   </item>
+        <item>   포테이토(슈퍼시드 함유 도우L)   </item>
+        <item>   포테이토(슈퍼시드 함유 도우M)   </item>
+        <item>   포테이토 더블치즈엣지(오리지널 L)   </item>
+        <item>   포테이토 더블치즈엣지(오리지널 M)   </item>
+        <item>   핫치킨(오리지널 L)   </item>
+        <item>   핫치킨(오리지널 M)   </item>
+        <item>   핫치킨(나폴리L)   </item>
+        <item>   핫치킨(나폴리M)   </item>
+        <item>   핫치킨(씬 L)   </item>
+        <item>   핫치킨(씬 M)   </item>
+        <item>   핫치킨(슈퍼시드 함유 도우L)   </item>
+        <item>   핫치킨(슈퍼시드 함유 도우M)   </item>
+        <item>   핫치킨 더블치즈엣지(오리지널 L)   </item>
+        <item>   핫치킨 더블치즈엣지(오리지널 M)   </item>
+        <item>   먹물 오징어링   </item>
+        <item>   슈퍼곡물 치킨(10조각)   </item>
+        <item>   옥수수 버터구이(6개)   </item>
+        <item>   치킨퐁듀 그라탕   </item>
+        <item>   퀴노아 치킨 샐러드   </item>
+        <item>   트러플 리조또   </item>
+        <item>   포테이토 순살치킨(3조각)   </item>
+        <item>   프레시 코울슬로   </item>
+        <item>   프레시 콘샐러드   </item>
+        <item>   프렌치 라따뚜이   </item>
+        <item>   하프 하프 스파게티 (NEW 치즈   화이트 크림)   </item>
+        <item>   화이트 크림 스파게티   </item>
+        <item>   NEW 치즈 볼로네즈 스파게티   </item>
+        <item>   티본스테이크 쉬림프(클래식)M   </item>
+        <item>   티본스테이크 쉬림프(클래식)L   </item>
+        <item>   티본스테이크 쉬림프(크런치)M   </item>
+        <item>   티본스테이크 쉬림프(크런치)L   </item>
+        <item>   티본스테이크 쉬림프(리치골드)M   </item>
+        <item>   티본스테이크 쉬림프(리치골드)L   </item>
+        <item>   티본스테이크 쉬림프(치즈크러스트)M   </item>
+        <item>   티본스테이크 쉬림프(치즈크러스트)L   </item>
+        <item>   더블치즈 티본스테이크(클래식)M   </item>
+        <item>   더블치즈 티본스테이크(클래식)L   </item>
+        <item>   더블치즈 티본스테이크(크런치)M   </item>
+        <item>   더블치즈 티본스테이크(크런치)L   </item>
+        <item>   더블치즈 티본스테이크(리치골드)M   </item>
+        <item>   더블치즈 티본스테이크(리치골드)L   </item>
+        <item>   더블치즈 티본스테이크(치즈크러스트)M   </item>
+        <item>   더블치즈 티본스테이크(치즈크러스트)L   </item>
+        <item>   쉬림프올인(클래식)M   </item>
+        <item>   쉬림프올인(클래식)L   </item>
+        <item>   쉬림프올인(크런치)M   </item>
+        <item>   쉬림프올인(크런치)L   </item>
+        <item>   쉬림프올인(리치골드)M   </item>
+        <item>   쉬림프올인(리치골드)L   </item>
+        <item>   쉬림프올인(치즈크러스트)M   </item>
+        <item>   쉬림프올인(치즈크러스트)L   </item>
+        <item>   갈릭버터쉬림프(클래식)M   </item>
+        <item>   갈릭버터쉬림프(클래식)L   </item>
+        <item>   갈릭버터쉬림프(크런치)M   </item>
+        <item>   갈릭버터쉬림프(크런치)L   </item>
+        <item>   갈릭버터쉬림프(리치골드)M   </item>
+        <item>   갈릭버터쉬림프(리치골드)L   </item>
+        <item>   갈릭버터쉬림프(치즈크러스트)M   </item>
+        <item>   갈릭버터쉬림프(치즈크러스트)L   </item>
+        <item>   토핑킹(크런치)M   </item>
+        <item>   토핑킹(크런치)L   </item>
+        <item>   토핑킹(리치골드)M   </item>
+        <item>   토핑킹(리치골드)L   </item>
+        <item>   토핑킹(치즈크러스트)M   </item>
+        <item>   토핑킹(치즈크러스트)L   </item>
+        <item>   치즈킹(크런치)M   </item>
+        <item>   치즈킹(크런치)L   </item>
+        <item>   치즈킹(리치골드)M   </item>
+        <item>   치즈킹(리치골드)L   </item>
+        <item>   치즈킹(치즈크러스트)M   </item>
+        <item>   치즈킹(치즈크러스트)L   </item>
+        <item>   큐브스테이크(크런치)M   </item>
+        <item>   큐브스테이크(크런치)L   </item>
+        <item>   큐브스테이크(리치골드)M   </item>
+        <item>   큐브스테이크(리치골드)L   </item>
+        <item>   큐브스테이크(치즈크러스트)M   </item>
+        <item>   큐브스테이크(치즈크러스트)L   </item>
+        <item>   갈릭마블 스테이크(크런치)M   </item>
+        <item>   갈릭마블 스테이크(크런치)L   </item>
+        <item>   갈릭마블 스테이크(리치골드)M   </item>
+        <item>   갈릭마블 스테이크(리치골드)L   </item>
+        <item>   갈릭마블 스테이크(치즈크러스트)M   </item>
+        <item>   갈릭마블 스테이크(치즈크러스트)L   </item>
+        <item>   쉬림프 스테이크 올인(크런치)M   </item>
+        <item>   쉬림프 스테이크 올인(크런치)L   </item>
+        <item>   쉬림프 스테이크 올인(리치골드)M   </item>
+        <item>   쉬림프 스테이크 올인(리치골드)L   </item>
+        <item>   쉬림프 스테이크 올인(치즈크러스트)M   </item>
+        <item>   쉬림프 스테이크 올인(치즈크러스트)L   </item>
+        <item>   직화불고기(크런치)M   </item>
+        <item>   직화불고기(크런치)L   </item>
+        <item>   직화불고기(리치골드)M   </item>
+        <item>   직화불고기(리치골드)L   </item>
+        <item>   직화불고기(치즈크러스트)M   </item>
+        <item>   직화불고기(치즈크러스트)L   </item>
+        <item>   수퍼슈프림(크런치)M   </item>
+        <item>   수퍼슈프림(크런치)L   </item>
+        <item>   수퍼슈프림(리치골드)M   </item>
+        <item>   수퍼슈프림(리치골드)L   </item>
+        <item>   수퍼슈프림(치즈크러스트)M   </item>
+        <item>   수퍼슈프림(치즈크러스트)L   </item>
+        <item>   베이컨포테이토(크런치)M   </item>
+        <item>   베이컨포테이토(크런치)L   </item>
+        <item>   베이컨포테이토(리치골드)M   </item>
+        <item>   베이컨포테이토(리치골드)L   </item>
+        <item>   베이컨포테이토(치즈크러스트)M   </item>
+        <item>   베이컨포테이토(치즈크러스트)L   </item>
+        <item>   직화불고기L   </item>
+        <item>   페페로니M   </item>
+        <item>   페페로니L   </item>
+        <item>   수퍼슈프림L   </item>
+        <item>   치즈M   </item>
+        <item>   치즈L   </item>
+        <item>   콘샐러드   </item>
+        <item>   코울슬로   </item>
+        <item>   크림치킨파스타   </item>
+        <item>   상하이쉬림프파스타   </item>
+        <item>   팝콘치킨   </item>
+        <item>   치즈볼   </item>
+        <item>   오리지날 윙 4조각   </item>
+        <item>   오리지날 윙 8조각   </item>
+        <item>   스파이시윙 4조각   </item>
+        <item>   스파이시윙 8조각   </item>
+        <item>   치킨텐더 4조각   </item>
+        <item>   치킨텐더 8조각   </item>
+        <item>   리치치즈파스타   </item>
+        <item>   그뤼에르 퐁듀소스   </item>
+        <item>   치즈크러스트 디핑소스   </item>
+        <item>   핫소스   </item>
+        <item>   바른생피클 L   </item>
+        <item>   바른생피클 M   </item>
+        <item>   갓치킨L(바삭한 크런치)   </item>
+        <item>   갓치킨L(쫄깃한 클래식)   </item>
+        <item>   순삭포테이토L(바삭한 크런치)   </item>
+        <item>   순삭포테이토L(쫄깃한 클래식)   </item>
+        <item>   케미콤보(쫄깃한 클래식)   </item>
+        <item>   케미콤보(바삭한 크런치)   </item>
+        <item>   폭폭치즈L(쫄깃한 클래식)   </item>
+        <item>   폭폭치즈L(바삭한 크런치)   </item>
+        <item>   얌얌페페로니L(쫄깃한 클래식)   </item>
+        <item>   얌얌페페로니L(바삭한 크런치)   </item>
+        <item>   씨푸드아일랜드 노엣지 R   </item>
+        <item>   씨푸드아일랜드 해쉬브라운R   </item>
+        <item>   씨푸드아일랜드 골드R   </item>
+        <item>   씨푸드아일랜드 크림치즈R   </item>
+        <item>   씨푸드아일랜드 에그타르트R   </item>
+        <item>   씨푸드아일랜드 치즈캡 R   </item>
+        <item>   씨푸드아일랜드 노엣지 L   </item>
+        <item>   씨푸드아일랜드 해쉬브라운 L   </item>
+        <item>   씨푸드아일랜드 골드L   </item>
+        <item>   씨푸드아일랜드 크림치즈 L   </item>
+        <item>   씨푸드아일랜드 에그타르트 L   </item>
+        <item>   씨푸드아일랜드 치즈캡 L   </item>
+        <item>   제주흑도새기 노엣지 R   </item>
+        <item>   제주흑도새기 해쉬브라운R   </item>
+        <item>   제주흑도새기 골드R   </item>
+        <item>   제주흑도새기 크림치즈R   </item>
+        <item>   제주흑도새기 에그타르트R   </item>
+        <item>   제주흑도새기 치즈캡 R   </item>
+        <item>   제주흑도새기 노엣지 L   </item>
+        <item>   제주흑도새기 해쉬브라운 L   </item>
+        <item>   제주흑도새기 골드L   </item>
+        <item>   제주흑도새기 크림치즈 L   </item>
+        <item>   제주흑도새기 에그타르트 L   </item>
+        <item>   제주흑도새기 치즈캡 L   </item>
+        <item>   치즈블라썸 스테이크 노엣지 R   </item>
+        <item>   치즈블라썸 스테이크 해쉬브라운R   </item>
+        <item>   치즈블라썸 스테이크 골드R   </item>
+        <item>   치즈블라썸 스테이크 크림치즈R   </item>
+        <item>   치즈블라썸 스테이크 에그타르트R   </item>
+        <item>   치즈블라썸 스테이크 치즈캡 R   </item>
+        <item>   치즈블라썸 스테이크 노엣지 L   </item>
+        <item>   치즈블라썸 스테이크 해쉬브라운 L   </item>
+        <item>   치즈블라썸 스테이크 골드L   </item>
+        <item>   치즈블라썸 스테이크 크림치즈 L   </item>
+        <item>   치즈블라썸 스테이크 에그타르트 L   </item>
+        <item>   치즈블라썸 스테이크 치즈캡 L   </item>
+        <item>   새우천왕 노엣지(오리진)R   </item>
+        <item>   새우천왕 치즈캡R   </item>
+        <item>   새우천왕 해쉬브라운R   </item>
+        <item>   새우천왕 에그타르트R   </item>
+        <item>   새우천왕 골드R   </item>
+        <item>   새우천왕 크림치즈R   </item>
+        <item>   새우천왕 노엣지(오리진)L   </item>
+        <item>   새우천왕 치즈캡L   </item>
+        <item>   새우천왕 해쉬브라운L   </item>
+        <item>   새우천왕 에그타르트L   </item>
+        <item>   새우천왕 골드L   </item>
+        <item>   새우천왕 크림치즈L   </item>
+        <item>   치우천왕 오리진R   </item>
+        <item>   치우천왕 치즈캡R   </item>
+        <item>   치우천왕 해쉬브라운R   </item>
+        <item>   치우천왕 에그타르트R   </item>
+        <item>   치우천왕 골드R   </item>
+        <item>   치우천왕 크림치즈R   </item>
+        <item>   치우천왕 노엣지L   </item>
+        <item>   치우천왕 치즈캡L   </item>
+        <item>   치우천왕 해쉬브라운L   </item>
+        <item>   치우천왕 에그타르트L   </item>
+        <item>   치우천왕 골드L   </item>
+        <item>   치우천왕 크림치즈L   </item>
+        <item>   트레비앙 해쉬브라운R   </item>
+        <item>   트레비앙 에그타르트R   </item>
+        <item>   트레비앙 오리진R   </item>
+        <item>   트레비앙 골드R   </item>
+        <item>   트레비앙 크림치즈R   </item>
+        <item>   트레비앙 치즈캡R   </item>
+        <item>   트레비앙 해쉬브라운L   </item>
+        <item>   트레비앙 에그타르트L   </item>
+        <item>   트레비앙 오리진L   </item>
+        <item>   트레비앙 골드L   </item>
+        <item>   트레비앙 크림치즈L   </item>
+        <item>   트레비앙 치즈캡L   </item>
+        <item>   러블리피스 해쉬브라운R   </item>
+        <item>   러블리피스 에그타르트R   </item>
+        <item>   러블리피스 오리진R   </item>
+        <item>   러블리피스 골드R   </item>
+        <item>   러블리피스 크림치즈R   </item>
+        <item>   러블리피스 치즈캡R   </item>
+        <item>   러블리피스 해쉬브라운L   </item>
+        <item>   러블리피스 에그타르트L   </item>
+        <item>   러블리피스 오리진L   </item>
+        <item>   러블리피스 골드L   </item>
+        <item>   러블리피스 크림치즈L   </item>
+        <item>   러블리피스 치즈캡L   </item>
+        <item>   스윗피스 해쉬브라운R   </item>
+        <item>   스윗피스 에그타르트R   </item>
+        <item>   스윗피스 오리진R   </item>
+        <item>   스윗피스 골드R   </item>
+        <item>   스윗피스 크림치즈R   </item>
+        <item>   스윗피스 치즈캡R   </item>
+        <item>   스윗피스 해쉬브라운L   </item>
+        <item>   스윗피스 에그타르트L   </item>
+        <item>   스윗피스 오리진L   </item>
+        <item>   스윗피스 골드L   </item>
+        <item>   스윗피스 크림치즈L   </item>
+        <item>   스윗피스 치즈캡L   </item>
+        <item>   로맨틱콤보 해쉬브라운R   </item>
+        <item>   로맨틱콤보 에그타르트R   </item>
+        <item>   로맨틱콤보 오리진R   </item>
+        <item>   로맨틱콤보 골드R   </item>
+        <item>   로맨틱콤보 크림치즈R   </item>
+        <item>   로맨틱콤보 치즈캡R   </item>
+        <item>   로맨틱콤보 해쉬브라운L   </item>
+        <item>   로맨틱콤보 에그타르트L   </item>
+        <item>   로맨틱콤보 오리진L   </item>
+        <item>   로맨틱콤보 골드L   </item>
+        <item>   로맨틱콤보 크림치즈L   </item>
+        <item>   로맨틱콤보 치즈캡L   </item>
+        <item>   포테이토 해쉬브라운R   </item>
+        <item>   포테이토 에그타르트R   </item>
+        <item>   포테이토 골드R   </item>
+        <item>   포테이토 크림치즈R   </item>
+        <item>   포테이토 해쉬브라운L   </item>
+        <item>   포테이토 에그타르트L   </item>
+        <item>   포테이토 골드L   </item>
+        <item>   포테이토 크림치즈L   </item>
+        <item>   쉬림프 해쉬브라운R   </item>
+        <item>   쉬림프 에그타르트R   </item>
+        <item>   쉬림프 오리진R   </item>
+        <item>   쉬림프 골드R   </item>
+        <item>   쉬림프 크림치즈R   </item>
+        <item>   쉬림프 치즈캡R   </item>
+        <item>   쉬림프 해쉬브라운L   </item>
+        <item>   쉬림프 에그타르트L   </item>
+        <item>   쉬림프 오리진L   </item>
+        <item>   쉬림프 골드L   </item>
+        <item>   쉬림프 크림치즈L   </item>
+        <item>   쉬림프 치즈캡L   </item>
+        <item>   하프앤하프 해쉬브라운R   </item>
+        <item>   하프앤하프 에그타르트R   </item>
+        <item>   하프앤하프 골드R   </item>
+        <item>   하프앤하프 크림치즈R   </item>
+        <item>   하프앤하프 해쉬브라운L   </item>
+        <item>   하프앤하프 에그타르트L   </item>
+        <item>   하프앤하프 골드L   </item>
+        <item>   하프앤하프 크림치즈L   </item>
+        <item>   풀드포크 오리진R   </item>
+        <item>   풀드포크 오리진L   </item>
+        <item>   칠리치킨 오리진R   </item>
+        <item>   칠리치킨 오리진L   </item>
+        <item>   올댓미트 오리진R   </item>
+        <item>   올댓미트 오리진L   </item>
+        <item>   트러플머쉬룸 오리진R   </item>
+        <item>   트러플머쉬룸 오리진L   </item>
+        <item>   부라타치즈 오리진R   </item>
+        <item>   부라타치즈 오리진L   </item>
+        <item>   찰떡단고감 노엣지R   </item>
+        <item>   찰떡단고감 노엣지L   </item>
+        <item>   핫앤핫 노엣지R   </item>
+        <item>   핫앤핫 노엣지L   </item>
+        <item>   불고기 오리진R   </item>
+        <item>   불고기 치즈캡R   </item>
+        <item>   불고기 오리진L   </item>
+        <item>   불고기 치즈캡L   </item>
+        <item>   슈퍼콤보 오리진R   </item>
+        <item>   슈퍼콤보 패스츄리   </item>
+        <item>   슈퍼콤보 치즈캡R   </item>
+        <item>   슈퍼콤보 오리진L   </item>
+        <item>   슈퍼콤보 치즈캡L   </item>
+        <item>   포테이토피자 오리진R   </item>
+        <item>   포테이토피자 패스츄리   </item>
+        <item>   포테이토피자 치즈캡R   </item>
+        <item>   포테이토피자 오리진L   </item>
+        <item>   포테이토피자 치즈캡L   </item>
+        <item>   치즈스페셜 오리진R   </item>
+        <item>   치즈스페셜 패스츄리   </item>
+        <item>   치즈스페셜 치즈캡R   </item>
+        <item>   치즈스페셜 오리진L   </item>
+        <item>   치즈스페셜 치즈캡L   </item>
+        <item>   시카고딥 노엣지R   </item>
+        <item>   시카고딥 노엣지L   </item>
+        <item>   페퍼로니 플러스 오리진R   </item>
+        <item>   페퍼로니 플러스 치즈캡R   </item>
+        <item>   페퍼로니 플러스 오리진L   </item>
+        <item>   페퍼로니 플러스 치즈캡L   </item>
+        <item>   하와이안스페셜 오리진R   </item>
+        <item>   하와이안스페셜 치즈캡R   </item>
+        <item>   하와이안스페셜 오리진L   </item>
+        <item>   하와이안스페셜 치즈캡L   </item>
+        <item>   트러플베지테리안 오리진R   </item>
+        <item>   트러플베지테리안 치즈캡R   </item>
+        <item>   트러플베지테리안 오리진L   </item>
+        <item>   트러플베지테리안 치즈캡L   </item>
+        <item>   고르곤졸라R   </item>
+        <item>   고르곤졸라L   </item>
+        <item>   불고기샌드   </item>
+        <item>   쉬골샌드   </item>
+        <item>   포골샌드   </item>
+        <item>   치즈추가(샌드)   </item>
+        <item>   홈샐바   </item>
+        <item>   홈샐바세트   </item>
+        <item>   핫오븐치킨   </item>
+        <item>   핫하프치킨   </item>
+        <item>   바비큐폭립   </item>
+        <item>   The 오븐치킨   </item>
+        <item>   하프치킨(오븐치킨 반마리)   </item>
+        <item>   BBQ갈비라이스   </item>
+        <item>   베이컨 크림리조또   </item>
+        <item>   오븐치즈 베이컨 크림스파게티   </item>
+        <item>   오븐치즈 미트 스파게티   </item>
+        <item>   쉬림프 까르보나라   </item>
+        <item>   스파이시 포테이토   </item>
+        <item>   베이크윙(4ea)   </item>
+        <item>   베이크윙(8ea)   </item>
+        <item>   핫윙(4ea)   </item>
+        <item>   핫윙(8ea)   </item>
+        <item>   크리스피 텐더치킨(4ea)   </item>
+        <item>   크리스피 텐더치킨(8ea)   </item>
+        <item>   어니언링   </item>
+        <item>   케이준치킨샐러드   </item>
+        <item>   홈샐러드(하절기)   </item>
+        <item>   홈샐러드(동절기)   </item>
+        <item>   4구 샐러드   </item>
+        <item>   1회용 피클   </item>
+        <item>   1회용 갈릭디핑소스   </item>
+        <item>   1회용 핫소스   </item>
+        <item>   허니머스타드소스   </item>
+        <item>   눈꽃치즈피자 L   </item>
+        <item>   눈꽃치즈피자 R   </item>
+        <item>   눈꽃치즈피자 (씬)   </item>
+        <item>   불금피자 L   </item>
+        <item>   불금피자 R   </item>
+        <item>   불금피자 (씬)   </item>
+        <item>   갈릭쉬림프 L   </item>
+        <item>   갈릭쉬림프 R   </item>
+        <item>   갈릭쉬림프 (씬)   </item>
+        <item>   베이컨체다 L   </item>
+        <item>   베이컨체다 R   </item>
+        <item>   베이컨체다 (씬)   </item>
+        <item>   핫치킨 L   </item>
+        <item>   핫치킨 R   </item>
+        <item>   핫치킨 (씬)   </item>
+        <item>   맵피자 L   </item>
+        <item>   맵피자 R   </item>
+        <item>   달피자 L   </item>
+        <item>   달피자 R   </item>
+        <item>   리얼고구마 L   </item>
+        <item>   리얼고구마 R   </item>
+        <item>   리얼고구마 (씬)   </item>
+        <item>   크림치즈포테이토 L   </item>
+        <item>   크림치즈포테이토 R   </item>
+        <item>   크림치즈포테이토 (씬)   </item>
+        <item>   마불피자 L   </item>
+        <item>   마불피자 R   </item>
+        <item>   마불피자 (씬)   </item>
+        <item>   울트라콤비네이션 L   </item>
+        <item>   울트라콤비네이션 R   </item>
+        <item>   울트라콤비네이션 (씬)   </item>
+        <item>   신세개피자 L   </item>
+        <item>   신세개피자 R   </item>
+        <item>   신세개피자 (씬)   </item>
+        <item>   신세개피자2 L   </item>
+        <item>   신세개피자2 R   </item>
+        <item>   신세개피자2 (씬)   </item>
+        <item>   수퍼수프림 L   </item>
+        <item>   수퍼수프림 (씬)   </item>
+        <item>   고구마 L   </item>
+        <item>   고구마 (씬)   </item>
+        <item>   불고기 L   </item>
+        <item>   불고기 (씬)   </item>
+        <item>   페퍼로니 L   </item>
+        <item>   페퍼로니 (씬)   </item>
+        <item>   치즈 L   </item>
+        <item>   치즈 (씬)   </item>
+        <item>   핫바비큐 L   </item>
+        <item>   핫바비큐 R   </item>
+        <item>   핫바비큐 (씬)   </item>
+        <item>   씨푸드 L   </item>
+        <item>   씨푸드 R   </item>
+        <item>   씨푸드 (씬)   </item>
+        <item>   포테이토베이컨 L   </item>
+        <item>   포테이토베이컨 R   </item>
+        <item>   포테이토베이컨 (씬)   </item>
+        <item>   파스트라미 L   </item>
+        <item>   파스트라미 R   </item>
+        <item>   파스트라미 (씬)   </item>
+        <item>   맵고달고 L   </item>
+        <item>   맵고달고 R   </item>
+        <item>   맵고달고 (씬)   </item>
+        <item>   국물떡볶이   </item>
+        <item>   치즈스파게티   </item>
+        <item>   베이크윙봉   </item>
+        <item>   콘샐러드   </item>
+        <item>   달콤닭강정   </item>
+        <item>   치즈-프라이   </item>
+        <item>   새우링   </item>
+        <item>   새우리조또   </item>
+        <item>   낙지리조또   </item>
+        <item>   치킨텐더   </item>
+        <item>   콘버터   </item>
+        <item>   치즈크러스트   </item>
+        <item>   고구마 크러스트   </item>
+        <item>   크림치즈 크러스트   </item>
+        <item>   전주불백피자R   </item>
+        <item>   전주불백피자L   </item>
+        <item>   꿈을피자R   </item>
+        <item>   꿈을피자L   </item>
+        <item>   부산피자R   </item>
+        <item>   부산피자L   </item>
+        <item>   쉬림프 핫치킨골드피자R   </item>
+        <item>   쉬림프 핫치킨골드피자L   </item>
+        <item>   단호박골드피자R   </item>
+        <item>   단호박골드피자L   </item>
+        <item>   어깨피자R   </item>
+        <item>   어깨피자L   </item>
+        <item>   단호박피자R   </item>
+        <item>   단호박피자L   </item>
+        <item>   콤비네이션피자R   </item>
+        <item>   콤비네이션피자L   </item>
+        <item>   더너피자 바베킹R   </item>
+        <item>   더너피자 바베킹L   </item>
+        <item>   웃음꽃피자R   </item>
+        <item>   웃음꽃피자L   </item>
+        <item>   고구마골드피자R   </item>
+        <item>   고구마골드피자L   </item>
+        <item>   목동피자R   </item>
+        <item>   목동피자L   </item>
+        <item>   고르곤졸라R   </item>
+        <item>   고르곤졸라L   </item>
+        <item>   포테이토피자R   </item>
+        <item>   포테이토피자L   </item>
+        <item>   베이컨체다치즈피자R   </item>
+        <item>   베이컨체다치즈피자L   </item>
+        <item>   불고기피자R   </item>
+        <item>   불고기피자L   </item>
+        <item>   야채피자R   </item>
+        <item>   야채피자L   </item>
+        <item>   하와이안피자R   </item>
+        <item>   하와이안피자L   </item>
+        <item>   페페로니피자R   </item>
+        <item>   페페로니피자L   </item>
+        <item>   치즈피자R   </item>
+        <item>   치즈피자L   </item>
+        <item>   고구마피자R   </item>
+        <item>   고구마피자L   </item>
+        <item>   핫 스파이시치킨피자R   </item>
+        <item>   핫 스파이시치킨피자L   </item>
+        <item>   콰트로포르마지오R   </item>
+        <item>   콰트로포르마지오L   </item>
+        <item>   쉬림프 안심골드피자R   </item>
+        <item>   쉬림프 안심골드피자L   </item>
+        <item>   슈크림치즈스틱   </item>
+        <item>   로제치즈오븐스파게티   </item>
+        <item>   치즈볼 바게트스틱   </item>
+        <item>   치즈볼   </item>
+        <item>   바게트스틱   </item>
+        <item>   콘치즈그라탕 L   </item>
+        <item>   콘치즈그라탕 R   </item>
+        <item>   버팔로윙 4조각   </item>
+        <item>   버팔로윙 10조각   </item>
+        <item>   단호박+고구마샐러드   </item>
+        <item>   치즈오븐스파게티   </item>
+        <item>   까르보나라스파게티   </item>
+        <item>   브래드스틱   </item>
+        <item>   고구마스틱   </item>
+        <item>   치즈스틱   </item>
+        <item>   팥치즈반달빵   </item>
+        <item>   치킨텐더 6조각   </item>
+        <item>   스노우칠리감자   </item>
+        <item>   한턱 쏘시지L   </item>
+        <item>   한턱 쏘시지M   </item>
+        <item>   관자네 온 새우L   </item>
+        <item>   관자네 온 새우M   </item>
+        <item>   골드랑군L   </item>
+        <item>   골드랑군M   </item>
+        <item>   쓰리고L   </item>
+        <item>   쓰리고M   </item>
+        <item>   코코쉬림프L   </item>
+        <item>   코코쉬림프M   </item>
+        <item>   모모스테이키L   </item>
+        <item>   모모스테이키M   </item>
+        <item>   맵뜨락L   </item>
+        <item>   맵뜨락M   </item>
+        <item>   비포 (비프앤포크)L   </item>
+        <item>   비포 (비프앤포크)M   </item>
+        <item>   토핑들의 수다L   </item>
+        <item>   토핑들의 수다M   </item>
+        <item>   웨스틴콤보더블L   </item>
+        <item>   웨스틴콤보더블M   </item>
+        <item>   리치킨BBQ L   </item>
+        <item>   리치킨BBQ M   </item>
+        <item>   스파이시쉬림프L   </item>
+        <item>   스파이시쉬림프M   </item>
+        <item>   베이컨포테이토L   </item>
+        <item>   베이컨포테이토M   </item>
+        <item>   콰트로L   </item>
+        <item>   콰트로M   </item>
+        <item>   차슈(불갈비)L   </item>
+        <item>   차슈(불갈비)M   </item>
+        <item>   슈프림콤비L   </item>
+        <item>   슈프림콤비M   </item>
+        <item>   불고기L   </item>
+        <item>   불고기M   </item>
+        <item>   스윗고구마L   </item>
+        <item>   스윗고구마M   </item>
+        <item>   페페로니L   </item>
+        <item>   페페로니M   </item>
+        <item>   멜팅치즈L   </item>
+        <item>   멜팅치즈M   </item>
+        <item>   웨지포테이토L   </item>
+        <item>   웨지포테이토M   </item>
+        <item>   넌필수있어L   </item>
+        <item>   베이컨의꿈L   </item>
+        <item>   걱정말아요허니L   </item>
+        <item>   스파이시쉬림프 크러스트 L   </item>
+        <item>   스파이시쉬림프 크러스트 M   </item>
+        <item>   베이컨포테이토 바이트 L   </item>
+        <item>   베이컨포테이토 바이트 M   </item>
+        <item>   웨지포테이토 소보로 L   </item>
+        <item>   웨지포테이토 소보로 M   </item>
+        <item>   불고기 크러스트L   </item>
+        <item>   불고기 크러스트M   </item>
+        <item>   차슈 바이트L   </item>
+        <item>   차슈 바이트M   </item>
+        <item>   페페로니 소보로L   </item>
+        <item>   페페로니 소보로M   </item>
+        <item>   스윗고구마 골드L   </item>
+        <item>   스윗고구마 골드M   </item>
+        <item>   국물떡볶이   </item>
+        <item>   치즈국물떡볶이   </item>
+        <item>   모둠튀김   </item>
+        <item>   고구마 튀김(5pcs)   </item>
+        <item>   순살치킨   </item>
+        <item>   새우링(10pcs)   </item>
+        <item>   모짜렐라오븐파스타   </item>
+        <item>   오븐구이치킨   </item>
+        <item>   코코쉬림프(8pcs)   </item>
+        <item>   플로리다랑군(7pcs)    </item>
+        <item>   버팔로스틱-핫윙(7pcs)   </item>
+        <item>   치킨텐더(7pcs)   </item>
+        <item>   치즈스틱(7pcs)   </item>
+        <item>   베이컨크림파스타   </item>
+        <item>   불갈비파스타   </item>
+        <item>   미트소스파스타   </item>
+        <item>   피클모듬세트   </item>
+        <item>   치포틀소스   </item>
+        <item>   살사소스   </item>
+        <item>   까망베르소스   </item>
+        <item>   머스타드소스   </item>
+        <item>   꿀 자몽   </item>
+        <item>   허니 레몬   </item>
+        <item>   복숭아   </item>
+        <item>   블루베리 솔베   </item>
+        <item>   망고 솔베   </item>
+        <item>   딸기 솔베   </item>
+        <item>   블루베리 라떼   </item>
+        <item>   망고 라떼   </item>
+        <item>   딸기 라떼   </item>
+        <item>   레몬   </item>
+        <item>   바나나 품은 헤이즐넛 초코렛   </item>
+        <item>   바나나 속 초코칩   </item>
+        <item>   헤이즐넛 초코렛   </item>
+        <item>   바나나   </item>
+        <item>   카페 모카   </item>
+        <item>   민트 초코   </item>
+        <item>   바닐라 빈   </item>
+        <item>   솔티드 카라멜   </item>
+        <item>   바닐라    </item>
+        <item>   카라멜   </item>
+        <item>   마스카포네치즈   </item>
+        <item>   그린티   </item>
+        <item>   피넛버터   젤리   </item>
+        <item>   스트라치아텔라   </item>
+        <item>   그린티 티라미수   </item>
+        <item>   티라미수   </item>
+        <item>   쿠키   크림   </item>
+        <item>   초코렛   </item>
+        <item>   땅콩 바나나   </item>
+        <item>   솜사탕   </item>
+        <item>   다크초코렛   </item>
+        <item>   리코타   </item>
+        <item>   크리미 요거트   </item>
+        <item>   요거트   </item>
+        <item>   화이트 초코렛+레인보우 토핑콘   </item>
+        <item>   다크 초코렛+오레오 토핑콘   </item>
+        <item>   플레인 와플콘   </item>
+        <item>   레드 포레스트   </item>
+        <item>   더블 초코 바나나   </item>
+        <item>   망고 요거트   </item>
+        <item>   솔티드 카초멜리아   </item>
+        <item>   카초멜리아   </item>
+        <item>   딸기 요거트   </item>
+        <item>   블루베리 요거트   </item>
+        <item>   케냐 니에리   </item>
+        <item>   에티오피아 게라   </item>
+        <item>   브라질 만티게이라 BSCA   </item>
+        <item>   과테말라 누에보 오리엔테   </item>
+        <item>   더치 블랙 - 에티오피아 예가체프   </item>
+        <item>   더치 블랙 - 케냐AA   </item>
+        <item>   더치 오션   </item>
+        <item>   더치 썬셋   </item>
+        <item>   에스프레소 블랙 N2   </item>
+        <item>   돌체 카푸치노 N2   </item>
+        <item>   에스프레소   </item>
+        <item>   에스프레소 마끼아또   </item>
+        <item>   에스프레소 콘파냐   </item>
+        <item>   아메리카노   </item>
+        <item>   카페라떼   </item>
+        <item>   바닐라 카페라떼   </item>
+        <item>   카라멜 카페라떼   </item>
+        <item>   헤이즐넛 카페라떼   </item>
+        <item>   카푸치노   </item>
+        <item>   카페모카   </item>
+        <item>   화이트모카   </item>
+        <item>   민트모카   </item>
+        <item>   카라멜마끼아또   </item>
+        <item>   아이스 아메리카노   </item>
+        <item>   아이스 카페라떼   </item>
+        <item>   아이스 바닐라 카페라떼   </item>
+        <item>   아이스 헤이즐넛 카페라떼   </item>
+        <item>   아이스 카푸치노   </item>
+        <item>   아이스 카페모카   </item>
+        <item>   아이스 화이트모카   </item>
+        <item>   아이스 민트모카   </item>
+        <item>   아이스 카라멜마끼아또   </item>
+        <item>   아포가토   </item>
+        <item>   다크초코 라떼   </item>
+        <item>   민트 초콜릿 라떼   </item>
+        <item>   그린티 라떼   </item>
+        <item>   홍차라떼   </item>
+        <item>   아이스 다크초코 라떼   </item>
+        <item>   아이스 민트 초콜릿 라떼   </item>
+        <item>   아이스 고구마 라떼   </item>
+        <item>   아이스 그린티 라떼   </item>
+        <item>   아이스 홍차 라떼   </item>
+        <item>   레몬 아이스티   </item>
+        <item>   복숭아 아이스티   </item>
+        <item>   레몬티   </item>
+        <item>   아이스 레몬티   </item>
+        <item>   허브티   </item>
+        <item>   아이스 허브티   </item>
+        <item>   홍차   </item>
+        <item>   아이스 홍차   </item>
+        <item>   녹차   </item>
+        <item>   아이스 녹차   </item>
+        <item>   딸기주스   </item>
+        <item>   토마토 주스   </item>
+        <item>   키위주스   </item>
+        <item>   베리 바나나 주스   </item>
+        <item>   스위티 파이   </item>
+        <item>   마이 몽키   </item>
+        <item>   러브 미   </item>
+        <item>   레몬에이드   </item>
+        <item>   오렌지에이드   </item>
+        <item>   자몽에이드   </item>
+        <item>   젤라또 쉐이크   </item>
+        <item>   플레인 요거트 스무디   </item>
+        <item>   딸기 요거트 스무디   </item>
+        <item>   블루베리 요거트 스무디   </item>
+        <item>   아이스 모카 블렌디모   </item>
+        <item>   아이스 카라멜 블렌디모   </item>
+        <item>   아이스 그린티 블렌디모   </item>
+        <item>   아이스 초콜릿 블렌디모   </item>
+        <item>   아이스 민트초코칩 블렌디모   </item>
+        <item>   아이스 민트모카 블렌디모   </item>
+        <item>   플레인 / 어니언 / 블루베리 베이글   </item>
+        <item>   치즈 / 초코칩 / 블루베리 머핀   </item>
+        <item>   플레인 에그디쉬   </item>
+        <item>   블루베리 에그디쉬   </item>
+        <item>   이탈리안 에그디쉬   </item>
+        <item>   갈릭 치즈 부기브레드   </item>
+        <item>   토마토 치즈 부기브레드   </item>
+        <item>   허니브레드   </item>
+        <item>   젤라또 브레드   </item>
+        <item>   크로크무슈   </item>
+        <item>   베이컨 치즈 팟파이   </item>
+        <item>   치킨 팟파이   </item>
+        <item>   불고기 브리또   </item>
+        <item>   핫칠리치킨 브리또   </item>
+        <item>   쿠키 크림 번버거   </item>
+        <item>   티라미수 번버거   </item>
+        <item>   쿠키 크림 번버거 + 아메리카노 SET   </item>
+        <item>   티라미수 번버거 + 아메리카노 SET   </item>
+        <item>   수플레 치즈케잌   </item>
+        <item>   티라미수 케잌   </item>
+        <item>   초코무스 케잌   </item>
+        <item>   레드벨벳 요거트 롤   </item>
+        <item>   그린티 롤   </item>
+        <item>   티라미수 샌디   </item>
+        <item>   리코타 딸기 샌디   </item>
+        <item>   쿠키   크림 샌디   </item>
+        <item>   클래식 플레인 와플   </item>
+        <item>   클래식 블루베리 와플   </item>
+        <item>   클래식 마롱 와플   </item>
+        <item>   플레인와플 젤라또   </item>
+        <item>   블루베리와플 젤라또   </item>
+        <item>   초코와플 젤라또   </item>
+        <item>   녹차와플 젤라또   </item>
+        <item>   까르보나라 젤빙   </item>
+        <item>   망고 크림젤빙   </item>
+        <item>   망고젤빙   </item>
+        <item>   치즈베리 젤빙   </item>
+        <item>   밀크팥 젤빙   </item>
+        <item>   딸기젤빙   </item>
+        <item>   오리지날 팥빙수   </item>
+        <item>   요거트빙수   </item>
+        <item>   녹차빙수   </item>
+        <item>   쿠키 크림빙수   </item>
+        <item>   망고빙수   </item>
+        <item>   블루베리치즈빙수   </item>
+        <item>   못난이찹쌀꽈배기   </item>
+        <item>   못난이찹쌀팥도넛   </item>
+        <item>   못난이찹쌀유자도넛   </item>
+        <item>   못난이찹쌀고구마크림치즈도넛   </item>
+        <item>   못난이찹쌀핫도그   </item>
+        <item>   못난이찹쌀모짜렐라치즈핫도그   </item>
+        <item>   못난이찹쌀모짜렐라치즈도넛   </item>
+        <item>   코코스페셜호두과자   </item>
+        <item>   코코스페셜코코너츠   </item>
+        <item>   선물용 대    </item>
+        <item>   선물용 중   </item>
+        <item>   선물용 소   </item>
+        <item>   미니케이스 럭셔리   </item>
+        <item>   미니케이스 대   </item>
+        <item>   미니케이스 소   </item>
+        <item>   레드컵   </item>
+        <item>   초코컵   </item>
+        <item>   프리백   </item>
+        <item>   간식용11개   </item>
+        <item>   간식용19개   </item>
+        <item>   간식용38개   </item>
+        <item>   단체간식용 호두과자   </item>
+        <item>   허니땅콩   </item>
+        <item>   아몬드   </item>
+        <item>   캐슈넛   </item>
+        <item>   초콜릿 글레이즈드   </item>
+        <item>   로열 루비 초콜릿 링   </item>
+        <item>   더블 다크 초콜릿 필드   </item>
+        <item>   퓨어 화이트 초콜릿 필드   </item>
+        <item>   크런치 밀크 초콜릿 링   </item>
+        <item>   크림치즈 필드   </item>
+        <item>   초콜릿 필드   </item>
+        <item>   로투스 비스코프 도넛   </item>
+        <item>   리고 피넛버터 도넛   </item>
+        <item>   미니 오리지널 글레이즈드   </item>
+        <item>   초코홀릭   </item>
+        <item>   초콜릿 아이스드 글레이즈드   </item>
+        <item>   딸기와플넛   </item>
+        <item>   초코와플넛   </item>
+        <item>   카라멜와플넛   </item>
+        <item>   오리지널 글레이즈드   </item>
+        <item>   카라멜 아이스드   </item>
+        <item>   슈거 코티드   </item>
+        <item>   뉴욕 치즈케익   </item>
+        <item>   파우더 스트로베리 필드   </item>
+        <item>   글레이즈드 사워 크림   </item>
+        <item>   글레이즈드 초콜릿 케익   </item>
+        <item>   메론 스무디   </item>
+        <item>   살구자두 스무디   </item>
+        <item>   블루베리 요거트 스무디   </item>
+        <item>   밀크티   </item>
+        <item>   다크 핫 초콜릿   </item>
+        <item>   망고스무디   </item>
+        <item>   스트로베리 스무디   </item>
+        <item>   아메리카노S   </item>
+        <item>   아메리카노M   </item>
+        <item>   아이스아메리카노S   </item>
+        <item>   아이스아메리카노M   </item>
+        <item>   아이스아메리카노L   </item>
+        <item>   아이스아메리카노 XL   </item>
+        <item>   스팀우유   </item>
+        <item>   우유   </item>
+        <item>   라떼S   </item>
+        <item>   라떼M   </item>
+        <item>   아이스라떼S   </item>
+        <item>   아이스라떼M   </item>
+        <item>   아이스라떼L   </item>
+        <item>   아이스라떼 XL   </item>
+        <item>   바닐라라떼S   </item>
+        <item>   바닐라라떼M   </item>
+        <item>   아이스 바닐라라떼S   </item>
+        <item>   아이스 바닐라라떼M   </item>
+        <item>   카푸치노S   </item>
+        <item>   카푸치노M   </item>
+        <item>   아이스 카푸치노S   </item>
+        <item>   아이스 카푸치노M   </item>
+        <item>   모카S   </item>
+        <item>   모카M   </item>
+        <item>   아이스모카S   </item>
+        <item>   아이스모카M   </item>
+        <item>   드립커피S   </item>
+        <item>   드립커피M   </item>
+        <item>   아이스드립커피S   </item>
+        <item>   아이스드립커피M   </item>
+        <item>   아이스드립커피L   </item>
+        <item>   아이스드립커피XL   </item>
+        <item>   카라멜 마끼아또S   </item>
+        <item>   카라멜 마끼아또M   </item>
+        <item>   순수우유 딸기 쉐이크   </item>
+        <item>   순수우유 쉐이크   </item>
+        <item>   순수우유 소프트콘   </item>
+        <item>   순수우유 초코콘   </item>
+        <item>   쿠앤크 쉐이크   </item>
+        <item>   크리스피 아이스크림 콘   </item>
+        <item>   스트로베리 쉐이크   </item>
+        <item>   밀크쉐이크   </item>
+        <item>   바삭 콘 라떼   </item>
+        <item>   바삭 콘 프라페   </item>
+        <item>   피넛 버터 라떼   </item>
+        <item>   피넛 버터 초코 라떼   </item>
+        <item>   피넛 버터 카페 라떼   </item>
+        <item>   피넛 버터 프라페   </item>
+        <item>   피넛 버터 초코 프라페   </item>
+        <item>   피넛 버터 카페 프라페   </item>
+        <item>   아메리카노   </item>
+        <item>   아이스 아메리카노   </item>
+        <item>   카페라떼   </item>
+        <item>   아이스 카페라떼   </item>
+        <item>   카푸치노   </item>
+        <item>   아이스 카푸치노   </item>
+        <item>   바닐라 라떼   </item>
+        <item>   아이스 바닐라 라떼   </item>
+        <item>   카라멜 마끼아또   </item>
+        <item>   아이스 카라멜 마끼아또   </item>
+        <item>   민트모카 라떼   </item>
+        <item>   아이스 민트모카 라떼   </item>
+        <item>   콜드브루   </item>
+        <item>   콜드브루 라떼   </item>
+        <item>   콜드브루 마끼아또   </item>
+        <item>   니트로 콜드브루   </item>
+        <item>   메론 치즈 프라페   </item>
+        <item>   요거트 요프치노   </item>
+        <item>   모카 요프치노   </item>
+        <item>   쿠앤크 요프치노   </item>
+        <item>   민트초코칩 요프치노   </item>
+        <item>   코코넛 카페 요프치노   </item>
+        <item>   순수 치즈 프라페   </item>
+        <item>   그린티 치즈 프라페   </item>
+        <item>   스트로베리 치즈프라페   </item>
+        <item>   블루베리 치즈프라페   </item>
+        <item>   화이트 핫초코   </item>
+        <item>   핫초코   </item>
+        <item>   초코 라떼   </item>
+        <item>   아이스 초코라떼   </item>
+        <item>   그린티 라떼   </item>
+        <item>   아이스 그린티 라떼   </item>
+        <item>   밀크티라떼   </item>
+        <item>   아이스 밀크티라떼   </item>
+        <item>   고구마 라떼    </item>
+        <item>   아이스 고구마라떼   </item>
+        <item>   블랙빈 라떼   </item>
+        <item>   아이스 블랙빈 라떼   </item>
+        <item>   리얼 홍시라떼   </item>
+        <item>   순수 딸기 우유   </item>
+        <item>   순수 딸기 바나나 우유   </item>
+        <item>   순수 망고 바나나 우유   </item>
+        <item>   자몽 스파클링 에이드   </item>
+        <item>   오렌지 스파클링 에이드   </item>
+        <item>   레몬 스파클링 에이드   </item>
+        <item>   리얼 홍시주스   </item>
+        <item>   딸기 생과일주스   </item>
+        <item>   키위 생과일주스   </item>
+        <item>   바나나 생과일 주스   </item>
+        <item>   토마토 생과일주스   </item>
+        <item>   흑당 시나몬 버블티   </item>
+        <item>   흑당 쇼콜라 버블티   </item>
+        <item>   흑당 말차 버블티   </item>
+        <item>   흑당 카페 버블티   </item>
+        <item>   흑당 홍차 버블티   </item>
+        <item>   흑당 버블티   </item>
+        <item>   아이스 상그리아 유자 티   </item>
+        <item>   상그리아 유자 티   </item>
+        <item>   아이스 상그리아 티   </item>
+        <item>   상그리아 티   </item>
+        <item>   자몽 티   </item>
+        <item>   유자 티   </item>
+        <item>   레몬 티   </item>
+        <item>   페퍼민트   </item>
+        <item>   베리마테   </item>
+        <item>   루이보스 레몬프레쉬   </item>
+        <item>   그린티   </item>
+        <item>   잉글리쉬 브렉퍼스트   </item>
+        <item>   캐모마일   </item>
+        <item>   메리마카롱 초코   </item>
+        <item>   메리마카롱 딸기   </item>
+        <item>   메리마카롱 피스타치오   </item>
+        <item>   메리마카롱 카라멜   </item>
+        <item>   메리메론   </item>
+        <item>   메리딸기   </item>
+        <item>   메리치즈   </item>
+        <item>   메리초코   </item>
+        <item>   메리트리   </item>
+        <item>   메리뉴욕   </item>
+        <item>   메리망고   </item>
+        <item>   메리베리   </item>
+        <item>   플레인(콘)   </item>
+        <item>   플레인(컵)   </item>
+        <item>   스트로베리   </item>
+        <item>   망고   </item>
+        <item>   블루베리   </item>
+        <item>   스트로베리 치즈   </item>
+        <item>   블루베리 치즈   </item>
+        <item>   초코슈   </item>
+        <item>   바닐라슈   </item>
+        <item>   플레인 요거트 쉐이크   </item>
+        <item>   딸기 요거트 쉐이크   </item>
+        <item>   망고 요거트 쉐이크   </item>
+        <item>   블루베리 요거트 쉐이크   </item>
+        <item>   메론 요거트 스무디   </item>
+        <item>   복숭아 요거트 스무디   </item>
+        <item>   딸기 요거트 스무디   </item>
+        <item>   망고 요거트 스무디   </item>
+        <item>   블루베리 요거트 스무디   </item>
+        <item>   순수 딸기 요거트   </item>
+        <item>   순수 딸기 바나나 요거트   </item>
+        <item>   순수 망고 바나나 요거트   </item>
+        <item>   슈 앤 딸기 스무디   </item>
+        <item>   슈 앤 망고 스무디   </item>
+        <item>   플레인 밀크 아이스크림 (콘)   </item>
+        <item>   플레인 밀크 아이스크림 (컵)   </item>
+        <item>   티라미수 밀크 아이스크림   </item>
+        <item>   밀크 아포가토   </item>
+        <item>   플레인 밀크 쉐이크   </item>
+        <item>   피넛 밀크 쉐이크   </item>
+        <item>   쿠키 밀크 쉐이크   </item>
+        <item>   초콜릿 밀크 쉐이크   </item>
+        <item>   말차 밀크 프라페   </item>
+        <item>   블랙빈 밀크프라페   </item>
+        <item>   오곡 밀크 프라페   </item>
+        <item>   에스프레소 밀크 프라페   </item>
+        <item>   망고 마카롱   </item>
+        <item>   초코 마카롱   </item>
+        <item>   딸기 마카롱   </item>
+        <item>   피스타치오 마카롱   </item>
+        <item>   카라멜 마카롱   </item>
+        <item>   딸기 생크림 카스테라   </item>
+        <item>   메론 생크림 카스테라   </item>
+        <item>   플레인 카스테라   </item>
+        <item>   콘 어니언 핫도그   </item>
+        <item>   칠리앤치즈 핫도그   </item>
+        <item>   쿠앤크 치즈케이크   </item>
+        <item>   프렌치 초콜릿 케이크   </item>
+        <item>   마스카포네 티라미수   </item>
+        <item>   아메리칸 치즈케이크   </item>
+        <item>   딸기 생크림 오믈렛   </item>
+        <item>   딸기 초코 생크림 오믈렛   </item>
+        <item>   초코 생크림 오믈렛   </item>
+        <item>   순수 요거트 오믈렛   </item>
+        <item>   청포도 생크림 오믈렛   </item>
+        <item>   블루베리 생크림 오믈렛   </item>
+        <item>   생크림 딸기 와플   </item>
+        <item>   생크림 딸기 망고 와플   </item>
+        <item>   생크림 망고 와플   </item>
+        <item>   생크림 와플   </item>
+        <item>   생크림 딸기 토스트   </item>
+        <item>   생크림 망고 토스트   </item>
+        <item>   아이스 바닐라 슈   </item>
+        <item>   아이스 초코 슈   </item>
+        <item>   허니볼   </item>
+        <item>   플레인 베이글   </item>
+        <item>   블루베리 베이글   </item>
+        <item>   어니언 베이글   </item>
+        <item>   갈릭치즈브래드   </item>
+        <item>   허니브래드   </item>
+        <item>   딸기 초코 메리 스노우 빙수   </item>
+        <item>   딸기 피스타치오 메리 스노우 빙수   </item>
+        <item>   생딸기 스노우빙수   </item>
+        <item>   홍시 스노우 빙수   </item>
+        <item>   트리플 초코 스노우 빙수   </item>
+        <item>   콩고물 스노우 빙수   </item>
+        <item>   트리플 치즈 스노우 빙수   </item>
+        <item>   망고 치즈 스노우 빙수   </item>
+        <item>   딸기 치즈 스노우 빙수   </item>
+        <item>   더블 그린티 스노우 빙수   </item>
+        <item>   딸기 망고 요거트 빙수   </item>
+        <item>   베리 베리 요거트 빙수   </item>
+        <item>   피치 망고 요거트 빙수   </item>
+        <item>   치즈 요거트 빙수   </item>
+        <item>   옛날 팥빙수   </item>
+        <item>   아메리카노(HOT) R   </item>
+        <item>   아메리카노(HOT) L   </item>
+        <item>   아메리카노(HOT) V   </item>
+        <item>   아메리카노(ICED) R   </item>
+        <item>   아메리카노(ICED) L   </item>
+        <item>   아메리카노(ICED) V   </item>
+        <item>   에스프레소   </item>
+        <item>   아포가또(크림치즈)   </item>
+        <item>   아포가또(그린티)   </item>
+        <item>   아포가또(바닐라)   </item>
+        <item>   카라멜마끼아또(HOT) R   </item>
+        <item>   카라멜마끼아또(HOT) L   </item>
+        <item>   카라멜마끼아또(HOT) V   </item>
+        <item>   카라멜마끼아또(ICED) R   </item>
+        <item>   카라멜마끼아또(ICED) L   </item>
+        <item>   카라멜마끼아또(ICED) V   </item>
+        <item>   카페모카(HOT) R   </item>
+        <item>   카페모카(HOT) L   </item>
+        <item>   카페모카(HOT) V   </item>
+        <item>   카페모카(ICED) R   </item>
+        <item>   카페모카(ICED) L   </item>
+        <item>   카페모카(ICED) V   </item>
+        <item>   화이트모카(HOT) R   </item>
+        <item>   화이트모카(HOT) L   </item>
+        <item>   화이트모카(HOT) V   </item>
+        <item>   화이트모카(ICED) R   </item>
+        <item>   화이트모카(ICED) L   </item>
+        <item>   화이트모카(ICED) V   </item>
+        <item>   바닐라라떼(HOT) R   </item>
+        <item>   바닐라라떼(HOT) L   </item>
+        <item>   바닐라라떼(HOT) V   </item>
+        <item>   바닐라라떼(ICED) R   </item>
+        <item>   바닐라라떼(ICED) L   </item>
+        <item>   바닐라라떼(ICED) V   </item>
+        <item>   카페라떼(HOT) R   </item>
+        <item>   카페라떼(HOT) L   </item>
+        <item>   카페라떼(HOT) V   </item>
+        <item>   카페라떼(ICED) R   </item>
+        <item>   카페라떼(ICED) L   </item>
+        <item>   카페라떼(ICED) V   </item>
+        <item>   카푸치노 R   </item>
+        <item>   카푸치노 L   </item>
+        <item>   카푸치노 V   </item>
+        <item>   흑당 아인슈페너 (HOT)   </item>
+        <item>   흑당 아인슈페너 (ICED)   </item>
+        <item>   흑당 아인슈페너 라떼(HOT)   </item>
+        <item>   흑당 아인슈페너 라떼(ICED)   </item>
+        <item>   콜드브루R   </item>
+        <item>   콜드브루L   </item>
+        <item>   콜드브루 라떼R   </item>
+        <item>   콜드브루 라떼L   </item>
+        <item>   콜드브루 카라멜마끼아또R   </item>
+        <item>   콜드브루 카라멜마끼아또L   </item>
+        <item>   콜드브루 헤이즐넛 라떼R   </item>
+        <item>   콜드브루 헤이즐넛 라떼L   </item>
+        <item>   콜드브루 바닐라 젤라또 라떼   </item>
+        <item>   니트로콜드브루   </item>
+        <item>   오곡라떼(HOT) R   </item>
+        <item>   오곡라떼(HOT) L   </item>
+        <item>   오곡라떼(ICED) R   </item>
+        <item>   오곡라떼(ICED) L   </item>
+        <item>   그린티라떼(HOT) R   </item>
+        <item>   그린티라떼(HOT) L   </item>
+        <item>   그린티라떼(ICED) R   </item>
+        <item>   그린티라떼(ICED) L   </item>
+        <item>   차이티라떼(HOT) R   </item>
+        <item>   차이티라떼(HOT) L   </item>
+        <item>   차이티라떼(ICED) R   </item>
+        <item>   차이티라떼(ICED) L   </item>
+        <item>   리얼초콜릿라떼(HOT) R   </item>
+        <item>   리얼초콜릿라떼(HOT) L   </item>
+        <item>   리얼초콜릿라떼(ICED) R   </item>
+        <item>   리얼초콜릿라떼(ICED) L   </item>
+        <item>   고구마라떼(HOT) R   </item>
+        <item>   고구마라떼(HOT) L   </item>
+        <item>   고구마라떼(ICED) R   </item>
+        <item>   고구마라떼(ICED) L   </item>
+        <item>   피스타치오라떼(HOT) R   </item>
+        <item>   피스타치오라떼(HOT) L   </item>
+        <item>   피스타치오라떼(ICED) R   </item>
+        <item>   피스타치오라떼(ICED) L   </item>
+        <item>   바밤 라떼(HOT)   </item>
+        <item>   바밤 라떼(ICED)   </item>
+        <item>   플랫 화이트(HOT)   </item>
+        <item>   플레어 연유 라떼(HOT)   </item>
+        <item>   플레어 연유 라떼(ICED)   </item>
+        <item>   플레어 시나몬 라떼(HOT)   </item>
+        <item>   우유(ICED) R   </item>
+        <item>   우유(ICED) L   </item>
+        <item>   밀크버블티   </item>
+        <item>   타로버블티   </item>
+        <item>   콜드브루프라페노 R   </item>
+        <item>   콜드브루프라페노L   </item>
+        <item>   콜드브루카라멜프라페노R   </item>
+        <item>   콜드브루카라멜프라페노L   </item>
+        <item>   콜드브루 화이트 모카프라페노R   </item>
+        <item>   콜드브루 화이트 모카프라페노L   </item>
+        <item>   콜드브루 모카프라페노R   </item>
+        <item>   콜드브루 모카프라페노L   </item>
+        <item>   그린티 프라페노R   </item>
+        <item>   그린티 프라페노L   </item>
+        <item>   초코칩 프라페노R   </item>
+        <item>   초코칩 프라페노L   </item>
+        <item>   플레인요거트스무디R   </item>
+        <item>   플레인요거트스무디L   </item>
+        <item>   딸기요거트스무디R   </item>
+        <item>   딸기요거트스무디L   </item>
+        <item>   블루베리요거트스무디R   </item>
+        <item>   블루베리요거트스무디L   </item>
+        <item>   그린티   </item>
+        <item>   블랙티(잉글리쉬블랙퍼스트)   </item>
+        <item>   블랙티(얼그레이)   </item>
+        <item>   허브티(민트)   </item>
+        <item>   허브티(카모마일)   </item>
+        <item>   허브티(히비스커스)   </item>
+        <item>   밀크티(HOT) R   </item>
+        <item>   밀크티(HOT) L   </item>
+        <item>   밀크티(ICED) R   </item>
+        <item>   밀크티(ICED) L   </item>
+        <item>   유자티(HOT)   </item>
+        <item>   유자티(ICED)   </item>
+        <item>   자몽차(HOT)   </item>
+        <item>   자몽히비스커스티에이드   </item>
+        <item>   아이스티(복숭아)R   </item>
+        <item>   아이스티(복숭아)L   </item>
+        <item>   애플시나몬티(HOT)   </item>
+        <item>   애플시나몬티(ICED)   </item>
+        <item>   레몬에이드   </item>
+        <item>   자몽에이드   </item>
+        <item>   칼라만시에이드   </item>
+        <item>   청포도포도 에이드   </item>
+        <item>   포도포도 에이드   </item>
+        <item>   오렌지주스   </item>
+        <item>   자몽주스   </item>
+        <item>   키위주스   </item>
+        <item>   벨지안위트비어   </item>
+        <item>   라즈베리 골드 아이스 티(ICED)   </item>
+        <item>   리치 레드 아이스 티(ICED)   </item>
+        <item>   브라운슈가 콜드브루 펄라떼(ICED)   </item>
+        <item>   브라운슈가 밀크티 펄라떼(ICED)   </item>
+        <item>   옐로우파인 스무디   </item>
+        <item>   핑크피치 스무디   </item>
+        <item>   자두 에이드   </item>
+        <item>   살구 에이드   </item>
+        <item>   딸기 젤라또 프라페노   </item>
+        <item>   초콜릿 쿠키 젤라또 프라페노   </item>
+        <item>   청도 홍시 라떼   </item>
+        <item>   청도 홍시 주스   </item>
+        <item>   청도 아이스홍시   </item>
+        <item>   허니브레드(카라멜시나몬)   </item>
+        <item>   비벼먹는 페스츄리   </item>
+        <item>   비벼먹는 페스츄리(초콜릿)   </item>
+        <item>   플레인 베이글   </item>
+        <item>   어니언 베이글   </item>
+        <item>   블루베리 베이글   </item>
+        <item>   블루베리 크림치즈   </item>
+        <item>   초코청크 크림치즈   </item>
+        <item>   크랜베리 크림치즈   </item>
+        <item>   허브갈릭 크림치즈   </item>
+        <item>   플레인 크림치즈   </item>
+        <item>   진한 뉴욕 치즈케이크   </item>
+        <item>   자허 토르테(휘핑크림 포함)   </item>
+        <item>   베리 까망베르 치즈 케이크   </item>
+        <item>   라운드 쇼콜라 케이크   </item>
+        <item>   홍차 케이크   </item>
+        <item>   오렌지 케이크   </item>
+        <item>   이탈리안 티라미수   </item>
+        <item>   크로크무슈   </item>
+        <item>   불고기 치아바타   </item>
+        <item>   어니언 햄 모짜렐라 파니니   </item>
+        <item>   에그베이컨 크로와상   </item>
+        <item>   뉴욕칠리 핫도그   </item>
+        <item>   더블초코 머핀   </item>
+        <item>   블루베리 머핀   </item>
+        <item>   진한초코쿠키   </item>
+        <item>   촉촉크림치즈 쿠키   </item>
+        <item>   팥빙수   </item>
+        <item>   베리딸기빙수   </item>
+        <item>   초코악마빙수   </item>
+        <item>   쿠키앤크림빙수   </item>
+        <item>   인절미 눈꽃빙수   </item>
+        <item>   딸기 눈꽃빙수   </item>
+        <item>   그린티 빙수   </item>
+        <item>   커피 빙수   </item>
+        <item>   스윗 망고 빙수   </item>
+        <item>   스윗 망고 눈꽃빙수   </item>
+        <item>   라즈베리 요거트무스케이크   </item>
+        <item>   옐로우파인 빙수   </item>
+        <item>   옐로우파인눈꽃빙수   </item>
+        <item>   핑크피치 빙수   </item>
+        <item>   핑크피치 눈꽃빙수   </item>
+        <item>   딸기(싱글)   </item>
+        <item>   딸기(더블)   </item>
+        <item>   딸기(스몰)   </item>
+        <item>   딸기(라지)   </item>
+        <item>   바닐라(싱글)   </item>
+        <item>   바닐라(더블)   </item>
+        <item>   바닐라(스몰)   </item>
+        <item>   바닐라(라지)   </item>
+        <item>   리코타치즈(싱글)   </item>
+        <item>   리코타치즈(더블)   </item>
+        <item>   리코타치즈(스몰)   </item>
+        <item>   리코타치즈(라지)   </item>
+        <item>   다크초콜릿(싱글)   </item>
+        <item>   다크초콜릿(더블)   </item>
+        <item>   다크초콜릿(스몰)   </item>
+        <item>   다크초콜릿(라지)   </item>
+        <item>   망고(싱글)   </item>
+        <item>   망고(더블)   </item>
+        <item>   망고(스몰)   </item>
+        <item>   망고(라지)   </item>
+        <item>   그린티(싱글)   </item>
+        <item>   그린티(더블)   </item>
+        <item>   그린티(스몰)   </item>
+        <item>   그린티(라지)   </item>
+        <item>   에스프레소(싱글)   </item>
+        <item>   에스프레소(더블)   </item>
+        <item>   에스프레소(스몰)   </item>
+        <item>   에스프레소(라지)   </item>
+        <item>   요거트(싱글)   </item>
+        <item>   요거트(더블)   </item>
+        <item>   요거트(스몰)   </item>
+        <item>   요거트(라지)   </item>
+        <item>   밤페스츄리와플(단품)   </item>
+        <item>   밤페스츄리와플(플레이트)   </item>
+        <item>   카페 아메리카노 tall(hot/iced)   </item>
+        <item>   카페 아메리카노 grande(hot)   </item>
+        <item>   카페 아메리카노 grande(iced)   </item>
+        <item>   카페 아메리카노 venti(hot/iced)   </item>
+        <item>   카페라떼 tall (hot)   </item>
+        <item>   카페라떼 tall (iced)   </item>
+        <item>   카페라떼 grande (hot)   </item>
+        <item>   카페라떼 grande (iced)   </item>
+        <item>   카페라떼 venti (hot)   </item>
+        <item>   카페라떼 venti (iced)   </item>
+        <item>   캬라멜 마끼아또 tall (hot)   </item>
+        <item>   캬라멜 마끼아또 tall (iced)   </item>
+        <item>   캬라멜 마끼아또 grande (hot)   </item>
+        <item>   캬라멜 마끼아또 grande (iced)   </item>
+        <item>   캬라멜 마끼아또 venti (hot)   </item>
+        <item>   캬라멜 마끼아또 venti (iced)   </item>
+        <item>   카푸치노 tall (hot)   </item>
+        <item>   카푸치노 tall (iced)   </item>
+        <item>   카푸치노 grande (hot)   </item>
+        <item>   카푸치노 grande (iced)   </item>
+        <item>   카푸치노 venti (hot)   </item>
+        <item>   카푸치노 venti (iced)   </item>
+        <item>   바닐라 라떼 tall (hot)   </item>
+        <item>   바닐라 라떼 tall (iced)   </item>
+        <item>   바닐라 라떼 grande (hot)   </item>
+        <item>   바닐라 라떼 grande (iced)   </item>
+        <item>   바닐라 라떼 venti (hot)   </item>
+        <item>   바닐라 라떼 venti (iced)   </item>
+        <item>   헤이즐넛 라떼 tall (hot)   </item>
+        <item>   헤이즐넛 라떼 tall (iced)   </item>
+        <item>   헤이즐넛 라떼 grande (hot)   </item>
+        <item>   헤이즐넛 라떼 grande (iced)   </item>
+        <item>   헤이즐넛 라떼 venti (hot)   </item>
+        <item>   헤이즐넛 라떼 venti (iced)   </item>
+        <item>   카페모카 tall (hot)   </item>
+        <item>   카페모카 tall (iced)   </item>
+        <item>   카페모카 grande (hot)   </item>
+        <item>   카페모카 grande (iced)   </item>
+        <item>   카페모카 venti (hot)   </item>
+        <item>   카페모카 venti (iced)   </item>
+        <item>   시나몬 카페모카 tall (hot)   </item>
+        <item>   시나몬 카페모카 tall (iced)   </item>
+        <item>   시나몬 카페모카 grande (hot)   </item>
+        <item>   시나몬 카페모카 grande (iced)   </item>
+        <item>   시나몬 카페모카 venti (hot)   </item>
+        <item>   시나몬 카페모카 venti (iced)   </item>
+        <item>   그린민트 카페모카 tall (hot)   </item>
+        <item>   그린민트 카페모카 tall (iced)   </item>
+        <item>   그린민트 카페모카 grande (hot)   </item>
+        <item>   그린민트 카페모카 grande (iced)   </item>
+        <item>   그린민트 카페모카 venti (hot)   </item>
+        <item>   그린민트 카페모카 venti (iced)   </item>
+        <item>   핫 초콜릿 tall (hot)   </item>
+        <item>   핫 초콜릿 tall (iced)   </item>
+        <item>   핫 초콜릿 grande (hot)   </item>
+        <item>   핫 초콜릿 grande (iced)   </item>
+        <item>   핫 초콜릿 venti (hot)   </item>
+        <item>   핫 초콜릿 venti (iced)   </item>
+        <item>   시나몬 초콜릿 tall (hot)   </item>
+        <item>   시나몬 초콜릿 tall (iced)   </item>
+        <item>   시나몬 초콜릿 grande (hot)   </item>
+        <item>   시나몬 초콜릿 grande (iced)   </item>
+        <item>   시나몬 초콜릿 venti (hot)   </item>
+        <item>   시나몬 초콜릿 venti (iced)   </item>
+        <item>   그린민트 초콜릿 tall (hot)   </item>
+        <item>   그린민트 초콜릿 tall (iced)   </item>
+        <item>   그린민트 초콜릿 grande (hot)   </item>
+        <item>   그린민트 초콜릿 grande (iced)   </item>
+        <item>   그린민트 초콜릿 venti (hot)   </item>
+        <item>   그린민트 초콜릿 venti (iced)   </item>
+        <item>   그린라떼 tall (hot)   </item>
+        <item>   그린라떼 tall (iced)   </item>
+        <item>   그린라떼 grande (hot)   </item>
+        <item>   그린라떼 grande (iced)   </item>
+        <item>   그린라떼 venti (hot)   </item>
+        <item>   그린라떼 venti (iced)   </item>
+        <item>   밀크티 로열 tall (hot)   </item>
+        <item>   밀크티 로열 tall (iced)   </item>
+        <item>   밀크티 로열 grande (hot)   </item>
+        <item>   밀크티 로열 grande (iced)   </item>
+        <item>   밀크티 로열 venti (hot)   </item>
+        <item>   밀크티 로열 venti (iced)   </item>
+        <item>   군고구마 라떼 tall (hot)   </item>
+        <item>   군고구마 라떼 tall (iced)   </item>
+        <item>   블랙 티 얼 그레이 tall (hot)   </item>
+        <item>   블랙 티 얼 그레이 tall (iced)   </item>
+        <item>   블랙 티 얼 그레이 grande (hot)   </item>
+        <item>   블랙 티 얼 그레이 grande (iced)   </item>
+        <item>   블랙 티 잉글리쉬 블랙퍼스트 tall (hot)   </item>
+        <item>   블랙 티 잉글리쉬 블랙퍼스트 tall (iced)   </item>
+        <item>   블랙 티 잉글리쉬 블랙퍼스트 grande (hot)   </item>
+        <item>   블랙 티 잉글리쉬 블랙퍼스트 grande (iced)   </item>
+        <item>   허브 티 캐모마일 tall (hot)   </item>
+        <item>   허브 티 캐모마일 tall (iced)   </item>
+        <item>   허브 티 캐모마일 grande (hot)   </item>
+        <item>   허브 티 캐모마일 grande (iced)   </item>
+        <item>   허브 티 페퍼민트 tall (hot)   </item>
+        <item>   허브 티 페퍼민트 tall (iced)   </item>
+        <item>   허브 티 페퍼민트 grande (hot)   </item>
+        <item>   허브 티 페퍼민트 grande (iced)   </item>
+        <item>   허브 티 로즈마리 tall (hot)   </item>
+        <item>   허브 티 로즈마리 tall (iced)   </item>
+        <item>   허브 티 로즈마리 grande (hot)   </item>
+        <item>   허브 티 로즈마리 grande (iced)   </item>
+        <item>   허브 티 쟈스민 플라워 tall (hot)   </item>
+        <item>   허브 티 쟈스민 플라워 tall (iced)   </item>
+        <item>   허브 티 쟈스민 플라워 grande (hot)   </item>
+        <item>   허브 티 쟈스민 플라워 grande (iced)   </item>
+        <item>   허브 티 베이비 그린티 tall (hot)   </item>
+        <item>   허브 티 베이비 그린티 tall (iced)   </item>
+        <item>   허브 티 베이비 그린티 grande (hot)   </item>
+        <item>   허브 티 베이비 그린티 grande (iced)   </item>
+        <item>   허브 티 베이비 그린티 venti (hot)   </item>
+        <item>   허브 티 베이비 그린티 venti (iced)   </item>
+        <item>   유자차 tall   </item>
+        <item>   유자차 grande    </item>
+        <item>   유자차 venti    </item>
+        <item>   후레쉬 티 자몽 tall   </item>
+        <item>   후레쉬 티 자몽 grande    </item>
+        <item>   후레쉬 티 자몽 venti    </item>
+        <item>   후레쉬 티 레몬 tall (hot)   </item>
+        <item>   후레쉬 티 레몬 tall (iced)   </item>
+        <item>   후레쉬 티 레몬 grande (hot)   </item>
+        <item>   후레쉬 티 레몬 grande (iced)   </item>
+        <item>   아카시아 꿀차 tall   </item>
+        <item>   아카시아 꿀차 grande    </item>
+        <item>   아카시아 꿀차 venti    </item>
+        <item>   바닐라 탐앤치노 tall   </item>
+        <item>   바닐라 탐앤치노 grande    </item>
+        <item>   바닐라 탐앤치노 venti    </item>
+        <item>   에스프레소 탐앤치노 tall   </item>
+        <item>   에스프레소 탐앤치노 grande    </item>
+        <item>   에스프레소 탐앤치노 venti    </item>
+        <item>   모카 탐앤치노 tall   </item>
+        <item>   모카 탐앤치노 grande    </item>
+        <item>   모카 탐앤치노 venti    </item>
+        <item>   캬라멜 탐앤치노 tall   </item>
+        <item>   캬라멜 탐앤치노 grande    </item>
+        <item>   캬라멜 탐앤치노 venti    </item>
+        <item>   시나몬 모카 탐앤치노 tall   </item>
+        <item>   시나몬 모카 탐앤치노 grande    </item>
+        <item>   시나몬 모카 탐앤치노 venti    </item>
+        <item>   그린민트 모카 탐앤치노 tall   </item>
+        <item>   그린민트 모카 탐앤치노 grande    </item>
+        <item>   그린민트 모카 탐앤치노 venti    </item>
+        <item>   그린 티 탐앤치노 tall   </item>
+        <item>   그린 티 탐앤치노 grande    </item>
+        <item>   그린 티 탐앤치노 venti    </item>
+        <item>   시나몬 초콜릿 탐앤치노 tall   </item>
+        <item>   시나몬 초콜릿  탐앤치노 grande    </item>
+        <item>   시나몬 초콜릿 탐앤치노 venti    </item>
+        <item>   그린민트 초콜릿 탐앤치노 tall   </item>
+        <item>   그린민트 초콜릿 탐앤치노 grande    </item>
+        <item>   그린민트 초콜릿 탐앤치노 venti    </item>
+        <item>   자바 칩 탐앤치노 tall   </item>
+        <item>   자바 칩 탐앤치노 grande    </item>
+        <item>   자바 칩 탐앤치노 venti    </item>
+        <item>   월넛치노 tall   </item>
+        <item>   월넛치노 grande    </item>
+        <item>   월넛치노 venti    </item>
+        <item>   플레인 요거트 스무디 tall   </item>
+        <item>   플레인 요거트 스무디 grande   </item>
+        <item>   플레인 요거트 스무디 venti   </item>
+        <item>   프리미엄 요거트 스무디 tall   </item>
+        <item>   프리미엄 요거트 스무디 grande   </item>
+        <item>   프리미엄 요거트 스무디 venti   </item>
+        <item>   프리미엄 스무디 블루베리 tall   </item>
+        <item>   프리미엄 스무디 블루베리 grande   </item>
+        <item>   프리미엄 스무디 블루베리 venti   </item>
+        <item>   프리미엄 스무디 유자 tall   </item>
+        <item>   프리미엄 스무디 유자 grande   </item>
+        <item>   프리미엄 스무디 유자 venti   </item>
+        <item>   과일 요거트 스무디 tall   </item>
+        <item>   과일 요거트 스무디 grande    </item>
+        <item>   과일 요거트 스무디 venti    </item>
+        <item>   과일 스무디 딸기 tall   </item>
+        <item>   과일 스무디 딸기 grande    </item>
+        <item>   과일 스무디 딸기 venti    </item>
+        <item>   과일 스무디 망고 tall   </item>
+        <item>   과일 스무디 망고 grande    </item>
+        <item>   과일 스무디 망고 venti    </item>
+        <item>   홍시 스무디 tall   </item>
+        <item>   후레쉬 에이드 자몽 tall   </item>
+        <item>   후레쉬 에이드 자몽 grande    </item>
+        <item>   후레쉬 에이드 망고 venti    </item>
+        <item>   후레쉬 쥬스 오렌지 tall   </item>
+        <item>   후레쉬 쥬스 오렌지 grande   </item>
+        <item>   후레쉬 쥬스 오렌지 venti   </item>
+        <item>   후레쉬 에이드 레몬  tall   </item>
+        <item>   후레쉬 에이드 레몬  grande   </item>
+        <item>   후레쉬 에이드 레몬  venti   </item>
+        <item>   후레쉬 쥬스 자몽 tall   </item>
+        <item>   후레쉬 쥬스 자몽 grande   </item>
+        <item>   후레쉬 쥬스 자몽 venti   </item>
+        <item>   후레쉬 주스 오렌지 tall   </item>
+        <item>   후레쉬 주스 오렌지 grande   </item>
+        <item>   블루레몬 에이드 grande   </item>
+        <item>   아이스 티 복숭아 tall   </item>
+        <item>   아이스 티 복숭아 grande   </item>
+        <item>   아이스 티 복숭아 venti   </item>
+        <item>   아이스 티 레몬 tall   </item>
+        <item>   아이스 티 레몬 grande   </item>
+        <item>   아이스 티 레몬 venti   </item>
+        <item>   아이스 홍시 tall   </item>
+        <item>   국내산 과일주스 딸기 grande   </item>
+        <item>   유자에이드 tall   </item>
+        <item>   유자에이드 grande   </item>
+        <item>   유자에이드 venti   </item>
+        <item>   아이스블루스노우모카 R   </item>
+        <item>   아이스블루스노우모카 L   </item>
+        <item>   블루스노우모카 R   </item>
+        <item>   블루스노우모카 L   </item>
+        <item>   넘버 원 모카 R   </item>
+        <item>   넘버 원 모카 L   </item>
+        <item>   시나몬 크림 모카 R   </item>
+        <item>   시나몬 크림 모카 L   </item>
+        <item>   화이트 모카 R   </item>
+        <item>   화이트 모카 L   </item>
+        <item>   아이스 아메리카노 R   </item>
+        <item>   아이스 아메리카노 L   </item>
+        <item>   아메리카노 R   </item>
+        <item>   아메리카노 L   </item>
+        <item>   카페라떼 R   </item>
+        <item>   카페라떼 L   </item>
+        <item>   아이스 카페라떼R   </item>
+        <item>   아이스 카페라떼L   </item>
+        <item>   민트모카 R   </item>
+        <item>   민트모카 L   </item>
+        <item>   아이스 민트모카 R   </item>
+        <item>   아이스 민트모카 L   </item>
+        <item>   에스프레소 토피넛라떼 R   </item>
+        <item>   에스프레소 토피넛라떼 L   </item>
+
+
+    </string-array>
+</resources>
