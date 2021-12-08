@@ -61,37 +61,15 @@ class DiaryFragment : Fragment() {
         binding.today.text = currentDate.dateToString("yyyy년 MM월 dd일")
 
 
-//        binding.uploadImage.setImageURI(uri)
-//
-//        binding.addPhotoBtn.setOnClickListener{
-//            checkPermission()
-//            funImageUpload(uri!!)
-//
-//        }
-
         myRef = myRef.child(userID.toString()).child("UserInfo")
 
-//        myRef.addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(snapshot: DataSnapshot) {
-//                val baby_birth = snapshot.child("user_baby_name").getValue()
-//
-//                val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(currentDate.toString())
-//                val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
-//                val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
-//
-//                binding.calDday.setText("$remaining_days")
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//                println("error")
-//            }
-//
-//        })
+
         Dday_current()
         test()
 
         return binding.root
     }
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     fun Dday_current() {
@@ -108,7 +86,7 @@ class DiaryFragment : Fragment() {
                     val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
                     val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
 
-                    binding.calDday.setText("아이와 만나기까지 D - %s".format(remaining_days))
+                    binding.calDday.setText("아이와 만나기까지 D-%s".format(remaining_days))
                     binding.ExpectedDate.setText("출산 예정일 : %s년 %s월 %s일".format(baby_birth.toString().substring(0,4),baby_birth.toString().substring(4,6),baby_birth.toString().substring(6,8)))
                 }
 
