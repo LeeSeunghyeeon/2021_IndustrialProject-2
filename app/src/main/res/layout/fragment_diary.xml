@@ -110,28 +110,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/calendarView"
                     android:visibility="invisible"/>
 
-
-                <Button
-                    android:id="@+id/add_photo_Btn"
-                    android:text="➕"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/diary_addphoto_button"
-                    app:layout_constraintEnd_toEndOf="@id/today"
-                    app:layout_constraintTop_toTopOf="@id/today"
-                    android:visibility="invisible"/>
-
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/upload_image"
-                    app:layout_constraintTop_toTopOf="@id/contextEditText"
-                    app:layout_constraintEnd_toEndOf="@id/contextEditText"/>
-
-
-
                 <EditText
                     android:id="@+id/contextEditText"
                     android:layout_width="0dp"
@@ -143,7 +121,7 @@
                     android:layout_marginRight="8dp"
                     android:ems="10"
                     android:textColor="@color/black"
-                    android:hint="오늘 하루 있었던 일이나 산모님의 감정 등을 자유롭게 기록해주세요.\n\n(+) 버튼으로 산모님의 소중한 사진들을 다이어리에 추가할 수도 있답니다."
+                    android:hint="오늘 하루 있었던 일이나 산모님의 감정 등을 자유롭게 기록해주세요."
                     android:inputType="textMultiLine"
                     android:textSize="13sp"
                     app:layout_constraintEnd_toEndOf="parent"
