@@ -62,11 +62,11 @@ class SingUpActivity2 : AppCompatActivity() {
                     if (task.isSuccessful) {
                         var user_uid=mAuth?.uid
                         var user_babyBirth_y=binding.babyDateSpinner.year
-                        var user_babyBirth_m=binding.babyDateSpinner.month
+                        var user_babyBirth_m=binding.babyDateSpinner.month+1
                         var user_babyBirth_d=binding.babyDateSpinner.dayOfMonth
                         var user_baby_name=binding.inputBabyName.text.toString()
                         var user_birth_y=binding.parentDateSpinner.year
-                        var user_birth_m=binding.parentDateSpinner.month
+                        var user_birth_m=binding.parentDateSpinner.month+1
                         var user_birth_d=binding.parentDateSpinner.dayOfMonth
                         var user_name=binding.inputName.text.toString()
                         var user_phone=binding.inputTelNum.text.toString()
@@ -87,23 +87,23 @@ class SingUpActivity2 : AppCompatActivity() {
                             user_relationship="아빠"
                         }
                         if(user_babyBirth_m<10&&user_babyBirth_d<10){
-                            user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m+1).toString()+zero.toString()+user_babyBirth_d.toString()
-                        }else if(binding.babyDateSpinner.dayOfMonth<10){
-                            user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m+1).toString()+zero.toString()+user_babyBirth_d.toString()
-                        }else if(binding.babyDateSpinner.month<10){
-                            user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m+1)+user_babyBirth_d.toString()
+                            user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m).toString()+zero.toString()+user_babyBirth_d.toString()
+                        }else if(user_babyBirth_m>10&&user_babyBirth_d<10){
+                            user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m).toString()+zero.toString()+user_babyBirth_d.toString()
+                        }else if(user_babyBirth_d>10&&user_babyBirth_m<10){
+                            user_babyBirth=user_babyBirth_y.toString()+zero.toString()+(user_babyBirth_m)+user_babyBirth_d.toString()
                         }else{
-                            user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m+1).toString()+user_babyBirth_d.toString()
+                            user_babyBirth=user_babyBirth_y.toString()+(user_babyBirth_m).toString()+user_babyBirth_d.toString()
                         }
 
-                        if(binding.parentDateSpinner.month<10&&binding.babyDateSpinner.dayOfMonth<10){
-                            user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m+1).toString()+zero.toString()+user_birth_d.toString()
-                        }else if(binding.babyDateSpinner.dayOfMonth<10){
-                            user_birth=user_birth_y.toString()+(user_birth_m+1).toString()+zero.toString()+user_birth_d.toString()
-                        }else if(binding.parentDateSpinner.month<10){
-                            user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m+1).toString()+user_birth_d.toString()
+                        if(user_birth_m<10&&user_birth_d<10){
+                            user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m).toString()+zero.toString()+user_birth_d.toString()
+                        }else if(user_birth_m>10&&user_birth_d<10){
+                            user_birth=user_birth_y.toString()+(user_birth_m).toString()+zero.toString()+user_birth_d.toString()
+                        }else if(user_birth_d>10&&user_birth_m<10){
+                            user_birth=user_birth_y.toString()+zero.toString()+(user_birth_m).toString()+user_birth_d.toString()
                         }else{
-                            user_birth=user_birth_y.toString()+(user_birth_m+1).toString()+user_birth_d.toString()
+                            user_birth=user_birth_y.toString()+(user_birth_m).toString()+user_birth_d.toString()
                         }
 
 
