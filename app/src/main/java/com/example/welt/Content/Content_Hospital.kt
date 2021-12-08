@@ -84,35 +84,6 @@ class Content_Hospital : Fragment() {
             }
         }
 
-        binding.hospitalReviseBtn.setOnClickListener{
-            var count = 0
-            for(i in 0 until data.size) {
-                if (adapter.item_list[i].getSelected()) {
-                    count++
-                }
-            }
-            for(i in 0 until data2.size) {
-                if (adapter2.item_list[i].getSelected()) {
-                    count++
-                }
-            }
-            if(count == 1){// 선택된 text 넘겨줘서 디비 바꿔줘야 하는데,,
-
-                val reviseHospitalScheduleDialog = Content_HospitalRevise()
-                activity?.supportFragmentManager?.let { fragmentManager ->
-                    reviseHospitalScheduleDialog.show(fragmentManager, "Content_reviseHospitalDialog")
-                }
-            }else{
-                Toast.makeText(context, "한 개의 항목만 선택해주세요.", Toast.LENGTH_SHORT).show()
-            }
-
-            //삭제 버튼 눌렀을 때 나왔던 화면
-            /*val removeHospitalScheduleDialog = Content_HospitalRemove()
-            activity?.supportFragmentManager?.let { fragmentManager ->
-                removeHospitalScheduleDialog.show(fragmentManager, "Content_removeHospitalDialog")
-            }*/
-        }
-
         binding.hospitalRemoveBtn.setOnClickListener{
             myRef = database.getReference("User")
             // 취소 시 실행할 코드
@@ -138,6 +109,7 @@ class Content_Hospital : Fragment() {
                     adapter2.notifyDataSetChanged()
                 }
             }
+            Toast.makeText(context, "삭제 되었습니다.", Toast.LENGTH_SHORT).show()
         }
         return binding.root
     }

@@ -45,10 +45,6 @@ class HealthFragment : Fragment() {
     var date = LocalDate.now()
 
 
-
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -69,6 +65,11 @@ class HealthFragment : Fragment() {
             activity?.supportFragmentManager?.let { fragmentManager ->
                 dialog.show(fragmentManager, "Health_exercise_dialog")
             }
+
+//            val dialog = Health_pedometer()
+//            activity?.supportFragmentManager?.let { fragmentManager ->
+//                dialog.show(fragmentManager, "Health_pedometer_dialog")
+//            }
         }
 
         // 식사

@@ -32,7 +32,6 @@ class Health_exercise : DialogFragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Health_Adapter
 
-
     // 현재 user 가져오기
     val user = FirebaseAuth.getInstance().currentUser
     val userID = user?.uid // 현재 로그인한 사용자의 파이어베이스 uid
@@ -68,13 +67,14 @@ class Health_exercise : DialogFragment() {
 
         var exerciseMap = mutableMapOf("요가" to 0, "필라테스" to 0, "스트레칭" to 0, "수영" to 0, "자전거" to 0)
         try{
+            myRef = database.getReference("User")
             myRef.addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val test = snapshot.child(userID.toString()).child("Health").child(date.toString()).child("exercise")
                     for (ds in test.children) {
                         exerciseMap.put(ds.key.toString(), Integer.parseInt(ds.value.toString()))
                     }
-                    println(exerciseMap)
+                    //println(exerciseMap)
                 }
                 override fun onCancelled(error: DatabaseError) {
                     Log.e("error", "에러")
@@ -95,7 +95,7 @@ class Health_exercise : DialogFragment() {
                 var minute = Integer.parseInt(binding.exerciseInputMinute.getText().toString())
 
                 if ((!exercise.equals("선택하세요")) && minute > 0) {
-                    
+
                     // 원래 운동 종목 있으면 시간 추가
                     val beforeMinute = exerciseMap[exercise]
                     println(exercise + " 이전 시간: " + beforeMinute)
@@ -104,6 +104,7 @@ class Health_exercise : DialogFragment() {
 
                     myRef.child(userID.toString()).child("Health").child(date.toString()).child("exercise").child(exercise).setValue(minute)
 
+                    dismiss()
 
 
                 } else {
