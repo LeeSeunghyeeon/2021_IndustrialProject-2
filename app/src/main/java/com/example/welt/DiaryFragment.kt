@@ -7,6 +7,7 @@ import android.content.Context.MODE_NO_LOCALIZED_COLLATORS
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -15,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CalendarView.OnDateChangeListener
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -25,6 +27,8 @@ import kotlinx.android.synthetic.main.fragment_diary.*
 import java.io.FileInputStream
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -52,6 +56,7 @@ class DiaryFragment : Fragment() {
 
     val currentDate = currentDate()
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
@@ -71,7 +76,6 @@ class DiaryFragment : Fragment() {
 
         myRef = myRef.child(userID.toString()).child("UserInfo")
 
-
 //        myRef.addValueEventListener(object : ValueEventListener {
 //            override fun onDataChange(snapshot: DataSnapshot) {
 //                val baby_birth = snapshot.child("user_baby_name").getValue()
@@ -88,15 +92,14 @@ class DiaryFragment : Fragment() {
 //            }
 //
 //        })
-
-        //Dday_current()
+        Dday_current()
         test()
 
         return binding.root
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun Dday_current() {
-
         if (userID != null) {
             myRef= FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("UserInfo")
 
@@ -104,23 +107,14 @@ class DiaryFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
 
                     val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
-
-                    binding.ExpectedDate.setText("$baby_birth")
-
-                    val startDate =
-                        SimpleDateFormat(
-                            "yyyyMMdd",
-                            Locale("ko", "KR")
-                        ).parse(currentDate.toString())
-                    val endDate =
-                        SimpleDateFormat(
-                            "yyyyMMdd",
-                            Locale("ko", "KR")
-                        ).parse(baby_birth.toString())
+                    val currentDate: LocalDateTime = LocalDateTime.now() //오늘 날짜
+                    val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+                    val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
+                    val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
                     val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
 
-                        binding.calDday.setText("아이와 만나기까지 D - %s".format(remaining_days))
-
+                    binding.calDday.setText("아이와 만나기까지 D - %s".format(remaining_days))
+                    binding.ExpectedDate.setText("출산 예정일 : %s년 %s월 %s일".format(baby_birth.toString().substring(0,4),baby_birth.toString().substring(4,6),baby_birth.toString().substring(6,8)))
                 }
 
                 override fun onCancelled(error: DatabaseError) {
