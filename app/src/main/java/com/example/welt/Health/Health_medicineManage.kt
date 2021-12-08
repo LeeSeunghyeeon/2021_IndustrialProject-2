@@ -19,13 +19,21 @@ import com.example.welt.databinding.FragmentHealthMedicineManageBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.lang.Exception
+import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
 
 class Health_medicineManage : DialogFragment() {
     private lateinit var binding: FragmentHealthMedicineManageBinding
     var myRef = database.getReference("User")
+    var myRef2 = database.getReference("User")
+    var myRef3 = database.getReference("User")
     private var data:ArrayList<MyMission> = ArrayList()
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Health_Adapter
@@ -49,6 +57,7 @@ class Health_medicineManage : DialogFragment() {
         showItemList()
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -96,6 +105,29 @@ class Health_medicineManage : DialogFragment() {
                 Toast.makeText(getActivity(), "모든 항목을 입력해 주셔야 합니다.", Toast.LENGTH_SHORT).show()
             }
 
+            val currentDate: LocalDateTime = LocalDateTime.now()
+            val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+
+            myRef = database.getReference("User").child(userID.toString()).child("UserInfo")
+            myRef.addValueEventListener(object :ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
+
+                    val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
+                    val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
+                    val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+                    myRef2=database.getReference("User").child(userID.toString()).child("Mission")
+                    for(i in 0..remaining_days){
+                        myRef2.child(date.plusDays(i).toString()).child(binding.medicineName.getText().toString()+" 복용하기").setValue(false)
+                    }
+
+
+                }
+                override fun onCancelled(error: DatabaseError) {
+                    println("Failed")
+                }
+            })
+
         }
 
 
@@ -111,9 +143,32 @@ class Health_medicineManage : DialogFragment() {
                     val exercise_= adapter.item_list[i].text.split(" | ")
                     myRef.child(uid.toString()).child("Medicine").child(date.toString()).child(exercise_[0]).setValue(null)
                     adapter.notifyDataSetChanged()
+
+                    val currentDate: LocalDateTime = LocalDateTime.now()
+                    val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+
+                    myRef3 = database.getReference("User").child(userID.toString()).child("UserInfo")
+                    myRef3.addValueEventListener(object :ValueEventListener{
+                        override fun onDataChange(snapshot: DataSnapshot) {
+                            val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
+
+                            val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
+                            val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
+                            val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+                            myRef2=database.getReference("User").child(userID.toString()).child("Mission")
+                            for(i in 0..remaining_days){
+                                myRef2.child(date.plusDays(i).toString()).child(exercise_[0]+" 복용하기").setValue(null)
+                            }
+
+                        }
+                        override fun onCancelled(error: DatabaseError) {
+                            println("Failed")
+                        }
+                    })
                 }
             }
             Toast.makeText(getActivity(), "해당 복약 내용이 삭제되었습니다.", Toast.LENGTH_SHORT).show()
+
         }
 
         // 닫기 버튼

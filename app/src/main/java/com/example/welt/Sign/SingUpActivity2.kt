@@ -1,17 +1,25 @@
 package com.example.welt.Sign
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.example.welt.R
 import com.example.welt.databinding.ActivitySingUp2Binding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 
@@ -19,9 +27,13 @@ class SingUpActivity2 : AppCompatActivity() {
     private var mAuth: FirebaseAuth? =null
     lateinit var binding: ActivitySingUp2Binding
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    var date = LocalDate.now()
+
 //    val database : FirebaseDatabase = FirebaseDatabase.getInstance()
 //    val myRef : DatabaseReference = database.reference
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySingUp2Binding.inflate(layoutInflater)
@@ -44,6 +56,34 @@ class SingUpActivity2 : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun addMission(baby_birth : String) {
+        var user_uid=mAuth?.uid
+        val currentDate: LocalDateTime = LocalDateTime.now()
+        val cal_today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+
+
+        val startDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
+        val endDate = SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(baby_birth.toString())
+        val remaining_days = (endDate.time - startDate.time) / (24 * 60 * 60 * 1000)
+        myRef=database.getReference("User").child(user_uid.toString()).child("Mission")
+        for(i in 0..remaining_days){
+            myRef.child(date.plusDays(i).toString()).child("아침 식단 기록하기").setValue(false)
+            myRef.child(date.plusDays(i).toString()).child("점심 식단 기록하기").setValue(false)
+            myRef.child(date.plusDays(i).toString()).child("저녁 식단 기록하기").setValue(false)
+            myRef.child(date.plusDays(i).toString()).child("수면 기록하기").setValue(false)
+            myRef.child(date.plusDays(i).toString()).child("운동하기").setValue(false)
+
+            if(i%14 == 0L){
+                myRef.child(date.plusDays(i).toString()).child("체중 기록하기").setValue(false)
+            }
+            if(i%7 == 0L){
+                myRef.child(date.plusDays(i).toString()).child("주차별 정보 학습하기").setValue(false)
+            }
+
+        }
+    }
+
     //    private fun input_User_Info(){
 //        var user = mAuth?.currentUser
 //        var user_uid=user?.uid
@@ -51,6 +91,7 @@ class SingUpActivity2 : AppCompatActivity() {
 //            myRef.child("User").child(user_uid).setValue("hi")
 //        }
 //    }
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun signUp(){
         if(binding.inputName.length()>0&&binding.inputBabyName.length()>0&&binding.inputTelNum.length()>0&&binding.inputId.length()>0&&binding.inputPw.length()>0&&binding.inputHeight.length()>0&&binding.inputWeight.length()>0){
             var id = binding.inputId.text.toString()
@@ -126,6 +167,7 @@ class SingUpActivity2 : AppCompatActivity() {
                             myRef.child("User").child(user_uid).child("Health").child(getTime).child("weight").setValue(user_weight)
 
                         }
+                        addMission(user_babyBirth)
                         //val user = mAuth.currentUser
                         Toast.makeText(this, "회원가입에 성공하였습니다.", Toast.LENGTH_SHORT).show()
                         changeActivity(SingInActivity::class.java)
