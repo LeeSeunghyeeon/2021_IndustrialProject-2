@@ -29,6 +29,7 @@ import java.time.LocalDate
 class Health_exercise : DialogFragment() {
     private lateinit var binding: FragmentHealthExerciseBinding
     var myRef = database.getReference("User")
+    var myRef2 = database.getReference("User")
     private var data:ArrayList<MyMission> = ArrayList()
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Health_Adapter
@@ -105,26 +106,6 @@ class Health_exercise : DialogFragment() {
 
                     myRef.child(userID.toString()).child("Health").child(date.toString()).child("exercise").child(exercise).setValue(minute)
 
-
-                    val met : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
-                    var totalCal = 0.0
-
-                    myRef = FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("Health").child(date.toString())
-                    myRef.addValueEventListener(object : ValueEventListener {
-                        override fun onDataChange(dataSnapshot: DataSnapshot) {
-                            val weight = dataSnapshot.child("weight").getValue().toString().toDouble()
-
-                            for (messageData in dataSnapshot.child("exercise").children) {
-                                val cal = (met[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
-                                totalCal = totalCal + cal
-                                myRef.child("burntCal").setValue(totalCal)
-                            }
-                        }
-
-                        override fun onCancelled(databaseError: DatabaseError) {}
-                    })
-
-
                 } else {
                     Toast.makeText(getActivity(), "운동 종목과 운동 시간을 제대로 입력해주세요.", Toast.LENGTH_SHORT).show()
                 }
@@ -132,6 +113,7 @@ class Health_exercise : DialogFragment() {
             } catch (e:Exception) {
                 Toast.makeText(getActivity(), "운동 종목과 운동 시간을 제대로 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
+            setTotalCal()
         }
 
         // 삭제 버튼
@@ -147,6 +129,8 @@ class Health_exercise : DialogFragment() {
                     adapter.notifyDataSetChanged()
                 }
             }
+
+            setTotalCal()
         }
 
         // 닫기 버튼
@@ -156,6 +140,38 @@ class Health_exercise : DialogFragment() {
         }
 
         return binding.root
+    }
+
+    private fun setTotalCal() {
+        val met : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
+        var totalCal = 0.0
+
+        myRef = FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("Weight")
+        myRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val temp = dataSnapshot.getValue().toString().split("=")
+                val weight = temp[1].split("}")
+
+                myRef2 = FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("Health").child(date.toString())
+                myRef2.addValueEventListener(object : ValueEventListener{
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        for (messageData in snapshot.child("exercise").children) {
+
+                            val cal = (met[messageData.key]!! * 3.5 * weight[0].toDouble() * messageData.getValue().toString().toDouble() * 5 ) / 1000
+                            totalCal = totalCal + cal
+                        }
+                        myRef2.child("burntCal").setValue(totalCal)
+                        totalCal = 0.0
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                    }
+
+                })
+
+            }
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
     }
 
     private fun initRecyclerView() {

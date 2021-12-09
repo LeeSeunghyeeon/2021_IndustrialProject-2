@@ -100,7 +100,7 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
                         PieEntry(
                             sleepTime, dataSnapshot.child("hour").getValue().toString(),
                             ResourcesCompat.getDrawable(
-                                getResources(),
+                                resources,
                                 R.drawable.ic_baseline_bedtime_24, null
                             )
                         )
@@ -110,7 +110,7 @@ class Mission_SleepDialog : DialogFragment(), View.OnClickListener {
                         PieEntry(
                             100 - sleepTime, "",
                             ResourcesCompat.getDrawable(
-                                getResources(),
+                                resources,
                                 R.drawable.ic_baseline_wb_sunny_24, null
                             )
                         )

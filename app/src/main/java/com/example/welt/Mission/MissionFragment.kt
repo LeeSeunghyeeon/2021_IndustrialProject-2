@@ -96,7 +96,9 @@ class MissionFragment : Fragment() {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
         databaseRef.limitToLast(1).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                binding.weightDialogBtn.setText("체중\n"+dataSnapshot.value.toString().substring(12,16)+"kg")
+                val temp = dataSnapshot.getValue().toString().split("=")
+                val weight = temp[1].split("}")
+                binding.weightDialogBtn.setText("체중\n"+weight[0]+"kg")
 
             }
             override fun onCancelled(databaseError: DatabaseError) {}

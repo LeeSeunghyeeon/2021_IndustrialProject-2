@@ -92,11 +92,8 @@ class Health_medicineManage : DialogFragment() {
 
                 if (medicineName.length > 0 && (!Mcount.equals("선택")) && (!Mwhen.equals("선택"))){
                     // 파이어베이스 약 이름, 횟수, 언제 먹을지 저장
-                    myRef.child(userID.toString()).child("Health").child(date.toString()).child("medicine").child(medicineName).child("count").setValue(Mcount)
-                    myRef.child(userID.toString()).child("Health").child(date.toString()).child("medicine").child(medicineName).child("when").setValue(Mwhen)
-
-                    myRef.child(userID.toString()).child("Medicine").child(date.toString()).child(medicineName).child("count").setValue(Mcount)
-                    myRef.child(userID.toString()).child("Medicine").child(date.toString()).child(medicineName).child("when").setValue(Mwhen)
+                    myRef.child(userID.toString()).child("Medicine").child(medicineName).child("count").setValue(Mcount)
+                    myRef.child(userID.toString()).child("Medicine").child(medicineName).child("when").setValue(Mwhen)
 
                 } else {
                     Toast.makeText(getActivity(), "모든 항목을 입력해 주셔야 합니다.", Toast.LENGTH_SHORT).show()
@@ -141,7 +138,7 @@ class Health_medicineManage : DialogFragment() {
             for(i in 0 until data.size){
                 if(adapter.item_list[i].getSelected()){
                     val exercise_= adapter.item_list[i].text.split(" | ")
-                    myRef.child(uid.toString()).child("Medicine").child(date.toString()).child(exercise_[0]).setValue(null)
+                    myRef.child(uid.toString()).child("Medicine").child(exercise_[0]).setValue(null)
                     adapter.notifyDataSetChanged()
 
                     val currentDate: LocalDateTime = LocalDateTime.now()
@@ -191,7 +188,7 @@ class Health_medicineManage : DialogFragment() {
 
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
-        myRef = myRef.child(uid.toString()).child("Medicine").child(date.toString())
+        myRef = myRef.child(uid.toString()).child("Medicine")
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 data.clear()
