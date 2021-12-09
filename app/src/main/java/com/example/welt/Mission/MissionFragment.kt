@@ -65,7 +65,7 @@ class MissionFragment : Fragment() {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("sleep")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if(!dataSnapshot.getValue().toString().equals("NULL")) time = dataSnapshot.child("hour").getValue().toString()
+                if(!dataSnapshot.getValue().toString().equals("null")) time = dataSnapshot.child("hour").getValue().toString()
                 binding.sleepDialogBtn.setText("수면\n"+time + "시간/8시간")
             }
             override fun onCancelled(databaseError: DatabaseError) {}
