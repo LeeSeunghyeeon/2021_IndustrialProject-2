@@ -102,8 +102,8 @@ class Health_meal : DialogFragment() {
         binding.breakfastOK.setOnClickListener {
             var food_name = input_breakfast.text.toString()
             val url : String =
-                //"http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&desc_kor=" + food_name + "&type=xml"
-                "http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&pageNo="+2222+"&type=xml"
+                "http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&desc_kor=" + food_name + "&type=xml"
+                //"http://apis.data.go.kr/1471000/FoodNtrIrdntInfoService1/getFoodNtrItdntList1?serviceKey=%2FdCv1qGNZQ6TMYaa8XsN5STAIC7Jw0wqqen41%2F7vcbXfWsT2%2BCokJ%2BpZYAw8puo7AqOQWWcI5Ws9AJ6qUazw%2BA%3D%3D&pageNo="+2222+"&type=xml"
 
             val thread = Thread(NetworkThread(url))
             thread.start()

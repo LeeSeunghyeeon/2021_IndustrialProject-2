@@ -59,12 +59,14 @@ class MissionFragment : Fragment() {
 
     private fun initData(){
         //수면 버튼 텍스트 변경
+        var time = "0"
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("sleep")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                binding.sleepDialogBtn.setText("수면\n"+dataSnapshot.getValue().toString() + "시간/8시간")
+                if(!dataSnapshot.getValue().toString().equals("null")) time = dataSnapshot.child("hour").getValue().toString()
+                binding.sleepDialogBtn.setText("수면\n"+time + "시간/8시간")
             }
             override fun onCancelled(databaseError: DatabaseError) {}
         })
@@ -74,20 +76,19 @@ class MissionFragment : Fragment() {
 
         //섭취 칼로리 버튼 텍스트 변경
 
+
         //소모 칼로리 버튼 텍스트 변경
-        val met : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
-        var text : String = ""
         var totalCal = 0.0
+<<<<<<< HEAD
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child("2021-12-08")
+=======
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString())
+>>>>>>> 8bc0ebef55ad82774dbfa50b2d4985e743753e92
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val weight = dataSnapshot.child("weight").getValue().toString().toDouble()
+                if(!dataSnapshot.child("burntCal").getValue().toString().equals("null"))
+                    totalCal = dataSnapshot.child("burntCal").getValue().toString().toDouble()
 
-                for (messageData in dataSnapshot.child("exercise").children) {
-                    val cal = (met[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
-                    totalCal = totalCal + cal
-                    text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
-                }
                 binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + " kcal")
             }
 

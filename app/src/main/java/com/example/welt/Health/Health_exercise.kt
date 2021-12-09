@@ -21,6 +21,7 @@ import com.example.welt.databinding.FragmentHealthExerciseBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.*
 import java.time.LocalDate
@@ -104,7 +105,24 @@ class Health_exercise : DialogFragment() {
 
                     myRef.child(userID.toString()).child("Health").child(date.toString()).child("exercise").child(exercise).setValue(minute)
 
-                    dismiss()
+
+                    val met : Map<String, Double> = mapOf("요가" to 2.5, "필라테스" to 2.5, "스트레칭" to 2.5, "수영" to 7.0, "자전거" to 8.0)
+                    var totalCal = 0.0
+
+                    myRef = FirebaseDatabase.getInstance().getReference("User").child(userID.toString()).child("Health").child(date.toString())
+                    myRef.addValueEventListener(object : ValueEventListener {
+                        override fun onDataChange(dataSnapshot: DataSnapshot) {
+                            val weight = dataSnapshot.child("weight").getValue().toString().toDouble()
+
+                            for (messageData in dataSnapshot.child("exercise").children) {
+                                val cal = (met[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
+                                totalCal = totalCal + cal
+                                myRef.child("burntCal").setValue(totalCal)
+                            }
+                        }
+
+                        override fun onCancelled(databaseError: DatabaseError) {}
+                    })
 
 
                 } else {
