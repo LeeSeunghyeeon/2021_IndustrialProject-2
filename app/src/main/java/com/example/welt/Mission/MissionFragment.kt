@@ -79,7 +79,11 @@ class MissionFragment : Fragment() {
 
         //소모 칼로리 버튼 텍스트 변경
         var totalCal = 0.0
+<<<<<<< HEAD
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child("2021-12-08")
+=======
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString())
+>>>>>>> 8bc0ebef55ad82774dbfa50b2d4985e743753e92
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if(!dataSnapshot.child("burntCal").getValue().toString().equals("null"))
