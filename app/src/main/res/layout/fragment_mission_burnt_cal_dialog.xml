@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="걷기 30분 106kcal"
+            android:text="운동 기록을 입력하세요"
             android:textSize="18dp"
             android:textStyle="bold" />
 
