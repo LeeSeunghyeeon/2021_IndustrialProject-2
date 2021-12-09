@@ -244,9 +244,9 @@
                         android:layout_height="40dp"
                         android:background="@drawable/borderline"
                         android:gravity="center"
-                        android:text="BIM(체질량지수) > 25"
-                        android:textColor="@color/black"
-                        android:textAlignment="center" />
+                        android:text="BMI(체질량지수) > 25"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
 
                     <TextView
                         android:id="@+id/textView39"
@@ -1300,36 +1300,23 @@
                 android:orientation="horizontal">
 
                 <Space
-                    android:layout_width="112dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_width="51dp"
+                    android:layout_height="match_parent" />
 
                 <Button
                     android:id="@+id/content_high_check_scoreBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/black"
-                    android:text="점수확인" />
-
-                <Space
-                    android:layout_width="112dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                    android:layout_width="110sp"
+                    android:layout_height="40sp"
+                    android:text="✔ 점수확인/저장"
+                    android:textColor="@color/black" />
 
                 <TextView
                     android:id="@+id/textView123"
-                    android:layout_width="220dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:text="점수 : "
-                    android:textColor="@color/black"
                     android:textAlignment="textEnd"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
 
                 <TextView
@@ -1342,10 +1329,15 @@
                 <TextView
                     android:id="@+id/content_high_show_score"
                     android:layout_width="match_parent"
-                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
 
+                <Space
+                    android:layout_width="112dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <TextView
@@ -1353,7 +1345,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="점수가 80점 이상인 경우 \n산부인과 전문변원에서 산전 진찰 필수입니다!"
+                android:text="점수가 80점 이상인 경우 \n산부인과 전문변원에서 산전 진찰 필수입니다!\n"
                 android:textAlignment="center"
                 android:textColor="#A37AEC" />
 
@@ -1371,8 +1363,8 @@
                     android:id="@+id/btnOK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="확인" />
+                    android:text="❌\n닫기"
+                    android:textColor="@color/black" />
 
                 <Space
                     android:layout_width="112dp"

@@ -104,7 +104,7 @@ class Content_HighRiskPregnancyTest : Fragment() {
 
             myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
                 .child("HighTest")
-            myRef.child(today).child("score").setValue(score)
+            myRef.child("score").setValue(score)
             Toast.makeText(context, "점수(%d)가 저장되었습니다.".format(score), Toast.LENGTH_SHORT).show()
         }
     }
