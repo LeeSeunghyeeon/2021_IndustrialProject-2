@@ -27,26 +27,19 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/content_todaydate"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/content_todaydate"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_column="2"
-                            android:layout_margin="10dp"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="22sp" />
-
-                    </LinearLayout>
+                        android:layout_height="25sp"
+                        android:layout_column="2"
+                        android:layout_margin="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50sp"
+                        android:layout_height="45sp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -71,7 +64,7 @@
                             android:shadowColor="#AFAFAF"
                             android:textAlignment="center"
                             android:textColor="#7E4FD3"
-                            android:textSize="28sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -87,9 +80,13 @@
 
                     </LinearLayout>
 
-                    <Space
+                    <TextView
+                        android:id="@+id/content_babybirth"
                         android:layout_width="match_parent"
-                        android:layout_height="10sp" />
+                        android:layout_height="wrap_content"
+                        android:text="출산예정일 | 2021년 12월 12일"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 

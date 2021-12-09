@@ -58,6 +58,7 @@ class ContentFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     babyName = snapshot.child("user_baby_name").getValue().toString() // 태명
                     val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
+                    binding.contentBabybirth.setText("출산예정일 | %s년 %s월 %s일".format(baby_birth.toString().substring(0,4),baby_birth.toString().substring(4,6),baby_birth.toString().substring(6,8)))
                     val startDate =
                         SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
                     val endDate = SimpleDateFormat(
@@ -68,7 +69,8 @@ class ContentFragment : Fragment() {
                     binding.contentRemainingDays.setText("$remaining_days")
                     week = 41 - (remaining_days / 7).toInt()
                     binding.contentShowWeek.setText("%d주차".format(week))
-                    myRef.child("UserInfo").child("week").setValue(week.toString())
+                    myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("UserInfo")
+                    myRef.child("week").setValue(week.toString())
                     if (week >= 4 && week <= 40) {
                         myRef = FirebaseDatabase.getInstance().getReference("WeekInfo")
                         myRef.addValueEventListener(object : ValueEventListener {
