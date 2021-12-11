@@ -36,6 +36,7 @@ class MissionFragment : Fragment() {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Mission_Adapter
     private lateinit var databaseRef:DatabaseReference
+    private lateinit var databaseRef2:DatabaseReference
 
     @RequiresApi(Build.VERSION_CODES.O)
     var date = LocalDate.now()
@@ -91,14 +92,17 @@ class MissionFragment : Fragment() {
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("meal")
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                try {
+                try { // null 아닐 때만
                     cal1 = dataSnapshot.child("breakfastCal").getValue().toString().toDouble()
+                } catch(E:Exception) {
+                }
+                try { // null 아닐 때만
                     cal2 = dataSnapshot.child("launchCal").getValue().toString().toDouble()
+                } catch(E:Exception) {
+                }
+                try { // null 아닐 때만
                     cal3 = dataSnapshot.child("dinnerCal").getValue().toString().toDouble()
                 } catch(E:Exception) {
-                    cal1 = 0.0
-                    cal2 = 0.0
-                    cal3 = 0.0
                 }
                 eatCal = cal1 + cal2 + cal3
                 binding.eatCalDialogBtn.setText("섭취 칼로리\n" + eatCal.toString() + " KCAL")
@@ -113,12 +117,18 @@ class MissionFragment : Fragment() {
 
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if(!dataSnapshot.child("burntCal").getValue().toString().equals("null"))
-                    totalCal = dataSnapshot.child("burntCal").getValue().toString().toDouble()
-
-                binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + " kcal")
+                databaseRef2 = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("WalkCal").child(date.toString())
+                databaseRef2.addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot2: DataSnapshot) {
+                        if(!dataSnapshot.child("burntCal").getValue().toString().equals("null"))
+                            totalCal = dataSnapshot.child("burntCal").getValue().toString().toDouble()
+                        if(!dataSnapshot.getValue().toString().equals("null"))
+                            totalCal += dataSnapshot2.getValue().toString().toDouble()
+                        binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + " kcal")
+                    }
+                    override fun onCancelled(databaseError: DatabaseError) {}
+                })
             }
-
             override fun onCancelled(databaseError: DatabaseError) {}
         })
 

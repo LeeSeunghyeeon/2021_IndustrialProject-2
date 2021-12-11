@@ -76,7 +76,7 @@
                         android:textColor="@color/black"
                         android:layout_margin="10dp"
                         android:backgroundTint="#ECCCDD"
-                        android:text="걸음 수\n 3000/5000" />
+                        android:text="걸음 수\n 0/5000" />
 
                 </TableRow>
 

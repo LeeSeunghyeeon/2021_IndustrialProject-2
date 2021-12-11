@@ -1,21 +1,25 @@
 package com.example.welt.Mission
 
 import android.annotation.SuppressLint
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.time.LocalDate
 import java.util.ArrayList
 
 class Mission_Adapter(var item_list: ArrayList<MyMission>) :
     RecyclerView.Adapter<Mission_Adapter.ViewHolder>() {
     private lateinit var databaseRef: DatabaseReference
 
-
+    @RequiresApi(Build.VERSION_CODES.O)
+    var date = LocalDate.now()
 
     /*getItemViewType 오버라이딩 해주면 리사이클러뷰에서 스크롤해도 아이템 섞이지 않음.*/
     override fun getItemViewType(position: Int): Int {
@@ -43,7 +47,7 @@ class Mission_Adapter(var item_list: ArrayList<MyMission>) :
 
             val user = FirebaseAuth.getInstance().currentUser
             val uid = user?.uid
-            databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Mission").child("20211124")
+            databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Mission").child(date.toString())
             databaseRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     for (messageData in dataSnapshot.children) {
@@ -53,9 +57,9 @@ class Mission_Adapter(var item_list: ArrayList<MyMission>) :
                         }*/
 
                         val text = messageData.key.toString()
-                       if(text == item_list[position].text){
-                           databaseRef.child(text).setValue(cb.isChecked)
-                       }
+                        if(text == item_list[position].text){
+                            databaseRef.child(text).setValue(cb.isChecked)
+                        }
                     }
                 }
 
