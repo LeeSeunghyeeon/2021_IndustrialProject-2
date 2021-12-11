@@ -107,7 +107,7 @@ class Mission_walkDialog : DialogFragment(), SensorEventListener {
                         // 걸음 수 저장
                         myRef.child(userID.toString()).child("Walk").child(date.toString()).setValue(cnt)
                         // 걸음 수 칼로리 저장 (30보당 1kcal)
-                        myRef.child(userID.toString()).child("Health").child(date.toString()).child("burntCal").setValue(cnt/30)
+                        myRef.child(userID.toString()).child("WalkCal").child(date.toString()).setValue(cnt/30)
                     } catch (E:Exception) {
 
                     }

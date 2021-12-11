@@ -20,6 +20,7 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
     private lateinit var content : TextView
     private lateinit var databaseRef: DatabaseReference
     private lateinit var databaseRef2: DatabaseReference
+    private lateinit var databaseRef3: DatabaseReference
 
     @RequiresApi(Build.VERSION_CODES.O)
     var date = LocalDate.now()
@@ -55,33 +56,83 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
         var totalCal = 0.0
         val user = FirebaseAuth.getInstance().currentUser
         val uid = user?.uid
+        var walkCal= 0.0
+
         databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString())
+
+
+//        databaseRef3.addValueEventListener(object: ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if (!snapshot.getValue().toString().equals("null")) {
+//                    walkCal = snapshot.getValue().toString().toDouble()
+//                    totalCal += walkCal
+//                }
+//            }
+//            override fun onCancelled(error: DatabaseError) {
+//            }
+//        })
+
         databaseRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 databaseRef2 = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
                 databaseRef2.limitToLast(1).addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(dataSnapshot2: DataSnapshot) {
-
-                        if (!dataSnapshot.getValue().toString().equals("null") && !dataSnapshot.getValue().toString().equals("null") ){
-                            val weight = dataSnapshot2.value.toString().substring(12,16).toDouble()
-                            for (messageData in dataSnapshot.child("exercise").children) {
-                                val cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
-                                totalCal = totalCal + cal
-                                text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
+                        databaseRef3 =  FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("WalkCal").child(date.toString())
+                        databaseRef3.addValueEventListener(object: ValueEventListener {
+                            override fun onDataChange(snapshot: DataSnapshot) {
+                                if (!snapshot.getValue().toString().equals("null")) {
+                                    walkCal = snapshot.getValue().toString().toDouble()
+                                    totalCal += walkCal
+                                }
+                                if (!dataSnapshot.getValue().toString().equals("null") && !dataSnapshot.getValue().toString().equals("null") ){
+                                    val weight = dataSnapshot2.value.toString().substring(12,16).toDouble()
+                                    for (messageData in dataSnapshot.child("exercise").children) {
+                                        var cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
+                                        totalCal = totalCal + cal
+                                        text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + " kcal\n\n"
+                                    }
+                                    text += "걷기 " + walkCal.toString() + " kcal\n\n"
+                                    text = text + "\n총 소모칼로리  " + totalCal.toString() + " kcal"
+                                    content.setText(text)
+                                }
                             }
-                            text = text + "\n총 소모칼로리  " + totalCal.toString() + "kcal"
-                            content.setText(text)
-                        }
+                            override fun onCancelled(error: DatabaseError) {
+                            }
+                        })
                     }
                     override fun onCancelled(databaseError: DatabaseError) {}
                 })
-
-
-
             }
-
             override fun onCancelled(databaseError: DatabaseError) {}
         })
+
+//        databaseRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(dataSnapshot: DataSnapshot) {
+//                databaseRef2 = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Weight")
+//                databaseRef2.limitToLast(1).addValueEventListener(object : ValueEventListener {
+//                    override fun onDataChange(dataSnapshot2: DataSnapshot) {
+//
+//                        if (!dataSnapshot.getValue().toString().equals("null") && !dataSnapshot.getValue().toString().equals("null") ){
+//                            val weight = dataSnapshot2.value.toString().substring(12,16).toDouble()
+//                            for (messageData in dataSnapshot.child("exercise").children) {
+//                                val cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
+//                                totalCal = totalCal + cal
+//                                text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + "kcal\n\n"
+//                            }
+//                            text += "걷기 + " + walkCal.toString() + " kcal\n\n"
+//                            text = text + "\n총 소모칼로리  " + totalCal.toString() + "kcal"
+//                            content.setText(text)
+//                        }
+//                    }
+//                    override fun onCancelled(databaseError: DatabaseError) {}
+//                })
+//
+//
+//
+//            }
+//
+//            override fun onCancelled(databaseError: DatabaseError) {}
+//        })
     }
 
     override fun onClick(v: View?) {
