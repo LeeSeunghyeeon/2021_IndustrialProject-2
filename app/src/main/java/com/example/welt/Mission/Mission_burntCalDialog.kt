@@ -64,7 +64,6 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
 
                         if (!dataSnapshot.getValue().toString().equals("null") && !dataSnapshot.getValue().toString().equals("null") ){
                             val weight = dataSnapshot2.value.toString().substring(12,16).toDouble()
-
                             for (messageData in dataSnapshot.child("exercise").children) {
                                 val cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
                                 totalCal = totalCal + cal

@@ -119,7 +119,6 @@ class Health_exercise : DialogFragment() {
         // 삭제 버튼
         binding.BtnExerciseDelete.setOnClickListener{
             myRef = database.getReference("User")
-            // 취소 시 실행할 코드
             val user = FirebaseAuth.getInstance().currentUser
             val uid = user?.uid
             for(i in 0 until data.size){
@@ -127,6 +126,7 @@ class Health_exercise : DialogFragment() {
                     val exercise_= adapter.item_list[i].text.split(" | ")
                     myRef.child(uid.toString()).child("Health").child(date.toString()).child("exercise").child(exercise_[0]).setValue(null)
                     adapter.notifyDataSetChanged()
+                    exerciseMap.put(exercise_[0], 0)
                 }
             }
 

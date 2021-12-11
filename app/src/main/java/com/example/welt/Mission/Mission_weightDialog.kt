@@ -95,10 +95,11 @@ class Mission_weightDialog : DialogFragment(), View.OnClickListener {
                             val temp = dataSnapshot.getValue().toString().split("=")
                             val weight = temp[1].split("}")
                             bmi = weight[0].toDouble().div(dataSnapshot2.child("height").getValue().toString().toDouble().div(100.0).pow(2))
+                            bmi = String.format("%.2f", bmi).toDouble()
                             //bmi = sqrt(dataSnapshot.child("height").getValue().toString().toDouble().div(100.0))
                             if(bmi < 18.5) content.setText("BMI : "+bmi.toString() + "\n저체중입니다.")
                             else if((bmi >= 18.5) and (bmi < 23)) content.setText("BMI : "+bmi.toString() + "\n정상 체중입니다.")
-                            else if((bmi >= 23) and (bmi < 25)) content.setText("BMI : "+bmi.toString() + "\n과체중입니다.")
+                            else if((bmi >= 23) and (bmi < 25)) content.setText("BMI : "+bmi.toString().format("%.1f") + "\n과체중입니다.")
                             else if(bmi >= 25) content.setText("BMI : "+bmi.toString() + "\n비만입니다.")
                         }
                     }

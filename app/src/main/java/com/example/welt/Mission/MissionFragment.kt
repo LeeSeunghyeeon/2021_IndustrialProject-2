@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DataSnapshot
 
 import com.google.firebase.database.ValueEventListener
+import java.lang.Exception
 import java.time.LocalDate
 import kotlin.math.pow
 
@@ -71,11 +72,39 @@ class MissionFragment : Fragment() {
             override fun onCancelled(databaseError: DatabaseError) {}
         })
 
-        //검음수 버튼 텍스트 변경
-
+        //걸음수 버튼 텍스트 변경
+        var walk = 0
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Walk").child(date.toString())
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                if(!dataSnapshot.getValue().toString().equals("null")) walk = Integer.parseInt(dataSnapshot.getValue().toString())
+                binding.walkDialogBtn.setText("걸음 수\n" + walk + "/5000")
+            }
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
 
         //섭취 칼로리 버튼 텍스트 변경
-
+        var eatCal = 0.0;
+        var cal1 = 0.0
+        var cal2 = 0.0
+        var cal3 = 0.0
+        databaseRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("Health").child(date.toString()).child("meal")
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                try {
+                    cal1 = dataSnapshot.child("breakfastCal").getValue().toString().toDouble()
+                    cal2 = dataSnapshot.child("launchCal").getValue().toString().toDouble()
+                    cal3 = dataSnapshot.child("dinnerCal").getValue().toString().toDouble()
+                } catch(E:Exception) {
+                    cal1 = 0.0
+                    cal2 = 0.0
+                    cal3 = 0.0
+                }
+                eatCal = cal1 + cal2 + cal3
+                binding.eatCalDialogBtn.setText("섭취 칼로리\n" + eatCal.toString() + " KCAL")
+            }
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
 
         //소모 칼로리 버튼 텍스트 변경
         var totalCal = 0.0
