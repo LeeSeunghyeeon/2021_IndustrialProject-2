@@ -136,6 +136,8 @@ class DiaryFragment : Fragment() {
 
                 str = contextEditText.getText().toString()
 
+                myRef= FirebaseDatabase.getInstance().getReference()
+
                 myRef.child("User").child(userID.toString()).child("Diary")
                     .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).child("Diary_Text").setValue(str)
                 Toast.makeText(context, "저장되었습니다.", Toast.LENGTH_SHORT).show()
@@ -160,6 +162,7 @@ class DiaryFragment : Fragment() {
                 binding.delBtn.visibility = View.INVISIBLE
                 binding.diaryContent.text = "${contextEditText.getText()}"
 
+                myRef= FirebaseDatabase.getInstance().getReference()
                 myRef.child("User").child(userID.toString()).child("Diary")
                     .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).setValue(str)
             }
@@ -173,6 +176,7 @@ class DiaryFragment : Fragment() {
                 binding.delBtn.visibility = View.INVISIBLE
 
                 removeDiary(fname)
+                myRef= FirebaseDatabase.getInstance().getReference()
                 myRef.child("User").child(userID.toString()).child("Diary")
                     .child(String.format("%d-%d-%d ", year, month + 1, dayOfMonth)).setValue(null)
 
