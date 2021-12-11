@@ -10,6 +10,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.core.view.isVisible
 import com.example.welt.Mission.MyMission
 import com.example.welt.R
 import com.google.firebase.auth.FirebaseAuth
@@ -34,7 +35,7 @@ class ContentFragment : Fragment() {
     ): View? {
         binding = FragmentContentBinding.inflate(inflater, container, false)
         initData()
-        //calHigh()
+        calHigh()
 
         setButtonClickEvent()
         return binding.root
@@ -53,12 +54,19 @@ class ContentFragment : Fragment() {
         var babyName = ""
         binding.contentTodaydate.setText("오늘은 $show_today")
         if (uid != null) {
-            myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("UserInfo")
+            myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
+                .child("UserInfo")
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     babyName = snapshot.child("user_baby_name").getValue().toString() // 태명
                     val baby_birth = snapshot.child("user_babyBirth").getValue() //출산예정일
-                    binding.contentBabybirth.setText("출산예정일 | %s년 %s월 %s일".format(baby_birth.toString().substring(0,4),baby_birth.toString().substring(4,6),baby_birth.toString().substring(6,8)))
+                    binding.contentBabybirth.setText(
+                        "출산예정일 | %s년 %s월 %s일".format(
+                            baby_birth.toString().substring(0, 4),
+                            baby_birth.toString().substring(4, 6),
+                            baby_birth.toString().substring(6, 8)
+                        )
+                    )
                     val startDate =
                         SimpleDateFormat("yyyyMMdd", Locale("ko", "KR")).parse(cal_today.toString())
                     val endDate = SimpleDateFormat(
@@ -69,7 +77,9 @@ class ContentFragment : Fragment() {
                     binding.contentRemainingDays.setText("$remaining_days")
                     week = 41 - (remaining_days / 7).toInt()
                     binding.contentShowWeek.setText("%d주차".format(week))
-                    myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString()).child("UserInfo")
+                    myRef =
+                        FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
+                            .child("UserInfo")
                     myRef.child("week").setValue(week.toString())
                     if (week >= 4 && week <= 40) {
                         myRef = FirebaseDatabase.getInstance().getReference("WeekInfo")
@@ -93,43 +103,44 @@ class ContentFragment : Fragment() {
                                         babyWeight
                                     )
                                 )
-                                if(week==4) binding.contentWeekPhoto.setImageResource(R.drawable.week04_poppyseed)
-                                else if(week==5) binding.contentWeekPhoto.setImageResource(R.drawable.week05_appleseed)
-                                else if(week==6) binding.contentWeekPhoto.setImageResource(R.drawable.week06_bean)
-                                else if(week==7) binding.contentWeekPhoto.setImageResource(R.drawable.week07_blueberry)
-                                else if(week==8) binding.contentWeekPhoto.setImageResource(R.drawable.week08_raspberries)
-                                else if(week==9) binding.contentWeekPhoto.setImageResource(R.drawable.week09_olive)
-                                else if(week==10) binding.contentWeekPhoto.setImageResource(R.drawable.week10_prune)
-                                else if(week==11) binding.contentWeekPhoto.setImageResource(R.drawable.week11_lime)
-                                else if(week==12) binding.contentWeekPhoto.setImageResource(R.drawable.week12_plum)
-                                else if(week==13) binding.contentWeekPhoto.setImageResource(R.drawable.week13_peach)
-                                else if(week==14) binding.contentWeekPhoto.setImageResource(R.drawable.week14_lemon)
-                                else if(week==15) binding.contentWeekPhoto.setImageResource(R.drawable.week15_oranges)
-                                else if(week==16) binding.contentWeekPhoto.setImageResource(R.drawable.week16_avocado)
-                                else if(week==17) binding.contentWeekPhoto.setImageResource(R.drawable.week17_onion)
-                                else if(week==18) binding.contentWeekPhoto.setImageResource(R.drawable.week18_sweet_potato)
-                                else if(week==19) binding.contentWeekPhoto.setImageResource(R.drawable.week19_mango)
-                                else if(week==20) binding.contentWeekPhoto.setImageResource(R.drawable.week20_banana)
-                                else if(week==21) binding.contentWeekPhoto.setImageResource(R.drawable.week21_pomegranate)
-                                else if(week==22) binding.contentWeekPhoto.setImageResource(R.drawable.week22_papaya)
-                                else if(week==23) binding.contentWeekPhoto.setImageResource(R.drawable.week23_grapefruit)
-                                else if(week==24) binding.contentWeekPhoto.setImageResource(R.drawable.week24_melon)
-                                else if(week==25) binding.contentWeekPhoto.setImageResource(R.drawable.week25_cauliflower)
-                                else if(week==26) binding.contentWeekPhoto.setImageResource(R.drawable.week26_lettuce)
-                                else if(week==27) binding.contentWeekPhoto.setImageResource(R.drawable.week27_turnip)
-                                else if(week==28) binding.contentWeekPhoto.setImageResource(R.drawable.week28_aubergine)
-                                else if(week==29) binding.contentWeekPhoto.setImageResource(R.drawable.week29_acorn_pumpkin)
-                                else if(week==30) binding.contentWeekPhoto.setImageResource(R.drawable.week30_cucumber)
-                                else if(week==31) binding.contentWeekPhoto.setImageResource(R.drawable.week31_pineapple)
-                                else if(week==32) binding.contentWeekPhoto.setImageResource(R.drawable.week32_pumpkin)
-                                else if(week==33) binding.contentWeekPhoto.setImageResource(R.drawable.week33_durian)
-                                else if(week==34) binding.contentWeekPhoto.setImageResource(R.drawable.week34_squash)
-                                else if(week==35) binding.contentWeekPhoto.setImageResource(R.drawable.week35_coconut)
-                                else if(week==36) binding.contentWeekPhoto.setImageResource(R.drawable.week36_lettuce)
-                                else if(week==37) binding.contentWeekPhoto.setImageResource(R.drawable.week37_beetroot)
-                                else if(week==38) binding.contentWeekPhoto.setImageResource(R.drawable.week38_pumpkin)
-                                else if(week==39) binding.contentWeekPhoto.setImageResource(R.drawable.week39_watermelon)
-                                else if(week==40) binding.contentWeekPhoto.setImageResource(R.drawable.week40_jackfruit)
+                                binding.contentMoreBtn.isVisible=true
+                                if (week == 4) binding.contentWeekPhoto.setImageResource(R.drawable.week04_poppyseed)
+                                else if (week == 5) binding.contentWeekPhoto.setImageResource(R.drawable.week05_appleseed)
+                                else if (week == 6) binding.contentWeekPhoto.setImageResource(R.drawable.week06_bean)
+                                else if (week == 7) binding.contentWeekPhoto.setImageResource(R.drawable.week07_blueberry)
+                                else if (week == 8) binding.contentWeekPhoto.setImageResource(R.drawable.week08_raspberries)
+                                else if (week == 9) binding.contentWeekPhoto.setImageResource(R.drawable.week09_olive)
+                                else if (week == 10) binding.contentWeekPhoto.setImageResource(R.drawable.week10_prune)
+                                else if (week == 11) binding.contentWeekPhoto.setImageResource(R.drawable.week11_lime)
+                                else if (week == 12) binding.contentWeekPhoto.setImageResource(R.drawable.week12_plum)
+                                else if (week == 13) binding.contentWeekPhoto.setImageResource(R.drawable.week13_peach)
+                                else if (week == 14) binding.contentWeekPhoto.setImageResource(R.drawable.week14_lemon)
+                                else if (week == 15) binding.contentWeekPhoto.setImageResource(R.drawable.week15_oranges)
+                                else if (week == 16) binding.contentWeekPhoto.setImageResource(R.drawable.week16_avocado)
+                                else if (week == 17) binding.contentWeekPhoto.setImageResource(R.drawable.week17_onion)
+                                else if (week == 18) binding.contentWeekPhoto.setImageResource(R.drawable.week18_sweet_potato)
+                                else if (week == 19) binding.contentWeekPhoto.setImageResource(R.drawable.week19_mango)
+                                else if (week == 20) binding.contentWeekPhoto.setImageResource(R.drawable.week20_banana)
+                                else if (week == 21) binding.contentWeekPhoto.setImageResource(R.drawable.week21_pomegranate)
+                                else if (week == 22) binding.contentWeekPhoto.setImageResource(R.drawable.week22_papaya)
+                                else if (week == 23) binding.contentWeekPhoto.setImageResource(R.drawable.week23_grapefruit)
+                                else if (week == 24) binding.contentWeekPhoto.setImageResource(R.drawable.week24_melon)
+                                else if (week == 25) binding.contentWeekPhoto.setImageResource(R.drawable.week25_cauliflower)
+                                else if (week == 26) binding.contentWeekPhoto.setImageResource(R.drawable.week26_lettuce)
+                                else if (week == 27) binding.contentWeekPhoto.setImageResource(R.drawable.week27_turnip)
+                                else if (week == 28) binding.contentWeekPhoto.setImageResource(R.drawable.week28_aubergine)
+                                else if (week == 29) binding.contentWeekPhoto.setImageResource(R.drawable.week29_acorn_pumpkin)
+                                else if (week == 30) binding.contentWeekPhoto.setImageResource(R.drawable.week30_cucumber)
+                                else if (week == 31) binding.contentWeekPhoto.setImageResource(R.drawable.week31_pineapple)
+                                else if (week == 32) binding.contentWeekPhoto.setImageResource(R.drawable.week32_pumpkin)
+                                else if (week == 33) binding.contentWeekPhoto.setImageResource(R.drawable.week33_durian)
+                                else if (week == 34) binding.contentWeekPhoto.setImageResource(R.drawable.week34_squash)
+                                else if (week == 35) binding.contentWeekPhoto.setImageResource(R.drawable.week35_coconut)
+                                else if (week == 36) binding.contentWeekPhoto.setImageResource(R.drawable.week36_lettuce)
+                                else if (week == 37) binding.contentWeekPhoto.setImageResource(R.drawable.week37_beetroot)
+                                else if (week == 38) binding.contentWeekPhoto.setImageResource(R.drawable.week38_pumpkin)
+                                else if (week == 39) binding.contentWeekPhoto.setImageResource(R.drawable.week39_watermelon)
+                                else if (week == 40) binding.contentWeekPhoto.setImageResource(R.drawable.week40_jackfruit)
                             }
 
                             override fun onCancelled(error: DatabaseError) {
@@ -137,18 +148,21 @@ class ContentFragment : Fragment() {
                             }
                         })
                     } else { //4주 미만일 때
+                        binding.contentMoreBtn.isVisible=false
                         binding.contentWeekSize.setText("")
                         binding.contentWeekBody.setText("")
                         binding.contentWeekPhoto.setImageResource(R.drawable.week00_null)
                     }
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                     println("Failed")
                 }
             })
         }
         if (com.example.welt.Content.uid != null) {
-            myRef = FirebaseDatabase.getInstance().getReference("User").child(com.example.welt.Content.uid.toString())
+            myRef = FirebaseDatabase.getInstance().getReference("User")
+                .child(com.example.welt.Content.uid.toString())
                 .child("HospitalSchedule")
             myRef.addValueEventListener(object : ValueEventListener {
                 @RequiresApi(Build.VERSION_CODES.O)
@@ -185,6 +199,7 @@ class ContentFragment : Fragment() {
                     else
                         binding.contentHospitalBtn.setText("🏥\n내원일\nD-%d".format(min))
                 }
+
                 override fun onCancelled(error: DatabaseError) {
                 }
             })
@@ -212,7 +227,7 @@ class ContentFragment : Fragment() {
             myRef = FirebaseDatabase.getInstance().getReference("WeekInfo")
             myRef.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    if(week<=40 && week>=4) {
+                    if (week <= 40 && week >= 4) {
                         var link_name =
                             snapshot.child("%d주차".format(week)).child("link_name")?.value.toString()
                         val intent = Intent(Intent.ACTION_VIEW, Uri.parse("$link_name"))
@@ -251,20 +266,23 @@ class ContentFragment : Fragment() {
         if (uid != null) {
             myRef = FirebaseDatabase.getInstance().getReference("User").child(uid.toString())
             myRef.addValueEventListener(object : ValueEventListener {
-                    @RequiresApi(Build.VERSION_CODES.O)
-                    override fun onDataChange(snapshot: DataSnapshot) {
-                        var date = "2021-12-08" //오늘날짜로 설정해줘야함
+                @RequiresApi(Build.VERSION_CODES.O)
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val currentDate: LocalDateTime = LocalDateTime.now() //오늘 날짜
+                    val today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
+                    var date = "%s-%s-%s".format(today.substring(0, 4), today.substring(4, 6), today.substring(6, 8))
+                    if (snapshot.child("HighTest").child("score").value != null
+                        && snapshot.child("Health").child("$date").child("eatCal").value != null
+                        && snapshot.child("Health").child("$date").child("burntCal").value != null) {
                         var totalScore = 0
-                        println(snapshot.child("HighTest").child("score").value)
-                        var eatCal =
-                            snapshot.child("Health").child("$date").child("eatCal").value.toString()
+                        var eatCal = snapshot.child("Health").child("$date").child("eatCal").value.toString()
                                 .toInt()
                         var personal_burntCal = snapshot.child("Health").child("$date")
                             .child("burntCal").value.toString().toInt()
                         var highTestScore =
                             snapshot.child("HighTest").child("score").value.toString().toInt()
                         var height =
-                            snapshot.child("UserInfo").child("height").value.toString().toInt()
+                            snapshot.child("UserInfo").child("height").value.toString().toDouble()
                         val splitarr = snapshot.child("Weight").value.toString().split(", ")
                         var weight = splitarr[splitarr.size - 1].split("=")[1].split("}")[0].toDouble()
 
@@ -326,40 +344,43 @@ class ContentFragment : Fragment() {
 
                         var state = " "
                         if(totalScore<=6)
-                            state = "매우 양호"
+                            state = "매우 양호👍"
                         else if(totalScore>=7 && totalScore<=12)
-                            state = "양호"
+                            state = "양호👌"
                         else if(totalScore>=13 && totalScore<=18)
-                            state = "주의"
+                            state = "주의⚠"
                         else if(totalScore>=19 && totalScore<=24)
-                            state = "경고"
+                            state = "경고❗"
                         else if(totalScore>=19 && totalScore<=24)
-                            state = "위험"
+                            state = "위험‼"
                         binding.contentHighscore.setText("$totalScore")
                         binding.contentHighstate.setText("$state")
-
+                        binding.content25score.setText("  / 25점")
                         println("나이 $user_age 키 $height  기초대사량 $BMR 섭취 $eatCal 소모 $burntCal 테스트점수 $highTestScore 총점수 $totalScore")
 
                     }
-
-                    override fun onCancelled(error: DatabaseError) {
-
+                    else {
+                        binding.content25score.setText("점수를 불러 올 수 없습니다.")
                     }
+                }
 
-                })
+                override fun onCancelled(error: DatabaseError) {
+                }
+            })
         }
-    }
-    fun calculateAge(date: Date?): Int {
-        val birthCalendar = Calendar.getInstance()
-        birthCalendar.time = date ?: Date()
-        val current = Calendar.getInstance()
-        val currentYear = current[Calendar.YEAR]
-        val currentMonth = current[Calendar.MONTH]
-        val currentDay = current[Calendar.DAY_OF_MONTH]
-        var age = currentYear - birthCalendar[Calendar.YEAR]
-        if (birthCalendar[Calendar.MONTH] * 100 +
-            birthCalendar[Calendar.DAY_OF_MONTH] > currentMonth * 100 + currentDay
-        ) age--
-        return age
+
+        fun calculateAge(date: Date?): Int {
+            val birthCalendar = Calendar.getInstance()
+            birthCalendar.time = date ?: Date()
+            val current = Calendar.getInstance()
+            val currentYear = current[Calendar.YEAR]
+            val currentMonth = current[Calendar.MONTH]
+            val currentDay = current[Calendar.DAY_OF_MONTH]
+            var age = currentYear - birthCalendar[Calendar.YEAR]
+            if (birthCalendar[Calendar.MONTH] * 100 +
+                birthCalendar[Calendar.DAY_OF_MONTH] > currentMonth * 100 + currentDay
+            ) age--
+            return age
+        }
     }
 }
