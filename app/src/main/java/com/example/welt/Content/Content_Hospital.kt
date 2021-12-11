@@ -11,10 +11,8 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.welt.Content_HospitalAdd
 import com.example.welt.Health.Health_Adapter
 import com.example.welt.Mission.MyMission
-import com.example.welt.R
 import com.example.welt.Sign.database
 import com.example.welt.Sign.myRef
 import com.example.welt.databinding.FragmentContentHospitalBinding

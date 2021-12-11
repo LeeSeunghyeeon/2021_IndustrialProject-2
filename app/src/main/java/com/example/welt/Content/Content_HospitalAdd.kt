@@ -1,4 +1,4 @@
-package com.example.welt
+package com.example.welt.Content
 
 import android.os.Build
 import android.os.Bundle
@@ -34,8 +34,6 @@ class Content_HospitalAdd : DialogFragment(), View.OnClickListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-
         binding = FragmentContentHospitalAddBinding.inflate(inflater, container, false)
         binding.contentHospitalAddOK.setOnClickListener{
             var selyear = binding.contentHospitalAddDpSpinner.year

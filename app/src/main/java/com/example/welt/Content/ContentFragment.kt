@@ -259,6 +259,13 @@ class ContentFragment : Fragment() {
                     .addToBackStack(null).commit()
             }
         }
+
+        binding.btnView.setOnClickListener{
+            val highRiskViewDialog = Content_HighRiskView()
+            activity?.supportFragmentManager?.let { fragmentManager ->
+                highRiskViewDialog.show(fragmentManager, "Content_highRiskViewDialog")
+            }
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -272,13 +279,15 @@ class ContentFragment : Fragment() {
                     val today = currentDate.format(DateTimeFormatter.ofPattern("yyyyMMdd", Locale("ko", "KR")))
                     var date = "%s-%s-%s".format(today.substring(0, 4), today.substring(4, 6), today.substring(6, 8))
                     if (snapshot.child("HighTest").child("score").value != null
-                        && snapshot.child("Health").child("$date").child("eatCal").value != null
+                        && snapshot.child("Health").child("$date").child("meal").child("breakfastCal").value != null
+                        && snapshot.child("Health").child("$date").child("meal").child("launchCal").value != null
+                        && snapshot.child("Health").child("$date").child("meal").child("dinnerCal").value != null
                         && snapshot.child("Health").child("$date").child("burntCal").value != null) {
-                        var totalScore = 0
-                        var eatCal = snapshot.child("Health").child("$date").child("eatCal").value.toString()
-                                .toInt()
+                            binding.btnView.isVisible = true
+                            var totalScore = 0
+                        var eatCal = snapshot.child("Health").child("$date").child("meal").child("breakfastCal").value.toString().toInt()+snapshot.child("Health").child("$date").child("meal").child("launchCal").value.toString().toInt()+snapshot.child("Health").child("$date").child("meal").child("dinnerCal").value.toString().toInt()
                         var personal_burntCal = snapshot.child("Health").child("$date")
-                            .child("burntCal").value.toString().toInt()
+                            .child("burntCal").value.toString().toDouble()
                         var highTestScore =
                             snapshot.child("HighTest").child("score").value.toString().toInt()
                         var height =
@@ -356,10 +365,9 @@ class ContentFragment : Fragment() {
                         binding.contentHighscore.setText("$totalScore")
                         binding.contentHighstate.setText("$state")
                         binding.content25score.setText("  / 25점")
-                        println("나이 $user_age 키 $height  기초대사량 $BMR 섭취 $eatCal 소모 $burntCal 테스트점수 $highTestScore 총점수 $totalScore")
-
                     }
                     else {
+                        binding.btnView.isVisible = false
                         binding.content25score.setText("점수를 불러 올 수 없습니다.")
                     }
                 }
