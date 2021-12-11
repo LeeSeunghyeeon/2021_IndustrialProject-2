@@ -285,7 +285,7 @@ class ContentFragment : Fragment() {
                         && snapshot.child("Health").child("$date").child("burntCal").value != null) {
                             binding.btnView.isVisible = true
                             var totalScore = 0
-                        var eatCal = snapshot.child("Health").child("$date").child("meal").child("breakfastCal").value.toString().toInt()+snapshot.child("Health").child("$date").child("meal").child("launchCal").value.toString().toInt()+snapshot.child("Health").child("$date").child("meal").child("dinnerCal").value.toString().toInt()
+                        var eatCal = snapshot.child("Health").child("$date").child("meal").child("breakfastCal").value.toString().toDouble()+snapshot.child("Health").child("$date").child("meal").child("launchCal").value.toString().toDouble()+snapshot.child("Health").child("$date").child("meal").child("dinnerCal").value.toString().toDouble()
                         var personal_burntCal = snapshot.child("Health").child("$date")
                             .child("burntCal").value.toString().toDouble()
                         var highTestScore =

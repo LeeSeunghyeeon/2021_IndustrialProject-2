@@ -83,10 +83,10 @@ class Content_HighRiskView : DialogFragment(), View.OnClickListener {
                         var totalScore = 0
                         var eatCal = snapshot.child("Health").child("$date").child("meal")
                             .child("breakfastCal").value.toString()
-                            .toInt() + snapshot.child("Health").child("$date").child("meal")
-                            .child("launchCal").value.toString().toInt() + snapshot.child("Health")
+                            .toDouble() + snapshot.child("Health").child("$date").child("meal")
+                            .child("launchCal").value.toString().toDouble() + snapshot.child("Health")
                             .child("$date").child("meal").child("dinnerCal").value.toString()
-                            .toInt()
+                            .toDouble()
                         var personal_burntCal = snapshot.child("Health").child("$date")
                             .child("burntCal").value.toString().toDouble()
                         var highTestScore =
@@ -202,7 +202,7 @@ class Content_HighRiskView : DialogFragment(), View.OnClickListener {
 
                         println("나이 $user_age 키 $height  기초대사량 $BMR 섭취 $eatCal 소모 $burntCal 테스트점수 $highTestScore 총점수 $totalScore")
                         binding.tv1.setText(
-                            "- 섭취칼로리 : %d kcal     \n-소모 칼로리 : %.2f kcal \n-고위험 임신 테스트 점수 : %d점".format(
+                            "- 섭취칼로리 : %.2f kcal     \n-소모 칼로리 : %.2f kcal \n-고위험 임신 테스트 점수 : %d점".format(
                                 eatCal,
                                 burntCal,
                                 highTestScore

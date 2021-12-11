@@ -85,9 +85,10 @@ class Mission_burntCalDialog : DialogFragment(), View.OnClickListener {
                                     totalCal += walkCal
                                 }
                                 if (!dataSnapshot.getValue().toString().equals("null") && !dataSnapshot.getValue().toString().equals("null") ){
-                                    val weight = dataSnapshot2.value.toString().substring(12,16).toDouble()
+                                    val temp = dataSnapshot2.getValue().toString().split("=")
+                                    val weight = temp[1].split("}")
                                     for (messageData in dataSnapshot.child("exercise").children) {
-                                        var cal = (data[messageData.key]!! * 3.5 * weight * messageData.getValue().toString().toDouble() * 5 ) / 1000
+                                        var cal = (data[messageData.key]!! * 3.5 * weight[0].toDouble() * messageData.getValue().toString().toDouble() * 5 ) / 1000
                                         totalCal = totalCal + cal
                                         text = text+ messageData.key +"  "+ messageData.getValue().toString() + "분  " + cal.toString() + " kcal\n\n"
                                     }

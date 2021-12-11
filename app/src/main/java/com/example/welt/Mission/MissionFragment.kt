@@ -122,7 +122,7 @@ class MissionFragment : Fragment() {
                     override fun onDataChange(dataSnapshot2: DataSnapshot) {
                         if(!dataSnapshot.child("burntCal").getValue().toString().equals("null"))
                             totalCal = dataSnapshot.child("burntCal").getValue().toString().toDouble()
-                        if(!dataSnapshot.getValue().toString().equals("null"))
+                        if(!dataSnapshot2.getValue().toString().equals("null"))
                             totalCal += dataSnapshot2.getValue().toString().toDouble()
                         binding.burntCalDialogBtn.setText("소모칼로리\n" + totalCal.toString() + " kcal")
                     }
